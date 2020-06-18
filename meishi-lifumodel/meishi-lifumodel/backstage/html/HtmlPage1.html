@@ -1,0 +1,68 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>js原生获取class名&多取一</title>
+
+</head>
+
+<body>
+
+    <ul>
+
+        <li class="red blue green">111</li>
+
+        <li class="red">444</li>
+
+        <li class="red blue green">222</li>
+
+        <li class="cred blue green">333</li>
+
+    </ul>
+
+    <script>
+
+        function className(classname) {
+
+            var tags = document.all ? document.all : document.getElementsByTagName('*');
+
+            var arr = [];
+
+            // var reg = /\bclassname\b/g;//普通方式定义
+
+            var reg = new RegExp('\\b' + classname + '\\b', 'g');//构造函数方式
+
+            for (var i = 0; i < tags.length; i++) {
+
+                reg.lastIndex = 0;
+
+                if (reg.test(tags[i].className)) {
+
+                    arr.push(tags[i]);
+
+                }
+
+            }
+
+            return arr;
+
+        }
+
+        var liRed = className('red');
+
+        for (var i = 0; i < liRed.length; i++) {
+
+            liRed[i].style.background = 'green';
+
+        }
+
+    </script>
+
+</body>
+
+</html>

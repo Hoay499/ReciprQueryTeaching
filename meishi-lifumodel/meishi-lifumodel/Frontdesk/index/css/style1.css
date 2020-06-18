@@ -1,0 +1,40 @@
+/*»áÔ±µÇÂ¼ */
+.member{
+	display: none;
+	width: 200px;
+	height: 130px;
+	background: url(img/huiyuan.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	right:39px;
+	top:40px;
+	z-index: 1000;
+}
+.member p{
+	width:84%;
+	margin:10px 8%;
+	line-height: 40px;
+	border-bottom: 1px solid #b3b3b3;
+	color: #7d7c81;
+	text-align: center;
+	font-size: 18px;
+}
+.member ul{
+	width:84%;
+	margin:0px 8%;
+}
+.member ul li{
+	line-height: 25px;
+	font-size: 12px;
+}
+.member ul li img{
+	width: 16px;
+	height: 16px;
+	margin-right: 5px;
+}
+.member ul li a{
+	color:#460085 ;
+}
+.member ul li a:hover{
+	text-decoration: underline;
+}

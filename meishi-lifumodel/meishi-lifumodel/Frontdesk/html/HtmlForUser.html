@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        html, body {
+            margin:0;
+            padding:0;
+            height:100%;
+            width:100%;
+        }
+         .headback {
+            width:100%;
+            height:10%;
+            float:left;
+            background:red;
+        }
+        .back {
+            width:30%;
+            height:60%;
+            float:left;
+           
+        }
+            .back h1 {
+               font-size:40px;
+                color:white;
+            }
+         #nav{
+             background:red;
+             float:left;
+             height:10%;
+             width:100%;
+            }
+        ul {
+            overflow:hidden;
+           list-style-type:none;
+            width:100%;
+
+        }
+        li {
+            width:20%;
+            float:left;
+            font-size:30px;
+            font-size:40px;
+            margin-top:5%;
+            color:white;
+        }
+        #show {
+            width:100%;
+            height:80%;
+            float:left;
+            background:red;
+        }
+          #show .MenuCollection {
+                height:16%;
+                width:100%;
+                float:left;
+                margin-top:4%;
+                background:white;
+            }
+          #show .MenuCollection  .MCImg{
+                height:100%;
+                width:20%;
+                float:left;
+            }
+          #show .MenuCollection  .introduce{
+                height:100%;
+                width:50%;
+                float:left;
+            }
+           #show .MenuCollection  .introduce h1{
+                height:30px;
+                width:100%;
+                float:left;
+            }
+           #show .MenuCollection .introduce h2{
+                height:50px;
+                width:100%;
+                float:left;
+                white-space:nowrap;
+                overflow:hidden;
+                text-overflow:ellipsis;
+                
+            }
+             #show .MenuCollection  .del{
+                height:50%;
+                width:20%;
+                float:right;
+                font-size:30px;
+                background:red;
+                color:white;
+            }
+    </style>
+   
+</head>
+<body>
+    <div class="headback">
+        <div class="back" onclick="back()">
+            <h1>< 返回</h1>
+        </div>
+
+    </div>
+     
+    <header id="nav">
+        <ul>
+           
+            <li onclick="FoodProduction()">制作菜品</li>
+            <li onclick="MyProduction()">菜品</li>
+        </ul>
+        
+    </header>
+
+    <div id="show"></div>
+</body>
+    <script src="js/jquery.js"></script>
+<script>
+    var usernumber = "";
+    $().ready(function () {
+
+
+        usernumber = decodeURI(GetQueryString("usernumber"));
+        //usernumber = decodeURI(GetQueryString("usernumber"));
+
+        // sessionStorage.setItem('usernumber','001');
+        //alert(username);
+        //document.getElementById("username").innerText = decodeURI(GetQueryString("username"));
+        //getlist(1, "001");
+        // $.post('../ashx/Index.ashx');
+    });
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return (r[2]); return null;
+    }
+    function back() {
+        window.location = "index.html";
+    }
+    function FoodProduction() {
+        window.location = "../MadeMenu/MadeMenu.html?usernumber="+usernumber;
+
+    }
+    function MyProduction() {
+        alert(usernumber);
+        var size = 10;
+        var menunumber = "";
+        $.post('../ashx/UserHandler.ashx?type=getUserMenu&UserNumber='+usernumber+'&Size='+size+'&MenuNumber='+menunumber, function (msg) {
+            $('#show').html(msg);
+        });
+
+    }
+    function showdetail(userfoodnumber) {
+        window.location = "introduces.html?userfoodnumber=" + userfoodnumber + "&UserNumber=" + usernumber;
+
+    }
+    function del(userfoodnumber) {
+        alert(userfoodnumber);
+        $.post('../ashx/UserHandler.ashx?type=UserProductiondel&userfoodnumber=' + userfoodnumber, function (msg) {
+          
+            //var ss = document.getElementById(pos);
+            // var ss = document.getElementsByClassName("");
+            var ss = document.getElementById(userfoodnumber);
+            if (ss != null) { alert("get it"); }
+            ss.parentNode.removeChild(ss);
+            //ss.innerHTML = "";
+            //$('#sc').html("<div class='line3' onclick='shoucang()'>点击收藏</div>");
+
+            alert("删除作品成功!");
+
+        })
+
+    }
+
+    function edit(userfoodnumber) {
+        alert(userfoodnumber);
+        window.location = "../MadeMenu/MadeMenu.html?usernumber="+usernumber+ "&menunumber="+userfoodnumber;
+        
+
+    }
+
+</script>
+</html>

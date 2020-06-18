@@ -1,0 +1,1014 @@
+﻿<!DOCTYPE html>
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+  <!-- =====  BASIC PAGE NEEDS  ===== -->
+  <meta charset="utf-8">
+  <title>Home</title>
+  <!-- =====  SEO MATE  ===== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="distribution" content="global">
+  <meta name="revisit-after" content="2 Days">
+  <meta name="robots" content="ALL">
+  <meta name="rating" content="8 YEARS">
+  <meta name="Language" content="en-us">
+  <meta name="GOOGLEBOT" content="NOARCHIVE">
+  <!-- =====  MOBILE SPECIFICATION  ===== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width">
+  <!-- =====  CSS  ===== -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  
+
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+
+   <style>
+
+      
+      
+    .singlepllist{
+  height:auto;
+  width:200px;
+   overflow:auto;
+   position:relative;
+}
+.e2{
+height:20px;overflow:auto;width:200px; position:relative;
+}
+  .mb_20 {
+	margin-bottom: 20px;
+}
+  main_title {
+	font-size: 20px;
+	float: left;
+	color: #000;
+	font-weight: 700;
+}
+.main_title:after {
+	border-bottom: 3px solid #e74c3c;
+	content: "";
+	display: block;
+	margin-bottom: -3px;
+	padding: 1px;
+}
+.heading-part {
+	border-bottom: 3px solid #e5e5e5;
+	display: inline-block;
+	width: 100%;
+}
+#product-tab {
+	position: relative;
+}
+#product-tab .nav {
+	position: absolute;
+	right: 70px;
+	top: 0;
+}
+  
+  .Specials .product-name a {
+	font-size: 18px;
+	font-weight: 600;
+	color: #000;
+}
+#product-tab .product-thumb {
+	margin: 0px 10px 20px;
+}
+.product-thumb {
+	overflow: hidden;
+}
+.product-thumb a img + img {
+	display: none;
+}
+.product-thumb:hover a img {
+	display: none;
+}
+.product-thumb:hover a img + img {
+	display: block;
+}
+.image.product-imageblock > a {
+	background: #ffffff none repeat scroll 0 0;
+	border: 1px solid #e6e6e6;
+	overflow: hidden;
+}
+.product-thumb .image {
+	text-align: center;
+}
+.product-thumb .image a {
+	display: block;
+    float:left;
+}
+.product-grid .product-thumb .image {
+	float: none;
+}
+.product-thumb .button-group .wishlist, .product-thumb .button-group .quickview, .product-thumb .button-group .compare, .product-thumb .button-group .add-to-cart {
+	background: transparent url("images/sprite.png") no-repeat scroll -150px -469px;
+	overflow: hidden;
+	height: 30px;
+	width: 29px;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	margin: 5px;
+	transition: all 0.5s ease 0s
+}
+.product-thumb .button-group .dislike:hover {
+    background-position: -150px -469px;
+}
+
+.product-thumb .button-group .dislike{
+    background: transparent url(images/sprite.png) no-repeat scroll -150px -421px;
+    overflow: hidden;
+    height: 30px;
+    width: 29px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    margin: 5px;
+    transition: all 0.5s ease 0s;
+}
+
+.product-thumb .button-group .dislike{
+    background: transparent url(images/sprite.png) no-repeat scroll -150px -421px;
+    overflow: hidden;
+    height: 30px;
+    width: 29px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    margin: 5px;
+    transition: all 0.5s ease 0s;
+} 
+ .product-thumb .button-group .like{
+    background: transparent url(images/sprite.png) no-repeat scroll -150px -469px;
+    overflow: hidden;
+    height: 30px;
+    width: 29px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    margin: 5px;
+    transition: all 0.5s ease 0s;
+} 
+ 
+.product-thumb .button-group a {
+	color: #fff;
+}
+.product-thumb .button-group {
+	bottom: 110px;
+	display: none;
+	left: 0;
+	position: absolute;
+	right: 0;
+}
+.Specials .product-name a {
+	font-size: 18px;
+	font-weight: 600;
+	color: #000;
+}
+.prodetail.product-thumb .button-group {
+	bottom: 0;
+	position: relative;
+	display: block;
+}
+.product-thumb:hover .button-group {
+	transition: all 2s ease 0s;
+	display: block;
+}
+.caption.product-detail {
+	position: relative;
+}
+.product-thumb .button-group span {
+	display: none;
+}
+.price {
+    color: #000;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+	font-family:"Open Sans"
+}
+.category-page-wrapper {
+	border: 1px solid #e6e6e6;
+	display: inline-block;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 20px 0;
+	width: 100%;
+}
+.product-grid .product-desc {
+	display: none;
+}
+.btn.btn-default.grid-view {
+	background: rgba(0, 0, 0, 0) url("images/gridlist.png") no-repeat scroll 5px 0;
+}
+.btn.btn-default.grid-view.active {
+	background: rgba(0, 0, 0, 0) url("images/gridlist.png") no-repeat scroll 5px -35px;
+}
+.product-layout-right .product-list .product-thumb .image, .product-layout-left .product-list .product-thumb .image {
+	margin: 0;
+}
+.product-layout-left, .product-layout-right {
+	display: inline-block;
+}
+.product-list .product-thumb .image {
+	background: #f5f5f5 none repeat scroll 0 0;
+	float: left;
+	margin: 0 20px 0 0;
+	width: 32%;
+}
+.product-list .product-thumb .caption {
+	float: left;
+	margin: 0 0 0 15 px;
+	padding: 0;
+	text-align: left;
+	width: 65%;
+}
+.col_3r .product-list .product-thumb .caption, .col_3l .product-list .product-thumb .caption {
+	width: 40%;
+}
+.col_4 .product-list .product-thumb .caption {
+	width: 70%;
+}
+.Specials .product-list .product-thumb .button-group {
+	bottom: 75px;
+}
+.product-list .product-thumb .button-group {
+	display: block;
+	transition: all 2s ease 0s;
+	bottom: 0px;
+	text-align: left;
+}
+.product-list .product-desc {
+	display: block;
+}
+.btn.btn-default.list-view {
+	background: rgba(0, 0, 0, 0) url("images/gridlist.png") no-repeat scroll -28px 0;
+}
+.btn.btn-default.list-view.active {
+	background: rgba(0, 0, 0, 0) url("images/gridlist.png") no-repeat scroll -28px -35px;
+}
+.btn.btn-default.list-view, .btn.btn-default.grid-view {
+	padding: 8px 16px;
+	border: none;
+	box-shadow: none;
+	outline: none;
+	z-index: 0;
+}
+.control-label {
+	float: left;
+}
+.sort-inner, .limit {
+	float: left;
+}
+.sort-inner .form-control, .limit .form-control {
+	background: transparent none repeat scroll 0 0;
+	border: 0;
+	box-shadow: none;
+	padding: 3px;
+	height: auto;
+}
+.pagination-nav ul li a {
+	background-color: #f7f7f7;
+	display: block;
+	font-size: 14px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	width: 36px;
+}
+.pagination-nav ul li.active a {
+	background: #e74c3c none repeat scroll 0 0;
+	color: #fff;
+}
+.pagination-nav ul li {
+	display: inline-block;
+	margin: 0 2px;
+}
+.rating {
+	line-height: 1;
+	margin:8px 0;
+}
+.fa-stack {
+	height: 12px;
+	line-height: 1;
+	width: 10px;
+}
+.fa-stack-1x, .fa-stack-x {
+	font-size: 13px;
+}
+.fa.fa-star-o.fa-stack-1x, .fa.fa-star.fa-stack-x {
+	color: #b2b2b2;
+}
+.fa.fa-star.fa-stack-1x {
+	color: #e74c3c;
+}
+#product-thumbnail .owl-nav {
+	top: 38px;
+}
+#product-tab .owl-nav, .blog .owl-nav {
+	right: 10px;
+}
+#product-thumbnail .owl-nav .owl-prev {
+	left: 0;
+}
+
+
+.owl-nav {
+	position: absolute;
+	top: -62px;
+	width: 100%;
+}
+.offers .owl-nav {
+	position: absolute;
+	right: 0px;
+	top: 11px;
+	width: 100%;
+}
+.related-pro .owl-nav, .team_grid .owl-nav {
+	position: absolute;
+	right: 10px;
+	top: -55px;
+	width: 100%;
+}
+.owl-nav > div {
+	background: url("images/sprite.png") no-repeat scroll -33px -507px;
+	height: 25px;
+	width: 25px;
+	font-size: 0px;
+	position: absolute;
+	border: 1px solid;
+	border-color: #e5e5e5;
+	transition: 0.5s;
+}
+.owl-nav > div:hover {
+	border-color: #e74c3c;
+}
+.owl-item .client-avatar > img {
+	border-radius: 50%;
+	width: auto !important;
+}
+.owl-nav .owl-prev {
+	background-position: 9px -507px;
+	opacity: 1;
+	right: 33px;
+}
+.owl-nav .owl-prev:hover {
+	background-color: #e74c3c;
+	background-position: 9px -537px;
+	transition: 0.5s;
+}
+.owl-nav .owl-next {
+	left: auto;
+	opacity: 1;
+	right: 0;
+}
+.owl-nav .owl-next:hover {
+	background-color: #e74c3c;
+	background-position: -33px -537px;
+	transition: 0.5s;
+}
+
+  </style>  
+ <Style>
+     .wdbb {
+         bottom:260px !important;
+     }
+     .wdcc {
+         margin-top:90px;
+         width:auto;
+         height:auto;
+     }
+ .wdc1{
+ height:250px;
+ width:500px;
+ border:1px solid #eee;
+ margin:0;
+ }
+ .wdc2{
+   width:19%;
+   height:30%;
+   float:left;
+   margin:0;
+   border-bottom:1px solid #eee;
+ }
+  .wdc3{
+   border-left:1px solid #eee;
+   border-bottom:1px solid #eee;
+   width:40%;
+   height:30%;
+   float:left;
+    margin:0;
+ }
+  
+ </style>
+
+    
+      <style type="text/css">
+           
+         
+             .loadwrap{position:absolute; left:0; width:100%; text-align:center;}
+			 
+	.thelist{
+	margin-top:40px;
+	 position:relative;
+		margin-left:12%; 
+	 
+	}		 
+			 
+			 
+	.index-page{
+	width:100%;
+	height:auto;
+
+	  background:#EBEBEB;
+	 overflow:hidden;}
+	
+#page-content .item {background-color: #fff; width:336px; position:absolute; padding:10px; 
+box-shadow: 2px 5px 5px 0 rgba(0, 0, 0, 0.18);}
+#page-content .item span.time{color: #999;font-size: 14px;}
+#page-content .item img {padding: 0px;display: block;max-width: 100%;}
+#page-content .content-item{padding: 10px 20px;}
+#page-content h3.title-item {font-family: 'Ek Mukta', sans-serif;font-size: 28px;margin: 7px 0 5px;}
+#page-content .content-item ul{margin: 0;font-size: 14px;}
+#page-content .content-item ul li a{color: #555;}
+#page-content .bottom-item{border-top: 1px solid #ddd;min-height: 50px;}
+#page-content .share{}
+#page-content .user{color: #777;font-size: 13px;line-height: 2.8;padding: 5px;}
+#page-content .user img{width: 38px; height: 38px;float:right;display: inline-block;margin-left: 7px;}
+.f-right{float: right;}
+/* ---------------------------------------------------------------------------- */
+/* -------------------------------------Btn------------------------------------ */
+/* ---------------------------------------------------------------------------- */
+.btn{color: #fff;padding: 0px 10px;font-weight: bold;}
+.btn-share{font-weight: 500;color: #555;border-right: 1px solid #ddd;margin: 0;border-radius: none;height: 51px; width: 75px;margin-top: -1px;padding: 14px;}
+.btn-search{color: #333333;
+  background-color: #ddd;
+  padding: 6px 12px;}
+.btn-search:hover{color: #333333;
+  background-color: #adadad;
+  }
+.btn-1{background-color: #E52E2E; }
+.btn-1:hover{background-color: transparent; color: #E52E2E;}
+.btn-2{background-color: #76C75D; }
+.btn-2:hover{background-color: transparent; color: #76C75D;}
+.btn-3{background-color: #36A08A; }
+.btn-3:hover{background-color: transparent; color: #36A08A;}
+.btn-4{background-color: #9E76C2; }
+.btn-4:hover{background-color: transparent; color: #9E76C2;}
+.btn-5{background-color: #5DB4C7; }
+.btn-5:hover{background-color: transparent; color: #5DB4C7;}		 
+ .OtherPractices{height:20px;width:40px;text-align:center;border-radius:10px;float:left;}
+ .OtherPractices:hover{background-Color:#d23535;}
+.logopp{
+  margin-left:400px;
+}	
+
+
+  .OtherPracticestit{height:30px;width:20%;float:left;text-align:center;font-size:15px;}
+                    .OtherPractices{height:30px;width:5%;float:left;}
+                .elsezuofa{ height:30px;width:100%;} 
+                 .menuusername{}
+                 .menuuser{height:50px;width:400px;float:left}
+                  .menuusertx{ height:50px;width:50px;border-radius :50%;float:left;margin-right:10px;} 
+                 .menuusertx img{ height:50px;width:50px;border-radius :50%;float:left;}
+                 .menuuser p{float:left;height:15px;width:100px;}
+
+          .menuylzf {
+            width:40%;text-align:center;height:20px;float:left;
+          }	 
+
+
+
+           .login-form-mask {
+z-index: 9998;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: #000;
+opacity: 0.4;
+filter: alpha(opacity=40);
+display: none
+}
+.login-form {
+z-index: 9999;
+position: fixed;
+top: 40%;
+left: 55%;
+width: 400px;
+height: auto;
+margin: -180px 0 0 -330px;
+border-radius: 5px;
+border: solid 2px #666;
+background-color: #fff;
+display: none;
+box-shadow: 0 0 10px #666;
+}
+.login-close {
+margin-right: 15px;
+}
+
+  .alertheader{ width:100%;height:400px}
+    .alertlabel{ width:100%;height:30px;text-align:center}
+    .alertcancle{width:45%;float:left;height:30px;margin-right:2%;    position: absolute;  top: 0;}
+    .alertconfirm{width:45%;float:left;height:30px;margin-left:2%;display:none;    text-align: center;}
+
+
+      .materailbox{height:400px;width:400px;text-align:center}
+                .mainmaterail{height:80px;width:400px;float:left;margin-top:40px}
+                .fumaterial{height:200px;width:400px;float:left;}
+          .mcont {float:left;width:50%;}
+    .StepsListbox{height:400px;width:400px;overflow:hidden;}
+      .StepsList{height:300px;width:400px;overflow:hidden;margin-left:0px;transition: all 0.6s;}
+                .steptitle{ text-align:center;height:30px;width:100%;float:left;}
+                    .stepcont{ text-align:center;height:200px;width:400px;float:left;position:relative;}
+                .stepcont img{ height:300px;width:300px;position:absolute;   top: 20px;  left: 50px;}
+                    .steptit{width:100%;float:left;height:30px;position:absolute;top:0;}
+         </style>
+</head>
+   
+                   
+<body>
+
+        <div class="container">
+          <div id="sale-product">
+            <div class="heading-part mb_20 ">
+              <h2 class="main_title">首页 > 菜谱大全 > 红烧肉</h2>
+            </div>
+            <div class="Specials owl-carousel" id="thelist">
+
+
+            
+            </div>
+
+          </div>
+        
+		  
+		  <script src="js/jquery-2.1.1.min.js"></script>
+         <script> 
+             var step = 1;
+             var bzsl = 0;
+             var StepsListleft=0;
+             var StepsList;
+             var MenuGYListImg;
+             $().ready(function () {
+                 //获取单个菜谱信息 
+                 var MenuNumber = decodeURI(GetQueryString("MenuNumber"));
+                 
+                 GetSingleMenu(MenuNumber);
+             });
+             function GetQueryString(name) {
+                 var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+                 var r = window.location.search.substr(1).match(reg);
+                 if (r != null) return (r[2]); return null;
+             }
+             //根据参数pflag获取菜谱list
+             function GetSingleMenu(MenuNumber) {
+                 $.post('../ashx/Index.ashx?type=GetSingleMenu&&val=' + MenuNumber, function (msg) {
+                     var a = msg.split('$');
+                      
+                     $('#thelist').html(a[0]);
+                     $('#yl').html(a[1]);
+                     $('#steps').html(a[2]);
+                     bzsl = document.getElementById('bzsl').innerText;
+                    
+                    // MenuGYListImg = $("#MenuGYListImg").innerHtml;
+                    
+                     StepsList = document.getElementById('StepsList');
+                 });
+                 //获取用户评论
+                 setTimeout(function () { GetUserComment(MenuNumber); }, 200);
+             }
+             //根据参数pflag获取菜谱评论list
+             function GetUserComment(MenuNumber) {
+                 $.post('../ashx/Index.ashx?type=GetUserComment&&val=' + MenuNumber, function (msg) {
+                     $('#thelist2').html(msg);               
+                 });
+                 setTimeout(function () { flow(10, 10); }, 200);
+             }
+             
+             function GetMenuByIdenticalGY(MenuNumberList, menuname, gy) {
+                
+                 
+                 $.post('../ashx/Index.ashx?type=GetMenuByIdenticalGY&&MenuNumberList=' + MenuNumberList + '&&MenuName=' + menuname + '&&MenuGY=' + gy + '&MenuGYListImg=' + MenuGYListImg, function (msg) {
+                     // $('#thelist').html(msg);
+                     var a = MenuNumberList.Split('/');
+                     for (var i = 0; i < a.length - 1; i++) {
+                         $("'#" + a[i] + "'").css({ 'display': 'none' });
+                     }
+                    
+                     $("#thelist").append(msg);
+
+                 });
+                 //获取用户评论
+                 // setTimeout(function () { GetUserComment(MenuNumber); }, 200);
+             }
+             function GetMenuByOtherPractices(MenuNumber, MenuName, gy) {
+                 //var a = MenuNumberList.Split('/');
+
+                 $.post('../ashx/Index.ashx?type=GetMenuByOtherPractices&&MenuNumber=' + MenuNumber + '&&MenuName=' + MenuName + '&&MenuGY=' + gy, function (msg) {
+                     // $('#thelist').html(msg);
+                     //$("#thelist").html(msg);
+                     $('#thelist').html(a[0]);
+                     $('#yl').html(a[1]);
+                     $('#steps').html(a[2]);
+                     bzsl = document.getElementById('bzsl').innerText;
+
+                     // MenuGYListImg = $("#MenuGYListImg").innerHtml;
+
+                     StepsList = document.getElementById('StepsList');
+
+                 });
+                 //获取用户评论
+                 // setTimeout(function () { GetUserComment(MenuNumber); }, 200);
+             }
+             //判断是否登录
+             function islogin() {
+                 $.post('../../ashx/UserHandler.ashx?type=islogin', function (msg) {
+                     if (msg == "unlogin") {
+                         alert("未登录！");
+                     }
+                 });
+             }
+             function shoucang(ObName,ObMenuNumber,ObCollection) {
+                
+                 //alert("hh");
+                 $.post('../../ashx/UserHandler.ashx?type=islogin', function (msg) {
+                     if (msg == "unlogin") {
+                         alert("未登录！");
+                     } else {
+                         ObCollection++;
+                         $.post('../ashx/UserHandler.ashx?type=LikeMenu&ObName=' + ObName + '&ObMenuNumber=' + ObMenuNumber + '&ObCollection=' + ObCollection, function (msg) {
+                            
+                             $('#sc').html("<div class='dislike'><a href='#' onclick='shoucangdel(" + collection + ")'><span>wishlist</span></a></div> ");
+
+                             if (msg = "ok") {
+                                 $('#scl').html("<span class='amount'><span class='currencySymbol'>已有</span>" + collection + " 收藏</span>");
+
+                             }
+
+                         });
+                     }
+                 });
+                 //islogin();
+                
+             }
+             function shoucangdel(ObName, ObMenuNumber, ObCollection) {
+               
+                 $.post('../../ashx/UserHandler.ashx?type=islogin', function (msg) {
+                     if (msg == "unlogin") {
+                         alert("未登录！");
+                     } else {
+                         ObCollection--;
+                         $.post('../ashx/UserHandler.ashx?type=DisLikeMenu&ObName=' + ObName + '&ObMenuNumber=' + ObMenuNumber + '&ObCollection=' + ObCollection, function (msg) {
+
+                             $('#sc').html("  <div class='like'><a href='#' onclick='shoucang(" + menu.Collection + ")'><span>wishlist</span></a></div>");
+                             $('#scl').html("<span class='amount'><span class='currencySymbol'>已有</span>" + collection + " 收藏</span>");
+
+                         });
+                     }
+                 });
+                
+             }
+
+             function getmenuMaterials () {
+                 $('#steps').css({ 'display': 'none' });
+                 $('#yl').css({ 'display': 'block' });
+                 $('#nextstep').css({ 'display': 'none' });
+                 $('#prestep').css({ 'display': 'none' });
+                     popUserInfoBox();
+
+                
+             }
+             function nextstep() {
+                 $('#nextstep').css({ 'display': 'block' });
+                 StepsListleft = StepsListleft - 400
+                 StepsList.style.marginLeft = StepsListleft + "px";
+                 step++;
+                 if (step >1) {
+                     $('#prestep').css({ 'display': 'block' });
+
+                 }
+                 if (step == bzsl) {
+
+                     $('#nextstep').css({ 'display': 'none' });
+
+                 } else {
+                     $('#nextstep').css({ 'display': 'block' });
+                 }
+             }
+             function prestep() {
+                 StepsListleft = StepsListleft + 400
+                 StepsList.style.marginLeft = StepsListleft + "px";
+                 step--;
+                 if (step<bzsl) {
+                     $('#nextstep').css({ 'display': 'block' });
+
+                 }
+                 if (step == 1) {
+                     $('#prestep').css({ 'display': 'none' });
+
+                 } else {
+                     $('#prestep').css({ 'display': 'block' });
+
+                 }
+             }
+             function getmenuSteps() {
+                 $('#yl').css({ 'display': 'none' });
+                 $('#steps').css({ 'display': 'block' });
+                 $('#searchresult').css({ 'display': 'block' });
+                 $('#nextstep').css({ 'display': 'block' });
+                  
+                 //var h = document.getElementsByClassName('alertconfirm'); 
+                 //for (var i in h) {
+                 //    $(i).css({ 'display': 'block' });
+                 //}
+                // alertconfirm
+                     popUserInfoBox();
+
+                  
+             }
+             /*点击弹出用户界面*/
+             function popUserInfoBox() {
+                 
+                   //  var popBox = document.getElementById("popBox");
+                    // var popLayer = document.getElementById("popLayer");
+                    // popBox.style.display = "block";
+                    // popLayer.style.display = "block";
+                     
+                    
+
+
+                  
+                     $('.login-form-mask').fadeIn(100);
+                     $('.login-form').slideDown(200);
+                 
+             };
+
+             /*点击关闭用户界面*/
+             function closeUserInfoBox() {
+                 //var popBox = document.getElementById("popBox");
+                // var popLayer = document.getElementById("popLayer");
+                // popBox.style.display = "none";
+                // popLayer.style.display = "none";
+             }
+             function alertcancle() {
+                 $('.login-form-mask').fadeOut(100);
+                 $('.login-form').slideUp(200);
+             }
+
+             function alertconfirm() {
+                 alertcancle();
+                // window.location = "../../login-reister/index.html";
+             }
+        </script>
+               
+		  
+          
+        </div>
+
+
+   
+  <div class="login-form" id="searchresult">
+<div class="alertheader" id="yl">
+ 
+</div>
+ <div class="alertheader" id="steps">
+ 
+</div>
+<div class="alertcancle" onclick="alertcancle()"> 取消</div> 
+<!--<div class="alertconfirm" onclick="alertconfirm()"> 确定</div>-->
+      
+      <div class="alertconfirm" id="prestep" onclick="prestep()"> 上一步</div>
+      <div class="alertconfirm" id="nextstep" onclick="nextstep()"> 下一步</div>
+</div>
+<div class="login-form-mask"></div>
+
+
+
+
+
+     <div id="page-content" class="index-page">
+	    
+    <div style="top:0">
+		<div class="logopp">
+			<a href="index.html"><img src="images/logo.png"></a>
+		</div>
+    </div>
+	 
+	   <div id="thelist2" class="thelist">
+      
+	  </div>
+	 </div>
+    
+
+
+  <script>
+      /*点击编辑即可要修改的内容*/
+      function edit(val) {
+          //val.innerHTML="保存";
+          //var prev=val.previousSibling;
+          var msg = "";
+          var ww = "";
+          //var parent = val.parentNode; // 父节点
+          //var oldhtml=prev.innerHTML;
+          //prev.innerHTML="";
+          //οnkeypress="getKey();"
+          var newObj = document.createElement("input");
+          //var newObj="<input οnkeypress='getKey()'/>";
+          val.parentNode.appendChild(newObj);
+
+          //document.createElement("textarea");
+          newObj.id = "pinglun";
+          newObj.type = "text";
+          //newObj.innerHTML=oldhtml;
+          // parent.appendChild(newObj);
+          var m = document.getElementById('pinglun');
+          $('#pinglun').focus();
+          //输入框失去焦点时
+          $('#pinglun').on('blur', function () {
+              msg = $('#pinglun').val();
+              ww = plsubmit(msg);
+              if (ww == 1) {
+                  m.parentNode.removeChild(m);
+              }
+              else {
+                  m.parentNode.removeChild(m);
+                  var hh = document.createElement("span");
+                  hh.innerText = ww;
+                  hh.style = "width:100%;height:20px;float:left";
+                  hh.setAttribute("onclick", "edit(this)");
+
+                  val.parentNode.appendChild(hh);
+              }
+
+          });
+          $("#pinglun").keydown(function (event) {
+              if (event.keyCode == 13) {
+                  msg = $('#pinglun').val();
+                  plsubmit(msg);
+              }
+
+
+          });
+
+      }
+
+
+      function list(val) {
+
+          if (val.parentNode.className == "singlepllist") {
+              val.parentNode.setAttribute("class", "e2");
+
+          }
+          else if (val.parentNode.className == "e2") {
+              val.parentNode.setAttribute("class", "singlepllist");
+
+          }
+          //var li =document.getElementBycalssname("singlepllist");
+          //var liLen = li.length;
+
+          //for (var i = 0; i < liLen; i++) {//遍历每一个数据块将高度记入数组
+          //if(li[i].offsetHeight>20)
+          //alert("高度hh");
+          // li[i].style="height:20px;overflow:hidden";
+
+          // }
+
+
+      }
+      //去左空格;
+      function ltrim(s) {
+          return s.replace(/(^\s*)/g, "");
+      }
+      //去右空格;
+      function rtrim(s) {
+          return s.replace(/(\s*$)/g, "");
+      }
+      //去左右空格;
+      function trim(s) {
+
+          return s.replace(/(^\s*)|(\s*$)/g, "");
+
+      }
+      function plsubmit(msg) {
+          if (msg.match(/^[ ]*$/)) {
+              alert('还没输入内容');
+              return 1;
+          }
+          else {
+              msgnew = trim(msg);
+              alert("1" + msg + "2");
+              return msg;
+          }
+
+      }
+
+
+</script>
+	 <script type="text/javascript">
+	     function flow(mh, mv) {//参数mh和mv是定义数据块之间的间距，mh是水平距离，mv是垂直距离
+	         // var w = document.documentElement.offsetWidth;//计算页面宽度
+	         // var ul = document.getElementById("flow-box");
+
+	         var li = document.getElementsByClassName("item");
+	         //var iw = li[0].offsetWidth + mh;//计算数据块的宽度
+	         var iw = 336 + mh;
+	         //var c = Math.floor(w / iw);//计算列数
+	         var c = 3;
+	         var heightmax = "";
+	         //ul.style.width = "1200px";//设置ul的宽度至适合便可以利用css定义的margin把所有内容居中 
+
+	         //ul.style.width = iw * c - mh + "px";//设置ul的宽度至适合便可以利用css定义的margin把所有内容居中
+
+	         var liLen = li.length;
+	         var lenArr = [];
+	         for (var i = 0; i < liLen; i++) {//遍历每一个数据块将高度记入数组
+	             lenArr.push(li[i].offsetHeight);
+	         }
+
+	         var oArr = [];
+	         for (var i = 0; i < c; i++) {//把第一行排放好，并将每一列的高度记入数据oArr
+	            // alert(li[i]);
+	             li[i].style.top = "0";
+	             li[i].style.left = iw * i + "px";
+	             //alert(iw * i);
+	            // li[i].style.opacity = "1";
+	            // li[i].style["-moz-opacity"] = "1";
+	            // li[i].style["filter"] = "alpha(opacity=100)";
+	             oArr.push(lenArr[i]);
+	         }
+	         //document.getElementById("loadimg").style.top = _getMaxValue(oArr) + 50 + "px";//将loading移到下面
+	         heightmax = _getMaxValue(oArr);
+	         sethh(heightmax);
+	         for (var i = c; i < liLen; i++) {//将其他数据块定位到最短的一列后面，然后再更新该列的高度
+	             var x = _getMinKey(oArr);//获取最短的一列的索引值
+	             li[i].style.top = oArr[x] + mv + "px";
+	             li[i].style.left = iw * x + "px";
+	             li[i].style.opacity = "1";
+	             li[i].style["-moz-opacity"] = "1";
+	             li[i].style["filter"] = "alpha(opacity=100)";
+	             oArr[x] = lenArr[i] + oArr[x] + mv;//更新该列的高度
+	         }
+	         //  document.getElementById("loadimg").style.top = _getMaxValue(oArr) + 50 + "px";//将loading移到下面
+	         heightmax = _getMaxValue(oArr);
+	         sethh(heightmax);
+	     }
+
+	     //图片加载完成后执行
+	     window.onload = function () {};
+	     //改变窗口大小时重新布局
+	     var re;
+	     window.onresize = function () {
+	         //  clearTimeout(re);
+	         //re = setTimeout(function() {flow(10, 10);}, 200);
+	     }
+
+	     //获取数字数组的最大值
+	     function _getMaxValue(arr) {
+	         var a = arr[0];
+	         for (var k in arr) {
+	             if (arr[k] > a) {
+	                 a = arr[k];
+	             }
+	         }
+	         return a;
+	     }
+	     //获取数字数组最小值的索引
+	     function _getMinKey(arr) {
+	         var a = arr[0];
+	         var b = 0;
+	         for (var k in arr) {
+	             if (arr[k] < a) {
+	                 a = arr[k];
+	                 b = k;
+	             }
+	         }
+	         return b;
+	     }
+
+	     //设置外框高度
+	     function sethh(val) {
+
+	         //alert(val);
+	         document.getElementById("page-content").style.height = val + 10 + "px";
+	         document.getElementById("thelist2").style.height = val + 10 + "px";
+	     }
+
+</script>
+   
+ <!-- <script src="js/jQuery_v3.1.1.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>-->
+  <script src="js/bootstrap.min.js"></script>
+ <!-- <script src="js/jquery.magnific-popup.js"></script>
+  <script src="js/jquery.firstVisitPopup.js"></script>
+  <script src="js/custom.js"></script>-->
+</body>
+
+</html>

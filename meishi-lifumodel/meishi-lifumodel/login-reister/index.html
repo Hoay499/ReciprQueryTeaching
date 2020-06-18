@@ -1,0 +1,372 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<title>Home</title>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+ <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<link href="css/style2.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+<div class="login">
+	 
+
+<div class="login-top form">
+		<h1>Register FORM</h1>
+		<form>
+		   <!-- 用户名begin-->
+		   <div style="width:100%;height:auto;">
+            <input id="registerusername" type="text" name="account" value="" placeholder="Account" >	
+			<p id="registerusernameRight" style="float:left;margin-bottom:10px;margin-left:5px;display:none" width="100%" height="35"   class="top_hui_text"  >
+				<font color="green" size="-1">验证通过</font>
+			</p>
+              <!-- <span  id="" style="width:20px;height:30px;float:left;margin-left:10px;margin-bottom: 10px;display: none;"><img   
+			src="images/right.png" width="100" class="isRight" height="30"></img></span>-->
+			<p id="registerusernameError" style="float:left;margin-bottom:10px;margin-left:5px;display:none" width="100%" height="35"   class="top_hui_text"  >
+				<font color="red" size="-1">请输入3-15位只包含汉字和英文字母！</font>
+			</p>
+            <p id="registerusernameexist" style="float:left;margin-bottom:10px;margin-left:5px;display:none" width="100%" height="35"   class="top_hui_text"  >
+				<font color="red" size="-1">用户名已存在</font>
+			</p>	
+		   </div>	
+			 <!-- 用户名end-->
+			  <!-- 密码begin-->
+	      <div style="width:100%;height:auto;">
+            <input id="registerpassword" type="password" name="password" value="" placeholder="Password" >
+			<p id="registerpasswordRight" style="float:left;margin-bottom:10px;margin-left:5px;display:none" width="100%" height="35"   class="top_hui_text"  >
+				<font color="green" size="-1">验证通过</font>
+			</p>
+             <!-- <span id="" style="width:20px;height:30px;float:left;margin-left:10px;margin-bottom: 10px;display: none;"><img   
+			src="images/right.png" width="100" class="isRight" height="30"></img></span>-->
+			<p id="registerpasswordError" style="float:left;margin-bottom:10px;margin-left:5px;display:none" width="100%" height="35"   class="top_hui_text"  >
+				<font color="red" size="-1">密码为6-16位数字英文字母的组合</font>
+			</p>	
+		 </div>
+			 <!--密码end-->
+		 <!-- 密码2begin-->
+		<div style="width:100%;height:auto;">
+          <input id="reregisterpassword" type="password" name="password2" value="" placeholder="Password">
+			<p id="reregisterpasswordRight" style="float:left;margin-bottom:10px;margin-left:5px;display:none" width="100%" height="35"   class="top_hui_text"  >
+				<font color="green" size="-1">验证通过</font>
+			</p>
+            <!--<span id=""  style="width:20px;height:30px;float:left;margin-left:10px;margin-bottom: 10px;display: none; "><img   
+			src="images/right.png" width="100" class="isRight" height="30"></img></span>-->
+			<p id="reregisterpasswordError" style="float:left;margin-bottom:10px;margin-left:5px;display:none" width="100%" height="35"   class="top_hui_text"  >
+				<font color="red" size="-1">两次密码不一致</font>
+			</p>	
+		 </div>
+			<!-- 密码2end-->  
+	    </form>
+	    <div class="forgot">	 
+	    	<input id="registersubmit" type="submit" value="Register"  onclick="check('register')">
+	    </div>
+	</div>
+
+
+		<div class="login-top form">
+		<h1>LOGIN FORM</h1>
+		<form>
+           <div style="width:100%;height:auto;">
+            <input type="text" id="usernamelogin" placeholder="请输入您的用户名！" value="jrx111925"/>
+			<p id="usernamelogintrue" style="float:left;margin-bottom:10px;margin-left:5px;display:none" width="100%" height="35"   class="top_hui_text"  >
+				<font color="green" size="-1">验证通过</font>
+			</p>
+              <!-- <span  id="" style="width:20px;height:30px;float:left;margin-left:10px;margin-bottom: 10px;display: none;"><img   
+			src="images/right.png" width="100" class="isRight" height="30"></img></span>-->
+				<p id="loginusernameError" style="float:left;margin-bottom:10px;margin-left:5px;display:none" width="100%" height="35"   class="top_hui_text"  >
+				<font color="red" size="-1">用户名错误</font>  
+			</p>
+            <!-- <p id="loginusernameError" style="float:left;margin-bottom:10px;margin-left:5px;display:none" width="100%" height="35"   class="top_hui_text"  >
+				<font color="red" size="-1">用户名错误</font>  
+			</p>-->		
+		   </div>
+              <div style="width:100%;height:auto;">
+             <input type="password" id="loginpassword"   placeholder="请输入您的用户密码！" value="wwwwwww"/>
+			<p id="loginpasswordtrue" style="float:left;margin-bottom:10px;margin-left:5px;display:none" width="100%" height="35"   class="top_hui_text"  >
+				<font color="green" size="-1">验证通过</font>
+			</p>
+                  
+                  
+                  <!--<span  id="" style="width:20px;height:30px;float:left;margin-left:10px;margin-bottom: 10px;display: none;"><img   
+			src="images/right.png" width="100" class="isRight" height="30"></img></span>-->
+            <p id="loginpasswordisnottrue" style="float:left;margin-bottom:10px;margin-left:5px;display:none" width="100%" height="35"   class="top_hui_text"  >
+				<font color="red" size="-1">密码错误</font>
+			</p>	
+		   </div>
+			 </form>
+	    <div class="forgot">
+	    	<a href="#">forgot Password</a>
+	    	<input  id="loginsubmit" type="submit" value="Login" onclick="check('login') ">
+	    </div>
+	</div>
+   <div class="login-bottom toggle" >
+		<h3> User &nbsp;<a href="#" id="btn" onclick="switchLR(this)">Register</a>&nbsp Here</h3>
+	</div> 
+</div>	
+
+<script type="text/javascript">
+
+    //登录账号验证
+    function usernamelogincheck() {
+        var re2 = /^[-\s\w\u4e00-\u9fa5]{5,15}$/;//只能输入汉字和英文字母空格3-15位
+        var account = $("#usernamelogin").val();
+         
+        //var uname = str1.replace(/(^\s*)|(\s*$)/g, "");//去除首尾空格
+        if (!re2.test(account)) {
+            $("#usernamelogintrue").hide();
+            $("#loginusernameError").show();
+            //document.getElementById("loginsubmit").disabled = "true";//disabled 
+        }
+        else {
+            $.post('../ashx/UserHandler.ashx?type=checkAccount&account=' + account, function (msg) {
+                if (msg == "success") {
+                    //用户名已存在
+                    $("#usernamelogintrue").show();
+                    $("#loginusernameError").hide();
+                   // document.getElementById("loginsubmit").disabled = "true";//disabled 
+                }
+                else {
+                    $("#usernamelogintrue").hide();
+                    $("#loginusernameError").show();
+                  //  document.getElementById("loginsubmit").disabled = "true";//disabled 
+                }
+            });
+        }
+    }
+    //登录密码验证
+    function loginpassword() {
+        var upassword = $("#loginpassword").val();
+        var re2 = /^[-\s\w\u4e00-\u9fa5]{6,15}$/;//只能输入汉字和英文字母空格6-15位
+        if (!re2.test(upassword)) {
+            $("#loginpasswordtrue").hide();
+            $("#loginpasswordisnottrue").show();
+            document.getElementById("loginsubmit").disabled = "true";//disabled 
+        }
+        else {
+            $("#loginpasswordtrue").show();
+            $("#loginpasswordisnottrue").hide();
+            //document.getElementById("loginsubmit").disabled = "";//去除disabled    
+        }
+    }
+    //注册用户名验证
+    function registerusernamecheck() {
+        var username = $("#registerusername").val();
+        var re2 = /^[-\s\w\u4e00-\u9fa5]{3,15}$/;//只能输入汉字和英文字母空格3-15位
+        //var uname = str1.replace(/(^\s*)|(\s*$)/g, "");//去除首尾空格
+        if (!re2.test(username)) {
+            $("#registerusernameRight").hide();
+            $("#registerusernameError").show();
+           // document.getElementById("registersubmit").disabled = "true";//disabled 
+        }
+        else {
+            $.post('../ashx/UserHandler.ashx?type=checkusername&username=' + username, function (msg) {
+                if (msg == "fail") {
+                    //用户名已存在
+                    $("#registerusernameRight").show();
+                    $("#registerusernameError").hide();
+                    $("#registerusernameexist").hide();
+                  //  document.getElementById("registersubmit").disabled = "true";//去除disabled 
+                }
+                else {
+                    $("#registerusernameRight").hide();
+                    $("#registerusernameError").hide();
+                    $("#registerusernameexist").show();
+
+                   // document.getElementById("registersubmit").disabled = "true";//disabled 
+                }
+            });
+        }
+    }
+    //注册密码验证 
+    function registerpasswordcheck() {
+        var upassword = $("#registerpassword").val();
+        var upassword1 = $("#reregisterpassword").val();
+        var re2 = /^[-\s\w]{6,15}$/;//只能输入数字和英文字母空格3-15位
+        //var uname = str1.replace(/(^\s*)|(\s*$)/g, "");//去除首尾空格
+        if (!re2.test(upassword)) {
+            $("#registerpasswordRight").hide();
+            $("#registerpasswordError").show();
+           // document.getElementById("registersubmit").disabled = "true";//disabled 
+        } else {
+            $("#registerpasswordError").hide();
+            $("#registerpasswordRight").show();
+           // document.getElementById("registersubmit").disabled = "true";//disabled 
+
+            if (upassword1 == upassword) {
+                $("#reregisterpasswordRight").show();
+                $("#reregisterpasswordError").hide();
+              //  document.getElementById("registersubmit").disabled = "";//disabled 
+            }
+        }
+    }
+    //二次注册密码验证
+    function registerrepasswordcheck() {
+        var upassword1 = $("#reregisterpassword").val();
+        var upassword = $("#registerpassword").val();
+        if (upassword1 != upassword) {
+            $("#reregisterpasswordRight").hide();
+            $("#reregisterpasswordError").show();
+           // document.getElementById("registersubmit").disabled = "true";//disabled 
+        } else {
+            $("#reregisterpasswordRight").show();
+            $("#reregisterpasswordError").hide();
+            //document.getElementById("registersubmit").disabled = "";//去除disabled 
+        }
+    }
+
+    //验证所有
+    function check(type) {
+
+        if (type == "register") {
+            registerusernamecheck();
+            registerpasswordcheck();
+            registerrepasswordcheck();
+            if ($("#registerusernameRight,#registerpasswordRight,#reregisterpasswordRight").css("display") != 'none')
+                register();
+        }
+        else {
+            loginpassword();
+            usernamelogincheck();
+
+            if ($("#usernamelogintrue,#loginpasswordtrue").css("display") != 'none')
+                login();
+
+
+        }
+
+
+    }
+         
+
+    $(document).ready(function () {
+        //usernamelogin验证
+        $("#usernamelogin").keydown(function (event) {
+            if(event.keyCode==13){
+                usernamelogincheck();
+            }       
+        });
+        $("#usernamelogin").blur(function () {
+            usernamelogincheck();
+        });
+        $("#usernamelogin").focus(function () {
+            $("#usernamelogintrue").hide();
+            $("#loginusernameError").hide();
+            
+        });
+        //loginpassword验证
+        $("#loginpassword").keydown(function (event) {
+            if (event.keyCode == 13) {
+                loginpassword();
+            }
+        });
+        $("#loginpassword").blur(function () {
+            loginpassword();
+        });
+        $("#loginpassword").focus(function (event) {
+            $("#loginpasswordtrue").hide();
+            $("#loginpasswordisnottrue").hide();
+        });
+        //registerusername验证
+        $("#registerusername").keydown(function (event) {
+            if (event.keyCode == 13) {
+                registerusernamecheck();
+            }
+        });
+        $("#registerusername").blur(function () {
+            registerusernamecheck();
+        });
+        $("#registerusername").focus(function (event) {
+            $("#registerusernameRight").hide();
+            $("#registerusernameError").hide();
+            $("#registerusernameexist").hide();
+        });
+        //registerpassword验证
+        $("#registerpassword").keydown(function (event) {
+            if (event.keyCode == 13) {
+                registerpasswordcheck();
+            }
+        });
+        $("#registerpassword").blur(function () {
+            registerpasswordcheck();
+        });
+        $("#registerpassword").focus(function (event) {
+            $("#registerpasswordError").hide();
+            $("#registerpasswordRight").hide();
+        });
+        //reregisterpassword验证
+        $("#reregisterpassword").keydown(function (event) {
+            if (event.keyCode == 13) {
+                registerrepasswordcheck();
+            }
+        });  
+        $("#reregisterpassword").blur(function () {
+            registerrepasswordcheck();
+        });
+        $("#reregisterpassword").focus(function (event) {
+            $("#reregisterpasswordRight").hide();
+            $("#reregisterpasswordError").hide();
+        });
+        //$('.toggle').click(function () {
+          
+        // });
+    });
+    //注册提交
+    function register() {
+         var username = $('#registerusername').val();
+         var password = $('#registerpassword').val();
+        $.post('../ashx/UserHandler.ashx?type=register&username=' + username + '&password=' + password, function (msg) {
+            if (msg != "fail") {
+                alert("注册成功！点击确定前往登录\n您的账号为:" + msg);
+                document.getElementById("registerusername").value = ""; 
+                $("#registerusernameRight").hide();
+                document.getElementById("registerpassword").value = "";
+                $("#reregisterpasswordRight").hide();
+                document.getElementById("reregisterpassword").value = "";
+                $("#registerpasswordRight").hide();
+                $('.form').animate({ height: "toggle", 'padding-top': 'toggle', 'padding-bottom': 'toggle', opacity: "toggle" }, "slow");
+            } 
+        });
+    }
+    //登录提交
+    function login() {
+         var username = $('#usernamelogin').val();
+         var password = $('#loginpassword').val();  
+        $.post('../ashx/UserHandler.ashx?type=login&username=' + encodeURI(username) + '&password=' + encodeURI(password), function (msg) {
+            if (msg == "fail"){
+                $("#usernamelogintrue").show(); 
+                $("#loginusernameError").hide();
+                $("#loginpasswordisnottrue").show();
+            } else if (msg == "usersuccess") {
+                 window.location = "../Frontdesk/index2/index.html";
+            } else if (msg == "adminsuccess") {
+                window.location = "../Frontdesk/hh/index.html?val=yh";
+               // window.location = " ../hh/index.html?val=yh";
+            }
+        });
+    }
+    //登录注册切换
+    function switchLR(obj) {
+        $('.form').animate({ height: "toggle", 'padding-top': 'toggle', 'padding-bottom': 'toggle', opacity: "toggle" }, "slow");
+        var val = document.getElementById("btn");
+        if (obj.innerHTML == "Register") {
+            val.innerHTML = "Login";
+
+        } else if (obj.innerHTML == "Login") {
+            val.innerHTML = "Register";
+        }
+    }
+
+</script>
+ 
+<div class="copyright">
+	 
+</div>
+
+
+ 
+</body>
+</html>

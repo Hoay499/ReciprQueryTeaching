@@ -1,0 +1,673 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>index</title>
+
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/gbstyle.css" />
+<link rel="stylesheet" href="css/style1.css" />
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+
+    <style>
+
+        .xfjm{
+ height:1000px;
+ width:100%;
+ position:relative;
+ background:#f9e9e4;
+}
+.boxshadowex{
+box-shadow: 0 0 10px #7b5757;
+height:auto;
+  position:absolute;
+width:90%; 
+margin-left:5%; 
+}
+.xfcontent{
+z-index :0;
+ height:auto;
+ width:100%;
+  position:absolute;
+ overflow:auto;
+ background:url(images/xgb34.png) no-repeat;
+ background-size: cover; 
+box-shadow: 0px 0px 20px #bf8585 inset;
+ background-color: #f9f1f1;
+}
+.xftitle{
+color:white;
+  height:65px;
+  margin:0 auto;
+  width:90%;
+position:relative;
+}
+.xftitle .cdc{
+  z-index :1;
+  background: linear-gradient(#fd6819, #f9ecea);
+   
+  border-radius: 5px;
+   height:50px;
+ width:120px;
+ float:left;
+  
+ text-align:center;
+ padding:5px;
+ margin-right:50px;
+ margin-top: 25px;
+ border-bottom:2px solid black; 
+}
+.xftitle .cdc a:hover{
+   color:red;
+  background-color:#f9ece9;
+ 
+}
+.xfitem{
+ height:50px;
+ width:95%;
+ float:left;
+ padding: 30px;
+ margin-bottom:20px;
+}
+.bbb{
+color: white;
+width:90px;
+height:40px;
+padding:5px;
+background-color:#fad4c2;
+margin:5px auto;
+}
+
+
+.cbitem{
+border-bottom:1px solid black;
+margin-bottom:3px;
+ width:100%;
+ height:100px;
+ float:left;
+ border-radius:0px 10px 10px 0px;
+ background-color:red;
+ word-break:break-word;
+ word-wrap: break-word;
+ line-height:70px; 
+   
+}
+.chuizjz{
+  width:20px;
+  //height:101px;
+   margin:0 auto;
+   line-height:24px;
+ 
+   //display:table-cell;
+   //vertical-align:middle;
+}
+
+.zccdcontent{
+height:480px;
+width:260px;
+ background-image:url(xgb6.png);
+ background-size:cover;
+ position:absolute;
+ 
+ transition: all 1s ease-out;
+}
+.cbcd{
+height:480px;
+width:60px;
+
+position:absolute;
+right:0px;
+ 
+ transition: all 1s ease-out;
+}
+.zccdall{
+    z-index:1;
+width:320px;
+height:480px;
+position:relative;
+left:-266px;
+top:10px;
+ transition: all 1s ease-out;
+
+ 
+}
+
+
+
+  .zchead{
+     height:60px;
+	 width:100%;
+	 
+  }
+  .zclbsearch{
+    height:60px;
+	width:80%;
+	float:left;
+  }
+  .acrefresh{
+    height:49px;
+	width:15%;
+	    margin-top: -9px;
+    margin-left: 2px;
+	background-image:url(Refresh.png);
+	background-size: cover; 
+	float:left;
+  }
+  .zcmiddle{
+     height:360px;
+	 width:90%;
+	 margin-left:3%;
+  }
+  .zcbottom{
+     height:60px;
+	 width:60%;
+	 margin-left:20%;
+	  
+  }
+  
+   .zclbsearch form {
+            position: relative;
+            width: 200px;
+             
+        }
+ 
+    .zclbsearch   input, button {
+            border: none;
+            outline: none;
+        }
+ 
+    .zclbsearch    input {
+            width: 100%;
+            height: 23px;
+           // padding-left: 13px;
+        }
+ 
+      
+ 
+        /*搜索框1*/
+        .bar1 { }
+        .bar1 input {
+            border: 2px solid #7BA7AB;
+            border-radius: 5px;
+            
+            color: #9E9C9C;
+        }
+        .bar1 button {
+             top: 2px;
+    right: -3px;
+    background: #7BA7AB;
+    border-radius: 0 5px 5px 0;
+    position: absolute;
+	 cursor: pointer;
+	height:25px;
+	color:white;
+        }
+		.zcbq{
+		height:33px;
+		width:32px;
+		position:absolute;
+		    top: -5px;
+    left: -20px;
+		z-index:1;
+		background-image:url(q.png);
+		
+		}
+		.zcbh{
+		 top: -5px;
+         right: -20px;
+		z-index:1;
+		height:33px;width:32px;position:absolute; background-image:url(h.png);
+		}
+		
+		  .zcmiddletitle{
+   width:100%;
+   height:35px;
+   position:relative;
+   
+  }
+  .zcmiddlet1{
+    position:absolute;
+	width:50px;
+	text-align:center;
+	padding:5px 0px 0px 0px;
+	height:30px;
+	 color: white;
+	 border-radius:5px 5px 0px 0px;
+	 background-color:gray;
+	left:0px;
+  }
+ 
+  .zcmiddlet1:hover {
+    background-color:white;
+	color:black;
+  }
+  .lm2{
+   left:60px;
+  }
+  .lm3{
+   left:120px;
+  }
+  .tp0{
+  margin-top:-15px;
+  }
+ 	.zcmiddlemian{
+	height:310px;
+	width:100%;
+	background-color:white;
+	}
+
+.zmml1{
+	  float:left;left:0;height:40px;width:30px;
+	}
+	.zmml2{
+	float:left;margin-left:10px;height:40px;width:40px;
+	}
+	.zmml3{
+	float:left;left:0;height:40px;width:90px;
+	}
+	.zmml4{
+	float:left;left:0;height:40px;width:30px;
+	}
+	.zmml5{
+	float:left;left:0;height:40px;width:30px;
+	}
+	.zmmrow{
+	width:96%;height:30px;border-bottom:1px gray dashed;margin:0 auto;
+	}
+
+        .zdyleft1 {
+            margin-left:100px;
+        }
+    </style>
+</head>
+
+<body style="background:#f4f4f4;">
+    <script>
+        function hideall() {
+            //$('#zccdcontent').hide();
+        }
+
+        function slideout() {
+            var leftcd = document.getElementById('leftcd');
+            var leftcdct = document.getElementById('zccdcontent');
+            var zccdall = document.getElementById('zccdall');
+            //leftcdct.style.width=260+'px';
+            //leftcd.style.left=260+'px';
+            zccdall.style.left = 0 + 'px';
+        }
+
+        function slidein() {
+            var leftcd = document.getElementById('leftcd');
+            var leftcdct = document.getElementById('zccdcontent');
+            var zccdall = document.getElementById('zccdall');
+            //leftcdct.style.width=0+'px';
+            // leftcd.style.left=0+'px';
+            zccdall.style.left = -266 + 'px';
+        }
+        $(document).ready(function () {
+            var zccdall = document.getElementById('zccdall');
+            var leftcd = document.getElementById('leftcd');
+            var flag = "fail";
+            /**
+             * 放大按钮鼠标移入事件
+            使用mouseenter来代替mouseover；使用mouseleave来代替mouseout。
+             */
+            zccdall.onmouseenter = function () {
+                if ($('#zccdall').css("left") != "-266px") {
+                    event.stopPropagation();
+                } else {
+                    slideout();
+                }
+
+
+                // $('#zccdcontent').show();
+            };
+
+            /**
+             * 放小按钮鼠标移开事件
+             使用mouseenter来代替mouseover；使用mouseleave来代替mouseout。
+             */
+            zccdall.onmouseleave = function () {
+
+                if ($('#zccdall').css("left") != "0px") {
+                    event.stopPropagation();
+                } else {
+                    slidein();
+
+
+                }
+
+            };
+
+        })
+</script>
+    <script>
+
+        $().ready(function () {
+            //var username = decodeURI(GetQueryString("username"));
+           // alert(username);
+            //document.getElementById("username").innerText = decodeURI(GetQueryString("username"));
+          
+            // $.post('../ashx/Index.ashx');
+            
+           
+            islogin(); //判断是否登录;
+            mainclasslist(); //获取主分类列表;
+            getNewNotice();//获取用户未收信息
+            getUserpeopleCollection();//获取用户关注用户列表
+
+        });
+        //判断是否登录
+        function islogin() {
+            $.post('../../ashx/UserHandler.ashx?type=islogin', function (msg) {
+                $('#username').html(msg);
+                if (msg != "未登录") {
+                    var context="<p>会员中心</p><ul>";
+                    context+="<li> <img src='img/huiyuan1.png' alt=''> <a href='../personal_center/index.html'  >个人中心</a> </li> ";
+                    context += "<li> <img src='img/huiyuan1.png' alt=''> <a href='#' onclick='logout()'> 注销</a> </li> </ul>";
+                    $('#themember').html(context);
+                }
+                
+                 
+            });
+        }
+        //退出登录
+        function logout() {
+            $.post('../../ashx/Index.ashx?type=logout', function () {
+
+            });
+        }
+      
+        
+       
+
+        //获取用户关注用户
+        function getUserpeopleCollection() {
+            $.post('../../ashx/UserHandler.ashx?type=getUserpeopleCollection', function (msg) {
+                $('#zcmiddlemainList').html(msg);
+
+            });
+        }
+        //获取用户收藏菜谱
+        function getUsermenuCollection() {
+            $.post('../../ashx/UserHandler.ashx?type=getUsermenuCollection', function (msg) {
+                $('#zcmiddlemainList').html(msg);
+
+            });
+        }
+        //获取用户菜谱作品
+        function getUserProduction() {
+            $.post('../../ashx/UserHandler.ashx?type=getUserProduction', function (msg) {
+                $('#zcmiddlemainList').html(msg);
+
+            });
+        }
+        //获取陌生人列表
+        function getStrangerList() {
+            $.post('../../ashx/UserHandler.ashx?type=getStrangerList', function (msg) {
+                $('#zcmiddlemainList').html(msg);
+
+            });
+        }
+        //获取历史足迹
+        function getHistoricalRecord() {
+            $.post('../../ashx/UserHandler.ashx?type=getHistoricalRecord', function (msg) {
+                $('#xfcontentlist').html(msg);
+            });
+        }
+        //获取未读信息
+        function getNewNotice() {
+            $.post('../../ashx/UserHandler.ashx?type=getNewNotice&', function (msg) {
+                $('#xfcontentlist').html(msg);
+
+            });
+        }
+        //获取主页分类list
+        function mainclasslist() {
+            $.post('../../ashx/Index.ashx?type=classification&val=mainclasslist', function (msg) {
+                $('#mainclasslist').html(msg);
+            });
+        }
+</script>
+<!-- header begin -->
+<div class="gbhead1">
+  <div class="gbhedcontain">
+    <p><img src="picture/xgbicon.png">当日留言 1234678 条</p>
+    <ul class="gbhdconul1">
+      <li class="gbfl gbhdzs"><a href="#" title="" target="_blank">招商网页</a></li>
+      <li class="gbfl">　｜　</li>
+      <li class="gbfl"><a href="#" onClick="AddFavorite('餐饮加盟网','')">收藏网站</a></li>
+      <li class="gbfl">　｜　</li>
+      <li class="gbfl"><a href="#" title="" target="_blank">手机查商网</a></li>
+      <li class="gbfl">　｜　</li>
+      <li class="gbfl wxewmli"><a href="#" title="" target="_blank">微信</a>
+        <div class="wxewm"><img src="picture/xdd.jpg" alt=""></div>
+      </li>
+      <li class="gbfl">　｜　</li>
+      <li class="gbfl lista"><a href="#" title="" target="_self" id="username">未登录</a></li>
+    </ul>
+  </div>
+</div>
+<!-- 会员登录 -->
+		<div class="member" id="themember">
+			<p>会员中心</p>
+			<ul>
+				<li>
+					<img src="img/huiyuan1.png" alt="">
+					<a href="../login-reister/index.html">登录</a>
+				</li>
+				<li>
+					<img src="img/huiyuan1.png" alt="">
+					<a href="../login-reister/index.html">新会员注册</a>
+				</li>
+			</ul>
+		</div>
+<script>
+	$(function(){
+	/*搜索*/
+	$(".search_pic").click(function(){
+		$(".headernav").fadeOut(500);
+		$(".search_main").fadeIn(1000);
+	});
+	$(".search_main .close_btn").click(function(){
+		$(".search_main").fadeOut(500);
+		$(".headernav").fadeIn(1000);
+	});
+	/*登录*/
+	$(".lista a").click(function(){
+		$(".member").slideToggle(500);
+	});
+
+});
+</script>
+<div class="gbhead2">
+  <div class="gbhdcon">
+    <!---<div class="gblogo gbfl"><a href="#" title="K18餐饮加盟网"><img src="i/logo.png" alt=""></a></div>--->
+    <div class="gbsecdivaa">
+      <div class="gbsearch">
+        <form id="form1" name="form1" method="get" action="" target="_blank" onSubmit="addSearchSid(this)">
+          <input type="text" placeholder="搜索什么项目？" class="inp_text" name="keyword" id="input_text">
+          <input type="hidden" name="sid" value="">
+          <input type="submit" value="搜索" class="inp_sub log100_listen" data-log100-event="$searchsubmit" id="sub">
+        </form>
+      </div>
+      <p class="gbssp"> 热门搜索：
+       
+        <a title="菜立方芽苗菜" href="#" data_1="#" target="_blank">芽 苗 菜</a>
+        <a title="五谷联盟煎饼果子" href="#" data_1="#" target="_blank">五谷煎饼</a>
+        <a title="疯迷便当" href="#" data_1="#" target="_blank">精品便当</a>
+        <a title="摊小二煎饼果子" href="#" data_1="#" target="_blank">煎饼煎饼</a>
+        <a title="辛麻到瓦香鸡" href="#" data_1="#" target="_blank">瓦 香 鸡</a>      
+      
+      </p>
+    </div>
+    <div class="gbhykh gbfr">
+      <div class="out outl5">
+        <ul class="img imgl5">
+          <li style="display: list-item;"><a href="#" title="" target="_blank"><img src="picture/201902131628142713058.jpg" alt=""></a></li>
+          <li style="display: none;"><a href="#" title="" target="_blank"><img src="picture/201902131628542718111.jpg" alt=""></a></li>
+          <li style="display: none;"><a href="#" title="" target="_blank"><img src="picture/201902281659422718293.jpg" alt=""></a></li>
+        </ul>
+        <ul class="num numl5">
+        </ul>
+        <div class="left btn"></div>
+        <div class="right btn"></div>
+      </div>
+    </div>
+  </div>
+ 
+
+   <ul class="nav_ul  zdyleft1" id="mainclasslist">
+      <!-- 选中给li添加check类名-->
+     <!-- <li><a href="#" title="中西美食" target="_blank">中西美食</a></li>
+      -->
+    </ul>   
+
+
+
+    </div>
+<!-- header end -->
+<div class="zccdall" id="zccdall">
+<div class="cbcd" id="leftcd">
+<div class="cbitem">
+<div class="chuizjz ">
+
+ <p style="text-align:center;">关注</p>
+</div>
+</div>
+<div class="cbitem">
+<div class="chuizjz">
+<p style="text-align:center;">陌生人</p>
+</div>
+</div>
+<div class="cbitem">
+<div class="chuizjz">
+<p style="text-align:center;">还有啥</p>
+</div>
+</div>
+<div class="cbitem">
+<div class="chuizjz  tp0">
+<p style="text-align:center;">好友申请</p>
+</div>
+</div>
+</div>
+ <div class="zccdcontent" id="zccdcontent">
+<div class="zchead">
+  <div class="zclbsearch">
+  <div class="search bar1">
+        <form>
+            <input type="text" placeholder="请输入您要搜索的内容...">
+            <button type="submit">搜索</button>
+        </form>
+    </div>
+  </div>
+  <div class="acrefresh"></div>
+</div>
+<div class="zcmiddle">
+  <div class="zcmiddletitle">
+
+  
+	    <div class="zcmiddlet1"> <a onclick="#"> 等级</a>   </div> 
+		<div class="zcmiddlet1 lm2"> <a onclick="#">关注度</a>  </div>
+	 <div class="zcmiddlet1 lm3">  <a onclick="#">认证</a>  </div>
+	  </div> 
+    <div class="zcmiddlemian" id="zcmiddlemainList">
+    
+<!--	   <div class="zmmrow">
+	 <div class="zmml1">号</div>
+	 <div class="zmml2">像</div>
+	 <div class="zmml3">用户名</div>
+	 <div class="zmml4">级</div>
+	 <div class="zmml5">注</div>
+	 </div>-->
+	 
+	 
+	 
+	 
+	 
+	</div>
+</div>
+<div class="zcbottom">
+   <div style="background-color:white;width:150px;height:30px;position:relative">
+      <div style="width:130px;height:20px;margin-left:10px;margin-top:3px;text-align:center;padding:2px;background-color:gray;position:absolute">1/5</div>
+	  <div class="zcbq"></div>
+	   <div class="zcbh"></div>
+   </div>
+   
+</div>
+</div>
+    </div>
+<div class="gbcont1">
+  <ul class="gbco11"  >
+    <li> <a href="#"  title="８元汉堡 全天爆单" target="_blank" class="gbco1ig"><img src="picture/201901281531223754335.jpg" alt=""></a>
+      <div class="gbco1dv gbco1dv1">
+        <label class="gbco1lb">早餐</label>
+        <a href="#"  title="" target="_blank">麦塔基汉堡</a>
+        <p>额度：3-5万</p>
+        <p>８元汉堡 全天爆单</p>
+        <a href="#"  title="８元汉堡 全天爆单" target="_blank" class="gbco1ck">立即查看</a> </div>
+    </li>
+    <li> <a href="#"  title="海鲜零食 万元开店" target="_blank" class="gbco1ig"><img src="picture/201901311435002714771.jpg" alt=""></a>
+      <div class="gbco1dv gbco1dv2">
+        <label class="gbco1lb">中餐</label>
+        <a href="#"  title="" target="_blank">漫鲸捞汁小海鲜</a>
+        <p>额度：3-5万</p>
+        <p>海鲜零食 万元开店</p>
+        <a href="#"  title="海鲜零食 万元开店" target="_blank" class="gbco1ck">立即查看</a> </div>
+    </li>
+    <li> <a href="#"  title="粗粮煎饼 酥脆好吃" target="_blank" class="gbco1ig"><img src="picture/201901111451162717397.png" alt=""></a>
+      <div class="gbco1dv gbco1dv3">
+        <label class="gbco1lb">晚餐</label>
+        <a href="#"  title="" target="_blank">石小沫煎饼果儿</a>
+        <p>额度：5-10万</p>
+        <p>粗粮煎饼 酥脆好吃</p>
+        <a href="#"  title="粗粮煎饼 酥脆好吃" target="_blank" class="gbco1ck">立即查看</a> </div>
+    </li>
+    <li> <a href="#"  title="麻辣海鲜 人手一杯" target="_blank" class="gbco1ig"><img src="picture/201902101827112717806.jpg" alt=""></a>
+      <div class="gbco1dv gbco1dv4">
+        <label class="gbco1lb">夜宵</label>
+        <a href="#"  title="" target="_blank">赶海鲜生即食小海鲜</a>
+        <p>额度：3-5万</p>
+        <p>麻辣海鲜 人手一杯</p>
+        <a href="#"  title="麻辣海鲜 人手一杯" target="_blank" class="gbco1ck">立即查看</a> </div>
+    </li>
+        <li> <a href="#"  title="麻辣海鲜 人手一杯" target="_blank" class="gbco1ig"><img src="picture/201902101827112717806.jpg" alt=""></a>
+      <div class="gbco1dv gbco1dv4">
+        <label class="gbco1lb">夜宵</label>
+        <a href="#"  title="" target="_blank">赶海鲜生即食小海鲜</a>
+        <p>额度：3-5万</p>
+        <p>麻辣海鲜 人手一杯</p>
+        <a href="#"  title="麻辣海鲜 人手一杯" target="_blank" class="gbco1ck">立即查看</a> </div>
+    </li>
+  </ul>
+ 
+</div>
+
+
+    <div  class="xfjm">
+	  <div class="xftitle">
+	    <div class="cdc"> 
+		<div class="bbb" onclick="getNewNotice()"><a >未读信息</a></div>
+		</div>
+		<div class="cdc"><div class="bbb" onclick="getHistoricalRecord()"><a>浏览记录</a></div>
+		</div>
+		
+	  </div>
+	 
+	   <div class="boxshadowex"  >
+	  <div class="xfcontent" id="xfcontentlist">
+	  <!-- <div class="xfitem">未读信息</div>
+	   <div class="xfitem">未读信息</div>
+	   <div class="xfitem">未读信息</div>
+	   <div class="xfitem">未读信息</div>
+	   <div class="xfitem">未读信息</div>
+	   <div class="xfitem">未读信息</div>-->
+	     
+	  </div>
+	  </div>
+	  <div style="height:50px;width:100%"></div>
+	</div>
+
+ 
+</body>
+</html>

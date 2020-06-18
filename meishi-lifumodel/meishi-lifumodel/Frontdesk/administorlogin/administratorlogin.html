@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Login</title>
+    <link href="css/style.css" rel='stylesheet' type='text/css' />
+
+</head>
+
+<body>
+<script>$(document).ready(function (c) {
+    $('.close').on('click', function (c) {
+        $('.login-form').fadeOut('slow', function (c) {
+            $('.login-form').remove();
+        });
+    });
+});
+    function login() {
+        //var username = $('#username').val();
+        //var password = $('#password').val();
+
+        //$.post('login.ashx?type=login&username=' + encodeURI(username) + '&password=' + encodeURI(password));
+        window.location = "../../backstage/html/back_index.html?username=" + username;
+    }
+</script>
+ <!--SIGN UP-->
+ <h1>管理员登录界面</h1>
+<div class="login-form">
+	<div class="close"> </div>
+		<div class="head-info">
+			<label class="lbl-1"> </label>
+			<label class="lbl-2"> </label>
+			<label class="lbl-3"> </label>
+		</div>
+			<div class="clear"> </div>
+	<div class="avtar">
+		<img src="images/avtar.png" />
+	</div>
+			<form>
+					<input type="text" class="text" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Username';}" />
+						<div class="key">
+					<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}"/>
+						</div>
+			</form>
+	<div class="signin">
+		<button type="submit" value="Login"  onclick="login()"></button>
+	</div>
+</div>
+ 
+
+</body>
+</html>

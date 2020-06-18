@@ -1,0 +1,614 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="LeagueGothic/fontface.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title></title>
+    <style>
+        .cpxx {
+                width: 190px;
+    min-height: 40px;
+    height:auto;
+    margin-top: 3%;
+    /* margin: 0 auto; */
+    float: left;
+   margin-left:192px;
+           
+        }
+        .w2 {
+               height: 93px;
+    padding-top: 32px;
+    width: 524px;
+    margin-left: 198px;
+        }
+        h2 {
+          margin-top:10px;
+        }
+         .cpxxjs {
+            width:100%;
+           
+            
+            float:left;
+            
+        }
+           .cpxxjs span {
+            width:auto;
+            margin:5px;
+            
+           text-align:center;
+         
+            float:left;
+             
+        }
+             .cpxxjs span:hover {
+           color:red;
+             
+        }
+        .cpxxtp {
+            width:100%;
+           
+            
+            float:left;
+        }
+             .cpxxjs textarea {
+                    width: 457px;
+    height: auto;
+    min-height: 100px;
+}
+               
+            
+            .cpxx label {
+                float:left;
+                width:30%;
+
+            }
+              .cpxx input {
+                float:left;
+                min-width:50px;
+                   
+                width:auto;
+                height: 37px;
+               
+
+            }
+        #img1 {
+            width:60%;
+            margin-left:20%;
+            margin-top:20px;
+            height:auto;
+        }
+          .claitem{ height:auto;width:94%;float:left;margin:20px} 
+                .clatitle{height: 30px;margin-bottom:5px;
+    font-size: 24px;
+    width: 100%;
+    float: left;
+    color: #ea9595;
+    font-weight: 900;
+    text-align: center;}
+                .cla{height:auto;width:auto;float:left;color:black;    padding: 4px;font-size:18px}
+                    .cla:hover { color:white;background-color:red;border-radius:5px}
+textarea::-webkit-input-placeholder {
+       color: #ddd;
+       text-align: center;
+       font-size:40px;
+   }
+textarea {
+    font-size:30px;
+       vertical-align: baseline;
+       caret-color:#EB3142;
+   }
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+::-webkit-scrollbar  
+{  
+    width: 4px;  
+    height: 4px;  
+    background-color: #F5F5F5;  
+}  
+ /*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track  
+{  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
+    border-radius: 10px;  
+    background-color: #FFF;  
+}
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb  
+{  
+    border-radius: 10px;  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+    background-color: #5eeaee;  
+}
+                      .login-form-mask {
+z-index: 9998;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: #000;
+opacity: 0.4;
+filter: alpha(opacity=40);
+display: none
+}
+.login-form {
+    overflow:scroll;
+    
+z-index: 9999;
+position: fixed;
+top: 40%;
+left: 45%;
+    min-width: 400px;
+    max-width:800px;
+    width: auto;
+height: auto;
+    max-height: 400px;
+margin: -180px 0 0 -330px;
+border-radius: 5px;
+border: solid 2px #666;
+background-color: #fff;
+display: none;
+box-shadow: 0 0 10px #666;
+}
+.login-close {
+margin-right: 15px;
+}
+ .alertheader{ width:100%;height:400px;position:relative}
+    .alertlabel{ width:100%;height:30px;text-align:center}
+    .alertcancle{width:45%;float:left;height:30px;margin-right:2%;    position: absolute;  top: 0;color:black;}
+    .alertconfirm{width:45%;float:left;height:30px;margin-left:2%;display:none;    text-align: center;}
+        .allselect {
+        background:url(xgb17-h.png);
+        background-size:cover;
+            height: 39px;
+    width: 17px;
+        float:left;
+
+        }
+
+
+
+          .basicval{
+            height:390px;
+            width:100%;
+            position:relative;
+            background-color:white;
+            float:left;
+            }
+        .basicvaltit {
+            position:relative;
+            height:30px;
+            width:100%;
+            background-color:white;
+            float:left;
+            font-size:30px;
+            color:black;
+        }
+        .basicvaltit input {
+            margin-left: 137px;
+    border: 0px;
+    height: 30px;
+    top:0;
+      position:absolute;
+        }
+
+        .imgupload {
+           height: 145px;
+    width: 133px;position:absolute;left:15px;top:10px;
+       /*background-image:url(tp.jpg);*/
+       /*background-size:cover;*/
+             }
+            .imgupload img {
+               height: 145px;
+    width: 133px;
+            }
+        .imgupload input{
+   width: 138px;
+    height: 136px;
+    opacity:0;
+    filter:alpha(opacity=0);
+    position:absolute;
+    left:0;
+    top:0;
+     
+        }
+        #mainsc, #fl {
+      
+            width: 100%;
+    height: 93px;
+    
+        }
+        .addin {
+            height: 263px;
+    width: 200px;
+    /* margin-left: 15%; */
+    margin-left: -196px;
+    float: left;
+    margin-top: 205px;
+        }
+
+        .maincontent {
+               margin: 0 auto;
+    width: 923px;
+    height: 590px;
+}
+        .bleft {
+            left:0px;
+        } .bright {
+              left:90%;
+        }
+
+        .intitle {
+       width:100%;height:22px;font-size:20px;background-color:#f7750f;float:left;text-align:center;
+        }
+    </style>
+</head>
+<body>
+
+      <div class="login-form" id="searchresult">
+ 
+ <div class="alertheader" id="basic">
+ 
+</div>
+<div class="alertcancle" onclick="alertcancle()"> 取消</div> 
+<!--<div class="alertconfirm" onclick="alertconfirm()"> 确定</div>-->
+      
+      <div class="alertconfirm" id="prestep" onclick="prestep()"> 上一步</div>
+      <div class="alertconfirm" id="nextstep" onclick="nextstep()"> 下一步</div>
+</div>
+<div class="login-form-mask"></div>
+
+<div class="step" id="step1">
+    <div class="section">
+        <h1 >Step 1  <p id="subtitle">输入菜谱信息</p></h1>
+       
+        <div class="maincontent">
+        <div style="min-height:500px;height:auto;width:365px;margin-left:5%;float:left;    margin-top: 10px;">
+          
+         <p class="basicvaltit"><input  id="menuname" placeholder="菜品名称"/> </p>
+        <div id="basicval"  class="basicval"> 
+            <div class="imgupload" >  <img src="tp.jpg" id="menuimg" /> <input type="file" id="file1" accept="image/*" /></div>
+             <div class="cpxx">   <input id="kw" placeholder="口味" /><span class="allselect" onclick="getaa(0)"></span> </div>
+             <div class="cpxx">    <input id="gy" placeholder="工艺" /><span class="allselect" onclick="getaa(1)"></span></div> 
+             <div class="cpxx">  <input id="menutype" placeholder="菜品类型" /><span class="allselect" onclick="getaa(3)"></span></div>
+           <div class=""><p class="intitle">主食材</p>  <textarea id="mainsc" placeholder=""  disabled="disabled"></textarea></div>
+           <div class=""> <p class="intitle">辅料</p> <textarea id="fl" placeholder=" " disabled="disabled"></textarea></div>
+         </div>
+       
+         
+       </div>
+        <div class="addin"> 
+             <div class="cpxx w2">  <input id="addmainsc" placeholder="主食材" /><span class="allselect" onclick="getaa(2)"></span>
+                   <input id="mainscingredientval" placeholder="0" /> <select id='mainscunit' style="width:120px;height:28px;" >
+         <option value="适量">适量</option>
+　　　　<option value="克">克</option> 
+　　　　<option value="勺">勺</option>
+　　　　<option value="汤匙">汤匙</option>
+　　　　<option value="茶匙">茶匙</option>
+　　　　<option value="个">个</option>
+　　　　<option value="只">只</option>                                                                                                                                                           
+　　</select>   
+                 <span onclick="addingredient('main')">添加</span>
+             </div>
+             <div class="cpxx w2">  <input id="addfl" placeholder="辅料" /><span class="allselect" onclick="getaa(4)"></span>
+                   <input id="flingredientval" placeholder="0" /> <select id='flunit' style="width:120px;height:28px;" >
+         <option value="适量">适量</option>
+　　　　<option value="克">克</option> 
+　　　　<option value="勺">勺</option>
+　　　　<option value="汤匙">汤匙</option>
+　　　　<option value="茶匙">茶匙</option>
+　　　　<option value="个">个</option>
+　　　　<option value="只">只</option>                                                                                                                                                           
+　　</select>   
+                 <span onclick="addingredient('fl')">添加</span>
+             </div>
+            
+           
+        <!--  <div class="cpxx">  <input id="cptp" placeholder="成品图片"  /></div>-->
+         </div>
+        <div style="height:200px;width:40%;margin-left:5%;float:left;    margin-top: 10px;">
+          <div class="cpxxjs">
+         <span onclick="changgeIT('I')">菜品基本介绍</span><span onclick="changgeIT('T')">烹饪小技巧</span>
+        <textarea id="introduce" placeholder="菜品基本介绍"></textarea>
+         <textarea id="Tips" placeholder="烹饪小技巧" style="display:none"></textarea>
+          </div>
+       </div>
+
+            </div>
+      <a class="button back bleft" onclick="back()">Back</a>
+		<a href="#" class="button bright">Next</a>
+    </div>
+</div>
+
+<div class="step" id="step2">
+    <div class="section">
+        <h1>Step 2</h1>
+        <h2>上传菜品图片</h2>
+         <div class="cpxxtp">
+    <!--图片类型验证方法1-->
+    <input type="file" id="file" accept="image/*" />
+    <input type="button" id="btn1" value="点击上传" onclick="uploadClick();" />
+    <h4>选择文件如下:</h4>
+    <img src="#" id="img1" />
+       </div>
+        <textarea>Prize Name, 2
+Another Prize, 1</textarea>
+		<a href="#" class="button back">Back</a>
+		<a href="#" class="button finish">Next!</a>
+    </div>
+</div>
+
+<div class="step" id="step3">
+    <div class="section">
+        <h1>Step 3</h1>
+        <h2>welcome to 16sucai.com</h2>
+        <div class="results"></div>
+        <a href="#" class="button again">Again</a>
+        <a href="#" class="button finish" onclick="upload()">Finish!</a>
+    </div>
+</div>  
+    <div id="js">
+       <!-- <script>
+
+            var foodname = document.getElementById("name");
+            var foodmaterials = document.getElementById("sc");
+            var foodtype = document.getElementById("type");
+            var foodintroduce = document.getElementById("introduce");
+            //  var foodpicture = result;
+
+            foodname.value = "红烧肉";
+            foodmaterials.value = "肉";
+            foodtype.value = "菜";
+            foodintroduce.value = "好吃";
+        </script>-->
+
+    </div>  
+<script src="jquery1_4_2.min.js"></script>
+<script src="md5.js"></script>
+<script src="script.js"></script>
+    <script>
+        var menunumber = "";
+        var usernumber = "";
+        var basic = new Array();
+        var title = document.getElementById('subtitle');
+        $().ready(function () {
+
+            
+            title.innerText = "输 入 基 本 菜 品 信 息";
+           
+            menunumber = decodeURI(GetQueryString("menunumber"));
+            usernumber = decodeURI(GetQueryString("usernumber"));
+            //usernumber = decodeURI(GetQueryString("usernumber"));
+            
+            // sessionStorage.setItem('usernumber','001');
+
+            //document.getElementById("username").innerText = decodeURI(GetQueryString("username"));
+            //getlist(1, "001");
+            getbasic();
+           
+            if (menunumber != "" && menunumber != null) {
+              //  alert("menunumber:" + menunumber);
+               // pageload(menunumber);
+            }
+               
+            // $.post('../ashx/Index.ashx');
+        });
+        function addingredient(sctype) {
+            if (sctype == "main") {
+                var h= $('#mainsc').val();
+                h=h+$('#addmainsc').val()+$('#mainscingredientval').val()+$('#mainscunit').val()+",";
+                $('#mainsc').val(h);
+               
+            } else if (sctype == "fl") {
+                var h= $('#fl').val();
+                h = h + $('#addfl').val() + $('#flingredientval').val() + $('#flunit').val() + ",";
+                $('#fl').val(h);
+                      
+            }
+
+        }
+        function setval(type, val) {
+             
+            if (type == "kw") {
+                $('#kw').val(val);
+            } else if (type == "gy") {
+                $('#gy').val(val);
+            } else if (type == "type") {
+                $('#menutype').val(val);
+            } else if (type == "mainsc") {
+                $('#addmainsc').val(val);
+                
+            } else if (type == "fl") {
+                $('#addfl').val(val);
+                
+            }
+
+            alertcancle();
+        }
+        function changgeIT(val) {
+            if (val == "I") {
+                $('#introduce').css({ "display": "block" });
+                $('#Tips').css({ "display": "none" });
+            } else {
+                $('#introduce').css({ "display": "none" });
+                $('#Tips').css({ "display": "block" });
+            }
+        }
+        function getaa(val) {
+            //alert(val);
+            //alert(basic);
+            $('#basic').html(basic[val]);
+            popUserInfoBox();
+        }
+       // onclick = "getaa('kw')"
+        function getbasic() {
+           
+            $.post('../ashx/UserHandler.ashx?type=getbasic', function (msg) {
+                
+                basic = msg.split('$');//  0 口味 1 工艺 2食材 3 类型 4 辅料  
+
+            })
+           
+
+        }
+        function GetQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return (r[2]); return null;
+        }
+        /*点击弹出用户界面*/
+        function popUserInfoBox() {
+
+            //  var popBox = document.getElementById("popBox");
+            // var popLayer = document.getElementById("popLayer");
+            // popBox.style.display = "block";
+            // popLayer.style.display = "block";
+
+
+
+
+
+            $('.login-form-mask').fadeIn(100);
+            $('.login-form').slideDown(200);
+
+        };
+
+        /*点击关闭用户界面*/
+        function closeUserInfoBox() {
+            //var popBox = document.getElementById("popBox");
+            // var popLayer = document.getElementById("popLayer");
+            // popBox.style.display = "none";
+            // popLayer.style.display = "none";
+        }
+        function alertcancle() {
+            $('.login-form-mask').fadeOut(100);
+            $('.login-form').slideUp(200);
+        }
+
+        function alertconfirm() {
+            alertcancle();
+            // window.location = "../../login-reister/index.html";
+        }
+        function pageload(menunumber) {
+           
+            $.post('../ashx/UserHandler.ashx?type=getUserMenu&UserNumber='+usernumber+'&MenuNumber='+menunumber+'&Size=0', function (msg) {
+               // alert(msg);
+                title.innerText = "菜 品 信 息 编 辑";
+                $('#js').html(msg);
+                //$.post('../ashx/UserHandler.ashx?type=getUserMenu&UserNumber='+usernumber+'&Size='+size+'&MenuNumber='+menunumber, function (msg) {
+          
+
+            })
+            //$.post('../ashx/UserHandler.ashx?type=UserProductionedit&userfoodnumber=' + userfoodnumber, function () {
+
+
+
+            //})
+
+        }
+
+        //读取图片实例,并上传到服务器
+        var result = "";//图片
+        var fileBox = document.getElementById('file');
+        
+        fileBox.onchange = function () {
+            //获取选择文件的数组
+            var fileList = fileBox.files;
+            for (var i = 0; i < fileList.length; i++) {
+                var file = fileList[i];
+                //图片类型验证第二种方式
+                if (/image\/\w+/.test(file.type))
+                    readFile(file);
+                else
+                    console.log(file.name + ':不是图片');
+            }
+        }
+        //读取二进制图片文件，并上传到服务器
+        function uploadClick() {
+            var fileList = fileBox.files;
+            for (var i = 0; i < fileList.length; i++) {
+                var file = fileList[i];
+                //图片类型验证第二种方式
+                if (/image\/\w+/.test(file.type))
+                    uploadFile(file);
+                else
+                    console.log(file.name + ':不是图片');
+            }
+        }
+        var menuimg = document.getElementById('file1');
+        fileBox.onchange = function () {
+            //获取选择文件的数组
+            var fileList = fileBox.files;
+            for (var i = 0; i < fileList.length; i++) {
+                var file = fileList[i];
+                //图片类型验证第二种方式
+                if (/image\/\w+/.test(file.type))
+                    readFile(file);
+                else
+                    console.log(file.name + ':不是图片');
+            }
+        }
+        //读取二进制图片文件，并上传到服务器
+        function uploadClick() {
+            var fileList = fileBox.files;
+            for (var i = 0; i < fileList.length; i++) {
+                var file = fileList[i];
+                //图片类型验证第二种方式
+                if (/image\/\w+/.test(file.type))
+                    uploadFile(file);
+                else
+                    console.log(file.name + ':不是图片');
+            }
+        }
+        //关键代码上传到服务器
+
+
+        //读取图片内容 为DataURL
+        function readFile(file) {
+            var reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function (e) {
+                 result = reader.result;
+                alert(result);
+                $('.container blockquote').text(result);
+                $('#menuimg').attr('src', result);
+               // $('#img1').attr('src', result)
+            }
+        }
+
+
+        //提交数据
+        function upload() {
+            var foodname = $('#name').val();
+            var foodmaterials = $('#sc').val();
+            var foodtype = $('#type').val();
+            var foodintroduce = $('#introduce').val();
+            var foodpicture = result;
+            if (menunumber != "") {
+                $.post('../ashx/UserHandler.ashx?type=UserProductionedit&foodname=' + foodname + '&foodmaterials=' + foodmaterials + '&foodtype=' + foodtype + '&foodintroduce=' + foodintroduce + '&foodnumber=' + menunumber + '&usernumber='+usernumber, function () {
+
+                    alert("菜品修改成功，可以在个人作品查看！");
+                    window.location = "../html/index.html";
+
+                });
+
+            } else {
+                $.post('../ashx/UserHandler.ashx?type=FoodProduction&foodname=' + foodname + '&foodmaterials=' + foodmaterials + '&foodtype=' + foodtype + '&foodintroduce=' + foodintroduce, function () {
+
+                    alert("菜品制作成功，可以在个人作品查看！");
+                    window.location = "../html/index.html";
+
+                });
+
+            }
+           
+
+        }
+        function back() {
+            window.location = "../html/HtmlForUser.html";
+        }
+    </script>
+
+</body>
+</html>

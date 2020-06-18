@@ -1,0 +1,397 @@
+﻿<!DOCTYPE html>
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+  <!-- =====  BASIC PAGE NEEDS  ===== -->
+  <meta charset="utf-8">
+  <title>Home</title>
+  <!-- =====  SEO MATE  ===== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="distribution" content="global">
+  <meta name="revisit-after" content="2 Days">
+  <meta name="robots" content="ALL">
+  <meta name="rating" content="8 YEARS">
+  <meta name="Language" content="en-us">
+  <meta name="GOOGLEBOT" content="NOARCHIVE">
+  <!-- =====  MOBILE SPECIFICATION  ===== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="viewport" content="width=device-width">
+  <!-- =====  CSS  ===== -->
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  
+<style>
+.item{
+width:200px;
+height:auto;
+float:left
+}
+li{
+float:left;
+}
+h2{
+margin-bottom:0px;
+}
+#product-tab {
+	position: relative;
+}
+#product-tab .nav {
+	position: absolute;
+	right: 70px;
+	top: 0;
+}
+#product-tab .owl-nav {
+	top: -79px;
+}
+#product-tab .nav {
+	 
+}
+#product-tab .heading-part {
+	margin-bottom: 40px;
+}
+ 
+ .mt_40 {
+width:700px;
+margin-left:100px;
+	margin-top: 40px;
+}
+.mb_20 {
+	margin-bottom: 20px;
+}
+.heading-part {
+	border-bottom: 3px solid #e5e5e5;
+	display: inline-block;
+	width: 100%;
+}
+.main_title {
+	font-size: 20px;
+	float: left;
+	color: #000;
+	font-weight: 700;
+}
+.main_title:after {
+	border-bottom: 3px solid #e74c3c;
+	content: "";
+	display: block;
+	margin-bottom: -3px;
+	padding: 1px;
+}
+.text-right{
+position:relative;
+
+float:left;
+ right:0;
+}
+
+.product-grid .product-thumb .image {
+	float: left;
+}
+ 
+ 
+ 
+ 
+ #product-tab .product-thumb {
+	margin: 0px 10px 20px;
+}
+.product-thumb {
+	overflow: hidden;
+}
+.product-thumb a img + img {
+	display: none;
+}
+.product-thumb:hover a img {
+	display: none;
+}
+.product-thumb:hover a img + img {
+	display: block;
+}
+.image.product-imageblock > a {
+	background: #ffffff none repeat scroll 0 0;
+	border: 1px solid #e6e6e6;
+	overflow: hidden;
+}
+.product-thumb .image {
+	text-align: center;
+}
+.product-thumb .image a {
+	display: block;
+}
+.product-grid .product-thumb .image {
+	float: none;
+}
+.product-thumb .button-group .wishlist, .product-thumb .button-group .quickview, .product-thumb .button-group .compare, .product-thumb .button-group .add-to-cart {
+	background: transparent url("../images/sprite.png") no-repeat scroll -150px -469px;
+	overflow: hidden;
+	height: 30px;
+	width: 29px;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	margin: 5px;
+	transition: all 0.5s ease 0s
+}
+.product-thumb .button-group .quickview {
+	background-position: -50px -469px
+}
+.product-thumb .button-group .compare {
+	background-position: 2px -469px
+}
+.product-thumb .button-group .add-to-cart {
+	background-position: -100px -469px
+}
+.product-thumb .button-group .wishlist:hover {
+	background-position: -150px -421px
+}
+.product-thumb .button-group .quickview:hover {
+	background-position: -50px -421px
+}
+.product-thumb .button-group .compare:hover {
+	background-position: 2px -421px
+}
+.product-thumb .button-group .add-to-cart:hover {
+	background-position: -100px -421px
+}
+.product-thumb .button-group a {
+	color: #fff;
+}
+.product-thumb .button-group {
+	bottom: 110px;
+	display: none;
+	left: 0;
+	position: absolute;
+	right: 0;
+}
+.Specials .product-name a {
+	font-size: 18px;
+	font-weight: 600;
+	color: #000;
+}
+.prodetail.product-thumb .button-group {
+	bottom: 0;
+	position: relative;
+	display: block;
+}
+.product-thumb:hover .button-group {
+	transition: all 2s ease 0s;
+	display: block;
+}
+.caption.product-detail {
+	position: relative;
+}
+.product-thumb .button-group span {
+	display: none;
+}
+.price {
+    color: #000;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 700;
+	font-family:"Open Sans"
+}
+.category-page-wrapper {
+	border: 1px solid #e6e6e6;
+	display: inline-block;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 20px 0;
+	width: 100%;
+}
+.product-grid .product-desc {
+	display: none;
+}
+.btn.btn-default.grid-view {
+	background: rgba(0, 0, 0, 0) url("../images/gridlist.png") no-repeat scroll 5px 0;
+}
+.btn.btn-default.grid-view.active {
+	background: rgba(0, 0, 0, 0) url("../images/gridlist.png") no-repeat scroll 5px -35px;
+}
+.product-layout-right .product-list .product-thumb .image, .product-layout-left .product-list .product-thumb .image {
+	margin: 0;
+}
+.product-layout-left, .product-layout-right {
+	display: inline-block;
+}
+.product-list .product-thumb .image {
+	background: #f5f5f5 none repeat scroll 0 0;
+	float: left;
+	margin: 0 20px 0 0;
+	width: 32%;
+}
+.product-list .product-thumb .caption {
+	float: left;
+	margin: 0 0 0 15 px;
+	padding: 0;
+	text-align: left;
+	width: 65%;
+}
+.col_3r .product-list .product-thumb .caption, .col_3l .product-list .product-thumb .caption {
+	width: 40%;
+}
+.col_4 .product-list .product-thumb .caption {
+	width: 70%;
+}
+.Specials .product-list .product-thumb .button-group {
+	bottom: 75px;
+}
+.product-list .product-thumb .button-group {
+	display: block;
+	transition: all 2s ease 0s;
+	bottom: 0px;
+	text-align: left;
+}
+.product-list .product-desc {
+	display: block;
+}
+.btn.btn-default.list-view {
+	background: rgba(0, 0, 0, 0) url("../images/gridlist.png") no-repeat scroll -28px 0;
+}
+.btn.btn-default.list-view.active {
+	background: rgba(0, 0, 0, 0) url("../images/gridlist.png") no-repeat scroll -28px -35px;
+}
+.btn.btn-default.list-view, .btn.btn-default.grid-view {
+	padding: 8px 16px;
+	border: none;
+	box-shadow: none;
+	outline: none;
+	z-index: 0;
+}
+.control-label {
+	float: left;
+}
+.sort-inner, .limit {
+	float: left;
+}
+.sort-inner .form-control, .limit .form-control {
+	background: transparent none repeat scroll 0 0;
+	border: 0;
+	box-shadow: none;
+	padding: 3px;
+	height: auto;
+}
+.pagination-nav ul li a {
+	background-color: #f7f7f7;
+	display: block;
+	font-size: 14px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	width: 36px;
+}
+.pagination-nav ul li.active a {
+	background: #e74c3c none repeat scroll 0 0;
+	color: #fff;
+}
+.pagination-nav ul li {
+	display: inline-block;
+	margin: 0 2px;
+}
+.rating {
+	line-height: 1;
+	margin:8px 0;
+}
+.fa-stack {
+	height: 12px;
+	line-height: 1;
+	width: 10px;
+}
+.fa-stack-1x, .fa-stack-x {
+	font-size: 13px;
+}
+.fa.fa-star-o.fa-stack-1x, .fa.fa-star.fa-stack-x {
+	color: #b2b2b2;
+}
+.fa.fa-star.fa-stack-1x {
+	color: #e74c3c;
+}
+</style>
+</head>
+
+<body>
+  
+		  
+		  
+		  
+          <div id="product-tab" class="mt_40">
+            <div class="heading-part mb_20 ">
+              <h2 class="main_title">Home Electronics</h2>
+            </div>
+            <ul class="nav text-right">
+              <li class="active"> <a href="" data-toggle="tab">New Arrivals</a> </li>
+              <li><a href="#" data-toggle="tab">Bestsellers</a> </li>
+              <li><a href="#" data-toggle="tab">Featured</a> </li>
+            </ul>
+			
+			
+			
+			
+          
+               
+                <div >
+				
+                  <div >
+                    <div class="item">
+                      <div class="product-thumb">
+                        <div class="image product-imageblock"> <a href="#"> <img data-name="product_image" src="images/product/product1.jpg" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="images/product/product1-1.jpg" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a> </div>
+                        <div class="caption product-detail text-left">
+                          <h6 data-name="product_name" class="product-name mt_20"><a href="#" title="Casual Shirt With Ruffle Hem">Latin literature from 45 BC, making it over old.</a></h6>
+                          <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                          <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
+                          </span>
+                          <div class="button-group text-center">
+                            <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                            <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                            <div class="compare"><a href="#"><span>Compare</span></a></div>
+                            <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="item">
+                      <div class="product-thumb">
+                        <div class="image product-imageblock"> <a href="#"> <img data-name="product_image" src="images/product/product2.jpg" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="images/product/product2-1.jpg" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a> </div>
+                        <div class="caption product-detail text-left">
+                          <h6 data-name="product_name" class="product-name mt_20"><a href="#" title="Casual Shirt With Ruffle Hem">Latin literature from 45 BC, making it over old.</a></h6>
+                          <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                          <span class="price"><span class="amount"><span class="currencySymbol">$</span>70.00</span>
+                          </span>
+                          <div class="button-group text-center">
+                            <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                            <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                            <div class="compare"><a href="#"><span>Compare</span></a></div>
+                            <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+		
+                </div>
+             
+			  
+		
+           
+          </div>
+           
+		   
+		   
+		   
+		   
+	   
+		  
+		  
+		  
+         
+    
+ 
+  <script src="js/jQuery_v3.1.1.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  <script src="js/custom.js"></script>
+</body>
+
+</html>

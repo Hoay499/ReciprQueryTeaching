@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        body {
+            margin:0;
+            height:100%;
+        }
+        img {
+            width:100%;
+            height:100%;
+        }
+        ul {
+            list-style-type:none;
+        }
+        .nav {
+            height:10%;
+            width:100%;
+            background:red;
+            position:absolute;
+            top:0;
+        }
+        .nav h1 {
+            color:white;
+            width:30%;
+        }
+        #contentwrap {
+            height:90%;
+            width:100%;
+            background:yellow;
+            float:left;
+            margin-top:13%;
+        }
+        .menuImg {
+            height:20%;
+            width:100%;
+            /*margin-left:5%;
+            border-radius:5%;*/
+        }
+        .jibenjs {
+            width:100%;
+            
+        }
+            .jibenjs .line1 {
+                width:100%;
+            
+            float:left;
+            }
+        .jibenjs .line1 h3 {
+            width:50%;
+            float:left;
+        }
+          .jibenjs .line1 .scl {
+            width:50%;
+            float:right;
+        }
+            .jibenjs .line2 {
+                width:100%;
+           
+            float:left;
+            }
+            .jibenjs .line2 .zzname {
+               font-size:20px;
+                width:50%;
+                float:left;
+               
+            }
+            .jibenjs .line2 .zzimg {
+                float:right;
+                height:50%;
+                width:50px;
+            }
+    </style>
+</head>
+<body>
+    <header class="nav">
+        <div onclick="back()"><h1>< 返回</h1></div>
+        
+    </header>
+    <div id="contentwrap">
+        
+       <!-- <div class="menuImg">
+            <img src="#" alt="Alternate Text" />
+        </div>
+        <div class="jibenjs">
+
+            <div class="line1"> <h3 >红烧肉</h3><p class="scl"> 收藏量：21321</p></div>
+            <div class="line2"><p class="zzname"> 作者:dssdf</p>
+            <div class="zzimg">
+               
+                <img src="#" alt="Alternate Text" />
+            </div>
+            
+            </div>
+
+            <div class="line3" onclick="shoucang()">点击收藏</div>
+             
+            
+        </div>
+
+        <div class="jieshao">
+            <h1>菜品介绍</h1>
+            <div class="menujieshao">sdfffffffffffffgfdgfd</div>
+            <h1>需要材料</h1>
+            <ul class="shicai">
+                <li>猪肉</li>
+                <li>酱油</li>
+                <li>猪肉</li>
+                <li>味精</li>
+                <li>猪肉</li>
+                <li>盐</li>
+                <li>糖</li>
+            </ul>
+
+        </div>-->
+
+    </div>
+</body>
+    <script src="js/jquery-1.8.3.min.js"></script>
+   <script>
+       var usernumber = "";
+       var menunumber = "";
+       var userfoodnumber = "";
+       $().ready(function () {
+           menunumber = decodeURI(GetQueryString("MenuNumber"));
+           usernumber = decodeURI(GetQueryString("UserNumber"));
+           userfoodnumber = decodeURI(GetQueryString("userfoodnumber"));
+           //alert("menunumber:" + menunumber);
+          // alert("usernumber:"+usernumber);
+           //document.getElementById("username").innerText = decodeURI(GetQueryString("username"));
+         
+               pageload();
+           
+           // $.post('../ashx/Index.ashx');
+       });
+
+     
+       /* PRELOADER */
+       function GetQueryString(name) {
+           var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+           var r = window.location.search.substr(1).match(reg);
+           if (r != null) return (r[2]); return null;
+       }
+
+       function addLoadEvent(func) {
+           var oldonload = window.onload;
+           if (typeof window.onload != 'function') {
+               window.onload = func;
+           } else {
+               window.onload = function () {
+                   if (oldonload) {
+                       oldonload();
+                   }
+                   func();
+               }
+           }
+       }
+
+       function pageload() {
+
+           // $.post('login.ashx?type=login&username=' + encodeURI(username) + '&password=' + encodeURI(password));
+           // alert(pflag);
+           alert(menunumber);
+           if (userfoodnumber == "") {
+               //pageload(menunumber);
+               $.post('../ashx/readmenu.ashx?type=GetSingleMainMenu&menunumber=' + encodeURI(menunumber) + '&usernumber=' + encodeURI(usernumber), function (msg) {
+                   $('#contentwrap').html(msg);
+
+                   //alert(msg);
+               });
+           }
+           else {
+              // pageload(userfoodnumber);
+               $.post('../ashx/readmenu.ashx?type=GetSingleUserMenu&menunumber=' + encodeURI(userfoodnumber) + '&usernumber=' + encodeURI(usernumber), function (msg) {
+                   $('#contentwrap').html(msg);
+
+                   //alert(msg);
+               });
+           }
+          
+           //$.post('ashx/listdata.ashx?type=createList_sctest', function (msg) {
+           //    $('#myfoodlist').html(msg);
+
+           //});
+
+       }
+       function back() {
+           window.location = "index.html";
+       }
+       function shoucang(collection) {
+           
+           $.post('../ashx/UserHandler.ashx?type=Collect&MenuNumber=' + encodeURI(menunumber) + '&UserNumber=' + encodeURI(usernumber) + '&Collection=' + encodeURI(collection), function (msg) {
+               collection++;
+               $('#sc').html("<div class='line3' onclick='shoucangdel(" + collection + ")'>取消收藏</div> ");
+               
+               $('#scl').html(msg);
+               alert("收藏成功!");
+           });
+       }
+       function shoucangdel(collection) {
+          
+           $.post('../ashx/UserHandler.ashx?type=Collect&MenuNumber=' + encodeURI(menunumber) + '&UserNumber=' + encodeURI(usernumber) + '&Collection=' + encodeURI(collection), function (msg) {
+               collection--;
+               $('#sc').html("  <div class='line3' onclick='shoucang(" + collection + ")'>点击收藏</div>");
+               $('#scl').html(msg);
+               alert("取消收藏成功!");
+           });
+       }
+   </script>
+</html>

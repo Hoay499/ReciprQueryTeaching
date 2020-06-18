@@ -1,0 +1,620 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>Home</title>
+
+<!-- Behavioral Meta Data -->
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+<link href='../css/index/style.css' rel='stylesheet' type='text/css'/>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+
+
+<script type="text/javascript">
+    var index = 1;
+    var myScroll,
+        pullDownEl, pullDownOffset,
+        pullUpEl, pullUpOffset,
+        generatedCount = 0;
+    //下拉刷新
+    function pullDownAction() {
+        setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
+            var el, li, i;
+            
+            el = document.getElementById('thelist');
+
+            $.post('../ashx/Index.ashx?type=11', function (msg) {
+                li = document.createElement('li');
+
+                li.innerHTML = msg;
+                el.insertBefore(li, el.childNodes[0]);
+            });
+           
+
+            myScroll.refresh();		// Remember to refresh when contents are loaded (ie: on ajax completion)
+        }, 1000);	// <-- Simulate network congestion, remove setTimeout from production!
+    }
+    
+    function getlist(pflag) {
+
+        // $.post('login.ashx?type=login&username=' + encodeURI(username) + '&password=' + encodeURI(password));
+        //var cache =null;
+       // alert(cache);
+        $.post('../ashx/Index.ashx?type=' + encodeURI(pflag), function (msg) {
+            
+            $('#thelist').html(msg);
+            //var li = document.createElement('li');
+
+           
+        });
+        //$.post('ashx/listdata.ashx?type=createList_sctest', function (msg) {
+        //    $('#myfoodlist').html(msg);
+
+        //});
+
+    }
+    //上拉加载更多
+    function pullUpAction() {
+        setTimeout(function () {	// <-- Simulate network congestion, remove setTimeout from production!
+            var el, li, i;
+            el = document.getElementById('thelist');
+
+            $.post('../ashx/Index.ashx?type=11&'+'index='+index, function (msg) {
+                li = document.createElement('li');
+                li.id = "newlist";
+                li.innerHTML = msg;
+                el.appendChild(li, el.childNodes[0]);
+                index++;
+            });
+
+           
+            //for (i = 0; i < 3; i++) {
+            //    li = document.createElement('li');
+            //    li.innerText = 'Generated row ' + (++generatedCount);
+            //    el.appendChild(li, el.childNodes[0]);
+            //}
+
+            myScroll.refresh();		// Remember to refresh when contents are loaded (ie: on ajax completion)
+        }, 1000);	// <-- Simulate network congestion, remove setTimeout from production!
+    }
+
+    function loaded() {
+        pullDownEl = document.getElementById('pullDown');
+        pullDownOffset = pullDownEl.offsetHeight;
+        pullUpEl = document.getElementById('pullUp');
+        pullUpOffset = pullUpEl.offsetHeight;
+
+        myScroll = new iScroll('wrapper', {
+            useTransition: true,
+            topOffset: pullDownOffset,
+            onRefresh: function () {
+                if (pullDownEl.className.match('loading')) {
+                    pullDownEl.className = '';
+                    pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Pull down to refresh...';
+                } else if (pullUpEl.className.match('loading')) {
+                    pullUpEl.className = '';
+                    pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
+                }
+            },
+            onScrollMove: function () {
+                if (this.y > 5 && !pullDownEl.className.match('flip')) {
+                    pullDownEl.className = 'flip';
+                    pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Release to refresh...';
+                    this.minScrollY = 0;
+                } else if (this.y < 5 && pullDownEl.className.match('flip')) {
+                    pullDownEl.className = '';
+                    pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Pull down to refresh...';
+                    this.minScrollY = -pullDownOffset;
+                } else if (this.y < (this.maxScrollY - 5) && !pullUpEl.className.match('flip')) {
+                    pullUpEl.className = 'flip';
+                    pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Release to refresh...';
+                    this.maxScrollY = this.maxScrollY;
+                } else if (this.y > (this.maxScrollY + 5) && pullUpEl.className.match('flip')) {
+                    pullUpEl.className = '';
+                    pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Pull up to load more...';
+                    this.maxScrollY = pullUpOffset;
+                }
+            },
+            onScrollEnd: function () {
+                if (pullDownEl.className.match('flip')) {
+                    pullDownEl.className = 'loading';
+                    pullDownEl.querySelector('.pullDownLabel').innerHTML = 'Loading...';
+                    pullDownAction();	// Execute custom function (ajax call?)
+                } else if (pullUpEl.className.match('flip')) {
+                    pullUpEl.className = 'loading';
+                    pullUpEl.querySelector('.pullUpLabel').innerHTML = 'Loading...';
+                    pullUpAction();	// Execute custom function (ajax call?)
+                }
+            }
+        });
+
+        setTimeout(function () { document.getElementById('wrapper').style.left = '0'; }, 800);
+    }
+
+    document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+    document.addEventListener('DOMContentLoaded', function () { setTimeout(loaded, 200); }, false);
+</script>
+<style>
+    .username {
+    color:white;
+    width:100%;
+    //height:20px;
+    text-align:center;
+    font-size:40px;
+    float:left;
+    }
+    .datalist1 {
+    width:90%;
+    height:500px;
+    margin-left:5%;
+    border:1px solid red;
+    float:left;
+    overflow:auto;
+    
+    }
+    .data {
+        width:100%;
+        height:100px;
+        margin-top:20px;
+        
+    }
+    .dataimg {
+        width:45%;
+        height:100px;
+        float:left;
+        
+        margin-right:5%;
+    }
+    .datadetails {
+        width:45%;
+        height:100px;
+        float:left;
+    }
+    .datatitle {
+        width:100%;
+        font-size:30px;
+        font-weight:500;
+        float:left;
+        margin-top:20px;
+        text-align:center;
+    }
+    .datacontent {
+         width:100%;
+        font-size:20px;
+        
+        float:left;
+        margin-top:-1em;
+        text-align:center;
+        color:gray;
+    }
+
+
+
+
+    
+#wrapper {
+ 
+
+	position:absolute; z-index:1;
+	top:105px; bottom:88px; left:-9999px;
+	width:100%;
+	background:#aaa;
+	overflow:auto;
+}
+
+#scroller {
+	position:absolute; z-index:1;
+/*	-webkit-touch-callout:none;*/
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	width:100%;
+    overflow:hidden;
+	padding:0;
+}
+
+#scroller ul {
+	list-style:none;
+	padding:0;
+	margin:0;
+	width:100%;
+	text-align:left;
+}
+
+#scroller li {
+	padding:0 10px;
+	height:150px;
+    float:left;
+	line-height:40px;
+	border-bottom:1px solid #ccc;
+	border-top:1px solid #fff;
+	background-color:#fafafa;
+	font-size:14px;
+    width:100%;
+}
+#scroller #newlist {
+	padding:0 10px;
+	height:auto;
+    float:left;
+	line-height:40px;
+	border-bottom:1px solid #ccc;
+	border-top:1px solid #fff;
+	background-color:#fafafa;
+	font-size:14px;
+    width:100%;
+}
+#myFrame {
+	position:absolute;
+	top:0; left:0;
+}
+
+
+
+/**
+ *
+ * Pull down styles
+ *
+ */
+#pullDown, #pullUp {
+	background:#fff;
+	height:40px;
+	line-height:40px;
+	padding:5px 10px;
+	border-bottom:1px solid #ccc;
+	font-weight:bold;
+	font-size:14px;
+	color:#888;
+}
+#pullDown .pullDownIcon, #pullUp .pullUpIcon  {
+	display:block; float:left;
+	width:40px; height:40px;
+	/*background:url(http://statics.webkfa.com/img/pull-icon@2x.png) 0 0 no-repeat;*/
+	-webkit-background-size:40px 80px; background-size:40px 80px;
+	-webkit-transition-property:-webkit-transform;
+	-webkit-transition-duration:250ms;	
+}
+#pullDown .pullDownIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+#pullUp .pullUpIcon  {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullDown.flip .pullDownIcon {
+	-webkit-transform:rotate(-180deg) translateZ(0);
+}
+
+#pullUp.flip .pullUpIcon {
+	-webkit-transform:rotate(0deg) translateZ(0);
+}
+
+#pullDown.loading .pullDownIcon, #pullUp.loading .pullUpIcon {
+	background-position:0 100%;
+	-webkit-transform:rotate(0deg) translateZ(0);
+	-webkit-transition-duration:0ms;
+
+	-webkit-animation-name:loading;
+	-webkit-animation-duration:2s;
+	-webkit-animation-iteration-count:infinite;
+	-webkit-animation-timing-function:linear;
+}
+
+@-webkit-keyframes loading {
+	from { -webkit-transform:rotate(0deg) translateZ(0); }
+	to { -webkit-transform:rotate(360deg) translateZ(0); }
+}
+
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+
+<div id="wrapper-header">
+	<div id="main-header" class="object">
+		<div class="logo"><img src="img/logo-burst.png" alt="logo platz" height="38" width="90"/></div>
+       <!-- <div id="main_tip_search"> 
+			<form>
+				<input type="text" name="search" id="tip_search_input" list="search"/>
+			</form>
+		</div>-->
+        <div id="stripes">
+             <img src="img/avatar-2.png"/>
+        </div>
+        <div class="search">
+            <img src="img/search.jpg"/>
+        </div>
+    </div>
+</div>
+    
+<!-- NAVBAR -->
+
+<div id="wrapper-navbar">
+		<div class="navbar object">
+    		<div id="wrapper-sorting">
+            <div id="wrapper-title-1">
+            <div class="top-rated object" onclick="getlist(1);">新秀菜谱</div>
+            	<div id="fleche-nav-1"></div>
+    		</div>
+              <div id="wrapper-title-2">
+          <div class="oldies object" onclick="getlist(2);">最近流行</div>
+                <div id="fleche-nav-4"></div>
+    		</div>
+
+            <div id="wrapper-title-3">
+             <div class="recent object" onclick="getlist(3);">时令食材</div>
+                <div id="fleche-nav-5"></div>
+    		</div>
+            <div id="wrapper-title-4">
+                <a href="../administorlogin/administratorlogin.html"><div class="oldies object">后台</div></a>
+                <div id="fleche-nav-2"></div>
+    		</div>
+            
+            
+
+          
+            </div>
+          
+    	</div>
+    </div>
+
+<!-- FILTER -->	
+
+	<div id="main-container-menu" class="object">
+    	<div class="container-menu">
+        	
+            <div id="main-cross">
+            	<div id="cross-menu">
+
+            	</div>
+            </div>
+            
+            <div id="main-small-logo">
+            	<div class="small-logo">
+                      <img src="img/avatar-2.png"/>
+            	</div>
+
+               
+            </div>
+            <div class="username"> <label id="username" ></label>
+                
+            </div>
+            
+            <div id="main-premium-ressource">
+                <div class="premium-ressource"><a href="#" >个人信息</a></div>
+            </div>
+            
+            <div id="main-themes">
+                <div class="themes"><a  onclick="mycollection()">收藏关注</a></div>
+            </div>
+            
+            <div id="main-psd">
+                <div class="psd"><a onclick="myproduction()">我的作品</a></div>
+            </div>
+          
+            <div id="main-ai">
+                <div class="ai"><a href="#">积分商城</a></div>
+            </div>
+            
+            <div id="main-font">
+                <div class="font"><a href="#">我的足迹</a></div>
+            </div>
+            
+            <div id="main-photo">
+                <div class="photo"><a href="#">我的账户</a></div>
+            </div>
+            
+        </div>
+        <div class="ft">
+            <div class="logout" onclick="logout()">
+            <img src="" />
+                退出登录
+        </div>
+            <a href="../login/login.html"><div id="login" class="login">
+          
+                登录
+        </div></a>
+            
+        </div>
+        
+    </div>
+
+<!-- PORTFOLIO -->
+   <div id="wrapper">
+	<div id="scroller">
+		<div id="pullDown">
+			<span class="pullDownIcon"></span><span class="pullDownLabel">Pull down to refresh...</span>
+		</div>
+        
+		<ul id="thelist">
+           
+            <!--<li>Pretty row 4</li>
+			<li>Pretty row 5</li>
+			<li>Pretty row 6</li>
+			<li>Pretty row 7</li>
+			<li>Pretty row 8</li>
+			<li>Pretty row 9</li>
+			<li>Pretty row 10</li>
+			<li>Pretty row 11</li>
+			<li>Pretty row 12</li>
+			<li>Pretty row 13</li>
+			<li>Pretty row 14</li>
+			<li>Pretty row 15</li>
+			<li>Pretty row 16</li>
+			<li>Pretty row 17</li>
+			<li>Pretty row 18</li>
+			<li>Pretty row 19</li>
+			<li>Pretty row 20</li>
+			<li>Pretty row 21</li>
+			<li>Pretty row 22</li>
+			<li>Pretty row 23</li>
+			<li>Pretty row 24</li>
+			<li>Pretty row 25</li>
+			<li>Pretty row 26</li>
+			<li>Pretty row 27</li>
+			<li>Pretty row 28</li>
+			<li>Pretty row 29</li>
+			<li>Pretty row 30</li>
+			<li>Pretty row 31</li>
+			<li>Pretty row 32</li>
+			<li>Pretty row 33</li>
+			<li>Pretty row 34</li>
+			<li>Pretty row 35</li>
+			<li>Pretty row 36</li>
+			<li>Pretty row 37</li>
+			<li>Pretty row 38</li>
+			<li>Pretty row 39</li>
+			<li>Pretty row 40</li>-->
+		</ul>
+		<div id="pullUp">
+			<span class="pullUpIcon"></span><span class="pullUpLabel">Pull up to refresh...</span>
+		</div>
+	</div>
+</div>
+    
+	<!--<div id="wrapper-container">
+    
+		<div class="container object">
+
+			<div id="main-container-image">
+                       
+					<section class="work">
+
+						<figure class="white">
+							<a href="../login.aspx">
+								<img src="img/psd-4.jpg" alt="" />
+								<dl>
+									<dt>houtai</dt>
+									<dd>Symphony is a responsive one page website template designed with sketches and coded with html5 and php. Freebie released by Lacoste Xavier.</dd>	
+								</dl>
+							</a>
+                            <div >
+                            	<div class="part-info-image"><img src="img/icon-psd.svg" alt="" width="28" height="28"/></div>
+                            	<div >Wordpress theme</div>
+							</div>
+                        </figure>	
+
+						
+
+						
+
+
+
+					</section>
+                    
+				</div>	
+            	    
+			</div>
+         
+  
+
+</div>-->
+
+    <footer id="foot">
+    
+        <ul id="navfoot">
+            <li class="nav">
+                <img src="img/index.jpg" />
+                首页
+            </li>
+            <li  class="nav">
+                <img src="img/fl.jpg" />
+                分类
+            </li>
+            <li  class="nav">
+                <img src="img/ph.jpg" />
+                排行
+            </li>
+            <li  class="nav">
+                <img src="img/group.jpg" />
+                美食圈</li>
+        </ul>
+        
+
+    </footer>
+<!-- SCRIPT -->  
+
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<script type="text/javascript" src="js/jquery.localScroll.min.js"></script>
+
+   
+<script type="text/javascript" src="js/main.js"></script>
+<script>
+    var usernumber = "001";
+    var username = "";
+    $().ready(function () {
+      
+        
+         username = decodeURI(GetQueryString("username"));
+        //usernumber = decodeURI(GetQueryString("usernumber"));
+        
+       // sessionStorage.setItem('usernumber','001');
+       
+        document.getElementById("username").innerText = decodeURI(GetQueryString("username"));
+        getlist(1,"001");
+       // $.post('../ashx/Index.ashx');
+    });
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return (r[2]); return null;
+    }
+    function tz(pp) {
+        window.location = "introduces.html?MenuNumber=" + pp + "&UserNumber=001";
+       
+
+    }
+    function mycollection() {
+        window.location = "UserCollections.html?UserNumber="+usernumber;
+
+    }
+    function myproduction() {
+        window.location = "HtmlForUser.html?usernumber=" + usernumber;
+      
+    }
+   
+    function logout() {
+        window.open("http://www.baidu.com/", "_blank");
+    }
+    function getlist(pflag) {
+       
+        // $.post('login.ashx?type=login&username=' + encodeURI(username) + '&password=' + encodeURI(password));
+        
+        $.post('../ashx/Index.ashx?type=' + encodeURI(pflag), function (msg) {
+            $('#thelist').html(msg);
+
+        });
+        //$.post('ashx/listdata.ashx?type=createList_sctest', function (msg) {
+        //    $('#myfoodlist').html(msg);
+
+        //});
+       
+    }
+    /* PRELOADER */
+    function GetQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return (r[2]); return null;
+    }
+   
+    function addLoadEvent(func) {
+        var oldonload = window.onload;
+        if (typeof window.onload != 'function') {
+            window.onload = func;
+        } else {
+            window.onload = function () {
+                if (oldonload) {
+                    oldonload();
+                }
+                func();
+            }
+        }
+    }
+  
+
+</script>
+
+</body>
+</html>

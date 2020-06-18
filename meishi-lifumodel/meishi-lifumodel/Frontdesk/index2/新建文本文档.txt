@@ -1,0 +1,475 @@
+   #region  每日三餐
+        public String createThreeMealsimage(IList<MenuCollocation> Lists,String useraccount)
+        {
+            String retstr = "";
+            String retstrzc = "";
+            String retstrwc = "";
+            String retstrwwc = "";
+            String retstryx = "";
+            String tt="";
+            int r1 = 0;
+            String menunumber = "";
+            int kk = Lists.Count();
+            BLL.BLLmenu bll = new BLL.BLLmenu();
+            BLL.BLLuser blluser = new BLLuser();
+            String widthall = (kk * 1400).ToString();
+           
+            foreach (MenuCollocation l in Lists) {
+               
+                String []h = l.MenuNumber.Split(',');
+                foreach (string s in h) {
+                    IList<SimpleMenu> siglemenu = bll.GetSimpleSingleMenu(s);
+                      if (l.Type == "0")
+                {
+                    tt = "早餐";
+                    
+                    foreach (SimpleMenu k in siglemenu)
+                    {
+                       
+                        retstrzc += "<div class='entry col-xs-12 col-sm-4 filter-food filter-pudding' id='uzc'>";
+                        retstrzc += " <div class='entry-inner'>";
+                        retstrzc += "		<div class='entry-media'>";
+                        retstrzc += "			<img src='../../images/MenuAll/" + k.CoverImg + "'  alt=''/>";
+                        retstrzc += "			<div class='entry-action'>";
+                        retstrzc += "				<div class='entry-action-inner'>";
+                        retstrzc += "				<span>";
+                        retstrzc += "					<a href='#' onclick='getmenudp(&quot;" + k.MenuNumber + "&quot;)'>查看菜谱</a>";
+                        retstrzc += "				</span>";
+                        retstrzc += "				<span id='sc'>";
+                        
+                        if (useraccount != "")
+                        {
+                            menunumber = k.MenuNumber;
+                             r1 = blluser.Collectcount(useraccount, menunumber);//判断是否已收藏
+                             if (r1 == 0)
+                             {
+                                 retstrzc += "<a href='#' onclick='shoucang(&quot;" + k.MenuName + "&quot;,&quot;" + k.MenuNumber + "&quot;," + k.Collection + ")' >收藏菜谱</a>";
+
+                             }
+                             else
+                             {
+                                 retstrzc += "<a href='#'onclick='shoucangdel(&quot;" + k.MenuName + "&quot;,&quot;" + k.MenuNumber + "&quot;," + k.Collection + ")'>取消收藏</a>";
+
+                             }
+
+                        }  
+                       
+                      //  retstrzc += "					<a href='#' >收藏菜谱</a>";
+                        retstrzc += "				</span>";
+                        retstrzc += "			</div>";
+                        retstrzc += "		</div>";
+                        retstrzc += "	</div>";
+                        //	<!-- ./ entry-media -->
+                        retstrzc += "	<div class='content-wrapper'>";
+                        retstrzc += "		<h3 class='entry-name'><a href='#' >" + k.MenuName + "</a></h3>";
+                        retstrzc += "		<p class='entry-author'>By "+k.UserName+"</p>";
+                        retstrzc += "		<div class='entry-meta'>";
+                        retstrzc += "			<div class='foo-wrapper'>";
+                        if (Int32.Parse(k.MenuND) <5) {
+                            retstrzc += "				<span class='meta-difficulty easy' title=''>Easy</span>";
+                        }
+                        else if (Int32.Parse(k.MenuND) < 8&&Int32.Parse(k.MenuND) >=5)
+                        {
+                            retstrzc += "	 <span class='meta-difficulty master' title=''>Master</span>";
+                        }
+                        else if (Int32.Parse(k.MenuND) >=8)
+                        {
+                            retstrzc += "	<span class='meta-difficulty hard' title=''>Hard</span>";
+                         
+                        }
+                        // <span class="meta-difficulty hard" title="">Hard</span>
+
+                        // <span class="meta-difficulty master" title="">Master</span>
+                        retstrzc += "				<span class='meta-time'>约 " + k.PreparationTime + " minutes</span>";
+                        retstrzc += "		</div>";
+                        retstrzc += "		<div class='meta-rate' title='4 star'>";
+                        if(Int32.Parse(k.MenuScore)>0&&Int32.Parse(k.MenuScore)<=2){//星级1
+                            retstrzc += "			<i class='fa fa-star rated'></i>";
+                            retstrzc += "			<i class='fa fa-star'></i>";
+                            retstrzc += "			<i class='fa fa-star'></i>";
+                            retstrzc += "			<i class='fa fa-star'></i>";
+                            retstrzc += "			<i class='fa fa-star'></i>";
+                        }else if(Int32.Parse(k.MenuScore)>2&&Int32.Parse(k.MenuScore)<=4){//星级2
+                            retstrzc += "			<i class='fa fa-star rated'></i>";
+                            retstrzc += "			<i class='fa fa-star rated'></i>";
+                            retstrzc += "			<i class='fa fa-star'></i>";
+                            retstrzc += "			<i class='fa fa-star'></i>";
+                            retstrzc += "			<i class='fa fa-star'></i>";
+                        }else if(Int32.Parse(k.MenuScore)>4&&Int32.Parse(k.MenuScore)<=6){//星级3
+                            retstrzc += "			<i class='fa fa-star rated'></i>";
+                            retstrzc += "			<i class='fa fa-star rated'></i>";
+                            retstrzc += "			<i class='fa fa-star rated'></i>";
+                            retstrzc += "			<i class='fa fa-star'></i>";
+                            retstrzc += "			<i class='fa fa-star'></i>";
+                        }else if(Int32.Parse(k.MenuScore)>6&&Int32.Parse(k.MenuScore)<=8){//星级4
+                            retstrzc += "			<i class='fa fa-star rated'></i>";
+                            retstrzc += "			<i class='fa fa-star rated'></i>";
+                            retstrzc += "			<i class='fa fa-star rated'></i>";
+                            retstrzc += "			<i class='fa fa-star rated'></i>";
+                            retstrzc += "			<i class='fa fa-star'></i>";
+                        }else if(Int32.Parse(k.MenuScore)>8&&Int32.Parse(k.MenuScore)<=10){//星级5
+                            retstrzc += "			<i class='fa fa-star rated'></i>";
+                            retstrzc += "			<i class='fa fa-star rated'></i>";
+                            retstrzc += "			<i class='fa fa-star rated'></i>";
+                            retstrzc += "			<i class='fa fa-star rated'></i>";
+                            retstrzc += "			<i class='fa fa-star rated'></i>";
+                        }
+                       
+                        retstrzc += "		</div>";
+                        retstrzc += "	</div>";
+                        retstrzc += "	</div>";
+                        //<!-- ./ entry-content -->
+                        retstrzc += "</div>";
+                        retstrzc += "</div>";
+
+                         
+
+                        //retstr += "  <label class='gbco1lb'>" + l.ParentC + tt + "</label>";
+                        //retstr += "    <a href='#'  title=''>" + k.MenuName + "</a>";
+                        //retstr += " <p>难度：" + k.MenuND + "</p>";
+                        //retstr += "<p>准备时间约" + k.PreparationTime + "分钟</p>";
+                        //retstr += " <p    title='" + k.MenuName + "' class='gbco1ck'>立即查看</p> </div>";
+                        //retstr += " </li>";
+
+                    }
+                   
+                    //retstr += " <div class='mmlist' id='mmlist1' >";
+                    //retstr += "  <div class='gbcont1head'> <p class='gbheadpre' onclick='#' ></p>";
+                    //retstr += "  <p class='gbcont1title'>" + l.Title + "</p>";
+                    //retstr += "<p class='gbheadnext' onclick='gbheadnext()'>>>>></p></div>";
+                }
+                else if (l.Type == "1")
+                {
+                    tt = "午餐";
+                    foreach (SimpleMenu k in siglemenu)
+                    {
+
+                        retstrwc += " <div class='entry-inner'>";
+                        retstrwc += "		<div class='entry-media'>";
+                        retstrwc += "			<img src='../../images/MenuAll/" + k.CoverImg + "'  alt=''/>";
+                        retstrwc += "			<div class='entry-action'>";
+                        retstrwc += "				<div class='entry-action-inner'>";
+                        retstrwc += "				<span>";
+                        retstrwc += "					<a href='#' onclick='getmenudp(&quot;" + k.MenuNumber + "&quot;)'>查看菜谱</a>";
+                        retstrwc += "				</span>";
+                        retstrwc += "				<span id='sc'>";
+                        if (useraccount != "")
+                        {
+                            menunumber = k.MenuNumber;
+                            r1 = blluser.Collectcount(useraccount, menunumber);//判断是否已收藏
+                            if (r1 == 0)
+                            {
+                                retstrwc += "<a href='#' onclick='shoucang(&quot;" + k.MenuName + "&quot;,&quot;" + k.MenuNumber + "&quot;," + k.Collection + ")' >收藏菜谱</a>";
+
+                            }
+                            else
+                            {
+                                retstrwc += "<a href='#'onclick='shoucangdel(&quot;" + k.MenuName + "&quot;,&quot;" + k.MenuNumber + "&quot;," + k.Collection + ")'>取消收藏</a>";
+
+                            }
+
+                        }  
+                      //  retstrwc += "					<a href='#' onclick='menushoucang(&quot;" + k.Collection + "&quot;)'>收藏菜谱</a>";
+                        retstrwc += "				</span>";
+                        retstrwc += "			</div>";
+                        retstrwc += "		</div>";
+                        retstrwc += "	</div>";
+                        //	<!-- ./ entry-media -->
+                        retstrwc += "	<div class='content-wrapper'>";
+                        retstrwc += "		<h3 class='entry-name'><a href='#' >" + k.MenuName + "</a></h3>";
+                        retstrwc += "		<p class='entry-author'>By "+k.UserName+"</p>";
+                        retstrwc += "		<div class='entry-meta'>";
+                        retstrwc += "			<div class='foo-wrapper'>";
+                        if (Int32.Parse(k.MenuND) < 5)
+                        {
+                            retstrwc += "				<span class='meta-difficulty easy' title=''>Easy</span>";
+                        }
+                        else if (Int32.Parse(k.MenuND) < 8 && Int32.Parse(k.MenuND) >= 5)
+                        {
+                            retstrwc += "	 <span class='meta-difficulty master' title=''>Master</span>";
+                        }
+                        else if (Int32.Parse(k.MenuND) >= 8)
+                        {
+                            retstrwc += "	<span class='meta-difficulty hard' title=''>Hard</span>";
+
+                        }
+                        //retstrwc += "				<span class='meta-difficulty easy' title=''>Easy</span>";
+                        retstrwc += "				<span class='meta-time'>约"+k.PreparationTime+" minutes</span>";
+                        retstrwc += "		</div>";
+                        retstrwc += "		<div class='meta-rate' title='4 star'>";
+                        if (Int32.Parse(k.MenuScore) > 0 && Int32.Parse(k.MenuScore) <= 2)
+                        {//星级1
+                            retstrwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwc += "			<i class='fa fa-star'></i>";
+                            retstrwc += "			<i class='fa fa-star'></i>";
+                            retstrwc += "			<i class='fa fa-star'></i>";
+                            retstrwc += "			<i class='fa fa-star'></i>";
+                        }
+                        else if (Int32.Parse(k.MenuScore) > 2 && Int32.Parse(k.MenuScore) <= 4)
+                        {//星级2
+                            retstrwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwc += "			<i class='fa fa-star'></i>";
+                            retstrwc += "			<i class='fa fa-star'></i>";
+                            retstrwc += "			<i class='fa fa-star'></i>";
+                        }
+                        else if (Int32.Parse(k.MenuScore) > 4 && Int32.Parse(k.MenuScore) <= 6)
+                        {//星级3
+                            retstrwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwc += "			<i class='fa fa-star'></i>";
+                            retstrwc += "			<i class='fa fa-star'></i>";
+                        }
+                        else if (Int32.Parse(k.MenuScore) > 6 && Int32.Parse(k.MenuScore) <= 8)
+                        {//星级4
+                            retstrwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwc += "			<i class='fa fa-star'></i>";
+                        }
+                        else if (Int32.Parse(k.MenuScore) > 8 && Int32.Parse(k.MenuScore) <= 10)
+                        {//星级5
+                            retstrwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwc += "			<i class='fa fa-star rated'></i>";
+                        }
+                        retstrwc += "		</div>";
+                        retstrwc += "	</div>";
+                        retstrwc += "	</div>";
+                        //<!-- ./ entry-content -->
+                        retstrwc += "</div>";
+                    }
+                }
+                else if (l.Type == "2")
+                {
+                    tt = "晚餐";
+                    foreach (SimpleMenu k in siglemenu)
+                    {
+
+                        retstrwwc += " <div class='entry-inner'>";
+                        retstrwwc += "		<div class='entry-media'>";
+                        retstrwwc += "			<img src='../../images/MenuAll/" + k.CoverImg + "'  alt=''/>";
+                        retstrwwc += "			<div class='entry-action'>";
+                        retstrwwc += "				<div class='entry-action-inner'>";
+                        retstrwwc += "				<span>";
+                        retstrwwc += "					<a href='#' onclick='getmenudp(&quot;" + k.MenuNumber + "&quot;)'>查看菜谱</a>";
+                        retstrwwc += "				</span>";
+                        retstrwwc += "				<span id='sc'>";
+                        if (useraccount != "")
+                        {
+                            menunumber = k.MenuNumber;
+                            r1 = blluser.Collectcount(useraccount, menunumber);//判断是否已收藏
+                            if (r1 == 0)
+                            {
+                                retstrwwc += "<a href='#' onclick='shoucang(&quot;" + k.MenuName + "&quot;,&quot;" + k.MenuNumber + "&quot;," + k.Collection + ")' >收藏菜谱</a>";
+
+                            }
+                            else
+                            {
+                                retstrwwc += "<a href='#'onclick='shoucangdel(&quot;" + k.MenuName + "&quot;,&quot;" + k.MenuNumber + "&quot;," + k.Collection + ")'>取消收藏</a>";
+
+                            }
+
+                        }  
+                        //retstrwwc += "					<a href='#'>收藏菜谱</a>";
+                        retstrwwc += "				</span>";
+                        retstrwwc += "			</div>";
+                        retstrwwc += "		</div>";
+                        retstrwwc += "	</div>";
+                        //	<!-- ./ entry-media -->
+                        retstrwwc += "	<div class='content-wrapper'>";
+                        retstrwwc += "		<h3 class='entry-name'><a href='#'>" + k.MenuName + "</a></h3>";
+                        retstrwwc += "		<p class='entry-author'>By "+k.UserName+"</p>";
+                        retstrwwc += "		<div class='entry-meta'>";
+                        retstrwwc += "			<div class='foo-wrapper'>";
+                        if (Int32.Parse(k.MenuND) < 5)
+                        {
+                            retstrwwc += "				<span class='meta-difficulty easy' title=''>Easy</span>";
+                        }
+                        else if (Int32.Parse(k.MenuND) < 8 && Int32.Parse(k.MenuND) >= 5)
+                        {
+                            retstrwwc += "	 <span class='meta-difficulty master' title=''>Master</span>";
+                        }
+                        else if (Int32.Parse(k.MenuND) >= 8)
+                        {
+                            retstrwwc += "	<span class='meta-difficulty hard' title=''>Hard</span>";
+
+                        }
+                       // retstrwwc += "				<span class='meta-difficulty easy' title=''>Easy</span>";
+                        retstrwwc += "				<span class='meta-time'>约"+k.PreparationTime +" minutes</span>";
+                        retstrwwc += "		</div>";
+                        retstrwwc += "		<div class='meta-rate' title='4 star'>";
+                        if (Int32.Parse(k.MenuScore) > 0 && Int32.Parse(k.MenuScore) <= 2)
+                        {//星级1
+                            retstrwwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwwc += "			<i class='fa fa-star'></i>";
+                            retstrwwc += "			<i class='fa fa-star'></i>";
+                            retstrwwc += "			<i class='fa fa-star'></i>";
+                            retstrwwc += "			<i class='fa fa-star'></i>";
+                        }
+                        else if (Int32.Parse(k.MenuScore) > 2 && Int32.Parse(k.MenuScore) <= 4)
+                        {//星级2
+                            retstrwwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwwc += "			<i class='fa fa-star'></i>";
+                            retstrwwc += "			<i class='fa fa-star'></i>";
+                            retstrwwc += "			<i class='fa fa-star'></i>";
+                        }
+                        else if (Int32.Parse(k.MenuScore) > 4 && Int32.Parse(k.MenuScore) <= 6)
+                        {//星级3
+                            retstrwwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwwc += "			<i class='fa fa-star'></i>";
+                            retstrwwc += "			<i class='fa fa-star'></i>";
+                        }
+                        else if (Int32.Parse(k.MenuScore) > 6 && Int32.Parse(k.MenuScore) <= 8)
+                        {//星级4
+                            retstrwwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwwc += "			<i class='fa fa-star'></i>";
+                        }
+                        else if (Int32.Parse(k.MenuScore) > 8 && Int32.Parse(k.MenuScore) <= 10)
+                        {//星级5
+                            retstrwwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwwc += "			<i class='fa fa-star rated'></i>";
+                            retstrwwc += "			<i class='fa fa-star rated'></i>";
+                        }
+                        retstrwwc += "		</div>";
+                        retstrwwc += "	</div>";
+                        retstrwwc += "	</div>";
+                        //<!-- ./ entry-content -->
+                        retstrwwc += "</div>";
+                    }
+                }
+                else if (l.Type == "3")
+                {
+                    tt = "夜宵";
+                    foreach (SimpleMenu k in siglemenu)
+                    {
+                        retstryx += " <div class='entry-inner'>";
+                        retstryx += "		<div class='entry-media'>";
+                        retstryx += "			<img src='../../images/MenuAll/" + k.CoverImg + "'  alt=''/>";
+                        retstryx += "			<div class='entry-action'>";
+                        retstryx += "				<div class='entry-action-inner'>";
+                        retstryx += "				<span>";
+                        retstryx += "					<a href='#' onclick='getmenudp(&quot;" + k.MenuNumber + "&quot;)'>查看菜谱</a>";
+                        retstryx += "				</span>";
+                        retstryx += "				<span id='sc'>";
+                        if (useraccount != "")
+                        {
+                            menunumber = k.MenuNumber;
+                            r1 = blluser.Collectcount(useraccount, menunumber);//判断是否已收藏
+                            if (r1 == 0)
+                            {
+                                retstryx += "<a href='#' onclick='shoucang(&quot;" + k.MenuName + "&quot;,&quot;" + k.MenuNumber + "&quot;," + k.Collection + ")' >收藏菜谱</a>";
+
+                            }
+                            else
+                            {
+                                retstryx += "<a href='#'onclick='shoucangdel(&quot;" + k.MenuName + "&quot;,&quot;" + k.MenuNumber + "&quot;," + k.Collection + ")'>取消收藏</a>";
+
+                            }
+
+                        }  
+                       // retstryx += "					<a href='#'>收藏菜谱</a>";
+                        retstryx += "				</span>";
+                        retstryx += "			</div>";
+                        retstryx += "		</div>";
+                        retstryx += "	</div>";
+                        //	<!-- ./ entry-media -->
+                        retstryx += "	<div class='content-wrapper'>";
+                        retstryx += "		<h3 class='entry-name'><a href='#' >" + k.MenuName + "</a></h3>";
+                        retstryx += "		<p class='entry-author'>By "+k.UserName+"</p>";
+                        retstryx += "		<div class='entry-meta'>";
+                        retstryx += "			<div class='foo-wrapper'>";
+                        if (Int32.Parse(k.MenuND) < 5)
+                        {
+                            retstryx += "				<span class='meta-difficulty easy' title=''>Easy</span>";
+                        }
+                        else if (Int32.Parse(k.MenuND) < 8 && Int32.Parse(k.MenuND) >= 5)
+                        {
+                            retstryx += "	 <span class='meta-difficulty master' title=''>Master</span>";
+                        }
+                        else if (Int32.Parse(k.MenuND) >= 8)
+                        {
+                            retstryx += "	<span class='meta-difficulty hard' title=''>Hard</span>";
+
+                        }
+                        
+                        retstryx += "				<span class='meta-time'>约"+k.PreparationTime+" minutes</span>";
+                        retstryx += "		</div>";
+                        retstryx += "		<div class='meta-rate' title='4 star'>";
+                        if (Int32.Parse(k.MenuScore) > 0 && Int32.Parse(k.MenuScore) <= 2)
+                        {//星级1
+                            retstryx += "			<i class='fa fa-star rated'></i>";
+                            retstryx += "			<i class='fa fa-star'></i>";
+                            retstryx += "			<i class='fa fa-star'></i>";
+                            retstryx += "			<i class='fa fa-star'></i>";
+                            retstryx += "			<i class='fa fa-star'></i>";
+                        }
+                        else if (Int32.Parse(k.MenuScore) > 2 && Int32.Parse(k.MenuScore) <= 4)
+                        {//星级2
+                            retstryx += "			<i class='fa fa-star rated'></i>";
+                            retstryx += "			<i class='fa fa-star rated'></i>";
+                            retstryx += "			<i class='fa fa-star'></i>";
+                            retstryx += "			<i class='fa fa-star'></i>";
+                            retstryx += "			<i class='fa fa-star'></i>";
+                        }
+                        else if (Int32.Parse(k.MenuScore) > 4 && Int32.Parse(k.MenuScore) <= 6)
+                        {//星级3
+                            retstryx += "			<i class='fa fa-star rated'></i>";
+                            retstryx += "			<i class='fa fa-star rated'></i>";
+                            retstryx += "			<i class='fa fa-star rated'></i>";
+                            retstryx += "			<i class='fa fa-star'></i>";
+                            retstryx += "			<i class='fa fa-star'></i>";
+                        }
+                        else if (Int32.Parse(k.MenuScore) > 6 && Int32.Parse(k.MenuScore) <= 8)
+                        {//星级4
+                            retstryx += "			<i class='fa fa-star rated'></i>";
+                            retstryx += "			<i class='fa fa-star rated'></i>";
+                            retstryx += "			<i class='fa fa-star rated'></i>";
+                            retstryx += "			<i class='fa fa-star rated'></i>";
+                            retstryx += "			<i class='fa fa-star'></i>";
+                        }
+                        else if (Int32.Parse(k.MenuScore) > 8 && Int32.Parse(k.MenuScore) <= 10)
+                        {//星级5
+                            retstryx += "			<i class='fa fa-star rated'></i>";
+                            retstryx += "			<i class='fa fa-star rated'></i>";
+                            retstryx += "			<i class='fa fa-star rated'></i>";
+                            retstryx += "			<i class='fa fa-star rated'></i>";
+                            retstryx += "			<i class='fa fa-star rated'></i>";
+                        }
+                        retstryx += "		</div>";
+                        retstryx += "	</div>";
+                        retstryx += "	</div>";
+                        //<!-- ./ entry-content -->
+                        retstryx += "</div>";
+                    }
+                }
+
+             // <span class="meta-difficulty hard" title="">Hard</span>
+             
+               // <span class="meta-difficulty master" title="">Master</span>
+                 
+                }
+               
+              
+
+             }
+            //String retstrzc = "";
+           // String retstrwc = "";
+            //String retstrwwc = "";
+           // String retstryx = "";
+            retstr = retstrzc + "；" + retstrwc + "；" + retstrwwc + "；" + retstryx;
+            return retstr;
+        }
+        #endregion 

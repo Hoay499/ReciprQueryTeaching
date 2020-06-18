@@ -1,0 +1,15 @@
+C:\Users\Administrator\Desktop\jjcc\meishi-lifumodel\meishi-lifumodel\bin\meishi-lifumodel.dll
+C:\Users\Administrator\Desktop\jjcc\meishi-lifumodel\meishi-lifumodel\bin\meishi-lifumodel.pdb
+C:\Users\Administrator\Desktop\jjcc\meishi-lifumodel\meishi-lifumodel\obj\Debug\meishi-lifumodel.dll
+C:\Users\Administrator\Desktop\jjcc\meishi-lifumodel\meishi-lifumodel\obj\Debug\meishi-lifumodel.pdb
+C:\Users\Administrator\Desktop\jjcc\meishi-lifumodel\meishi-lifumodel\obj\Debug\meishi-lifumodel.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Desktop\meishi-lifumodel\meishi-lifumodel\bin\meishi-lifumodel.dll
+C:\Users\Administrator\Desktop\meishi-lifumodel\meishi-lifumodel\bin\meishi-lifumodel.pdb
+C:\Users\Administrator\Desktop\meishi-lifumodel\meishi-lifumodel\obj\Debug\meishi-lifumodel.dll
+C:\Users\Administrator\Desktop\meishi-lifumodel\meishi-lifumodel\obj\Debug\meishi-lifumodel.pdb
+C:\Users\Administrator\Desktop\meishi-lifumodel\meishi-lifumodel\obj\Debug\meishi-lifumodel.csprojResolveAssemblyReference.cache
+E:\我在干什么\wwwwwww\meishi-lifumodel\meishi-lifumodel\bin\meishi-lifumodel.dll
+E:\我在干什么\wwwwwww\meishi-lifumodel\meishi-lifumodel\bin\meishi-lifumodel.pdb
+E:\我在干什么\wwwwwww\meishi-lifumodel\meishi-lifumodel\obj\Debug\meishi-lifumodel.csprojResolveAssemblyReference.cache
+E:\我在干什么\wwwwwww\meishi-lifumodel\meishi-lifumodel\obj\Debug\meishi-lifumodel.dll
+E:\我在干什么\wwwwwww\meishi-lifumodel\meishi-lifumodel\obj\Debug\meishi-lifumodel.pdb

@@ -1,0 +1,125 @@
+ 
+@media (min-width: 769px) {
+  .burger_menu:hover,
+  .home:hover,
+  .location:hover,
+  .mail:hover,
+  .image:hover {
+    background: #fff;
+  }
+  .burger_menu:hover [class*="_line"],
+  .home:hover [class*="_line"],
+  .location:hover [class*="_line"],
+  .mail:hover [class*="_line"],
+  .image:hover [class*="_line"] {
+    background: #605770;
+  }
+  .burger_menu:hover i.fa,
+  .home:hover i.fa,
+  .location:hover i.fa,
+  .mail:hover i.fa,
+  .image:hover i.fa {
+    color: #605770;
+  }
+}
+.burger_menu {
+  transform: translateZ(0);
+  background: #4d4861;
+  width: 110px;
+  height: 110px;
+  z-index: 5;
+}
+.burger_menu [class*="_line"] {
+  transition: transform 0.3s ease, background 0.3s ease, opacity 0.3s ease, top 0.3s ease;
+  width: 28px;
+  height: 4px;
+  border-radius: 10px;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+.burger_menu .top_line {
+  top: -20px;
+}
+.burger_menu .bottom_line {
+  top: 20px;
+}
+.toggle_burger {
+  transform: translateZ(0);
+  animation: bounce 1s ease-in-out;
+}
+.toggle_burger .top_line {
+  top: 0;
+  transform: rotate(45deg);
+}
+.toggle_burger .middle_line {
+  opacity: 0;
+}
+.toggle_burger .bottom_line {
+  top: 0;
+  transform: rotate(-45deg);
+}
+i.fa {
+  transition: color 0.5s ease;
+  color: #fff;
+  font-size: 10px;
+}
+
+
+.burger_menu,
+.home,
+.home2,
+.location,
+.mail,
+.image {
+  border-radius: 50%;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+ // bottom: 0;
+ // left: 0;
+ // margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.home,
+.home2,
+.location,
+.mail,
+.image {
+  width: 40px;
+  height: 40px;
+  background: #605770;
+}
+.toggle_home {
+  transform: translate3d(-80px, -80px, 0);
+}
+
+.toggle_location {
+  transform: translate3d(-80px, 80px, 0);
+}
+.toggle_mail {
+  transform: translate3d(80px, -80px, 0);
+}
+ 
+.toggle_image {
+  transform: translate3d(80px, 80px, 0);
+}
+.hv_toggle {
+  background: #fff;
+}
+.hv_toggle:hover {
+  background: #fff;
+}
+.hv_toggle i.fa {
+  display: none;
+}

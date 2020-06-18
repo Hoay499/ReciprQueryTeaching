@@ -1,0 +1,1659 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>index</title>
+
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/gbstyle.css" />
+<link rel="stylesheet" href="css/style1.css" />
+<link rel="stylesheet" href="css/minestyle1.css"  />
+<script type="text/javascript" src="js/jquery-1.12.4.min.js"></script>
+<script type="text/javascript" src="js/minejs33.js" charset="utf-8"></script>
+     
+    <style>
+    .login-form-mask {
+z-index: 9998;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: #000;
+opacity: 0.4;
+filter: alpha(opacity=40);
+display: none
+}
+.login-form {
+z-index: 9999;
+position: fixed;
+top: 40%;
+left: 55%;
+width: 400px;
+min-height: 184px;
+height:auto;
+max-height:400px;
+margin: -180px 0 0 -330px;
+border-radius: 5px;
+border: solid 2px #666;
+background-color: #fff;
+display: none;
+box-shadow: 0 0 10px #666;
+}
+.login-close {
+margin-right: 15px;
+}
+
+  .alertheader{ width:100%;height:30px}
+    .alertlabel{ width:100%;height:30px;text-align:center}
+    .alertcancle{width:45%;float:left;height:30px;position: absolute;
+    margin-left: 92%;}
+    .alertconfirm{width:45%;float:left;height:30px;margin-left:2%;}
+          .usernonedata {
+              height:192px;
+             width: 336px;
+    margin: 0 auto;
+          background-image:url(images/nonedata.png);
+          background-size:cover;
+          }
+
+
+                   .userjmleft{
+                     background-image:url('../../images/usergradeimg/xb.jpg');background-size:cover;height:300px;width:200px;float:left;
+                   }
+                   .userjmleft .username{
+                     position:relative;top:0px;height:30px;width:200px;
+                     background-color: #ffe8e8;
+                   }
+                   .userjmleft .username input{
+                          top:0px; 
+                          border:0;
+                          outline:none;/*去掉选中状态边框*/  
+                          background-color:rgba(0,0,0,0);/*透明背景*/
+                   }
+                   .userjmleft .username img{
+                    height:20px;width:20px;position:absolute;top:0px;margin-left:-50px
+                   }
+
+        .finaljytinn {
+            /*width: 3px;*/
+    position: absolute;
+    left:0;
+    height: 9px;
+     position:absolute;
+      background: red;
+        }
+        .jyst {
+                top: -4px;
+            position:absolute;
+            right:0;
+            width:100px;
+            text-align:center;
+            color:black;
+        }
+        .finaljytcon10 {
+            width: 10px;
+    position:relative;
+    height: 9px;
+    border-radius:5px;
+    margin-top: 7px;
+    position:absolute;
+    background: #d2cfcf;
+        }
+           .finaljytcon100 {
+            width: 100px;
+    position:relative;
+    height: 9px;
+    border-radius:5px;
+    margin-top: 7px;
+     float:left;
+    background: #d2cfcf;
+        }
+   
+                   .userjmright{ height:400px;width: 450px;float:left; margin-left: 10px;}
+               .userjmrighthead{height:150px;width:100%;float:left;background-color:white}
+               .userjmrighttit{height:30px;width:100%;float:left;background-color:#efe1e1}
+               .userjmrightc2{height:30px;width:50%;float:left;background-color:#eae7e7}
+               .userjmrightc3{height:30px;width:33%;float:left;background-color:#eae7e7;border-top:1px solid white;border-right:1px solid white;}
+               .userjmrightbottom{height:150px;width:100%;float:left;background-color:white}
+              
+               .userjmrightbottomcot{height:50px;width:100%;float:left;background-color:white }
+               .userjmrightc2 p{width:40px;height:20px;float:left}
+               .usersc100 {width:100px;height:20px;float:left;background-color:gray;}
+               .userjmrightc2 .jyt{width:90px;height:20px;background-color:red;}
+                .usercptit{width:670px;height:50px;margin-bottom:10px;background:#f9ecea}
+                .usercptit .bt{width:50px;height:30px;float:left;margin-left:300px;padding:2px}
+                .usercptit .jyt{width:100px;height:30px;background:red;float:left}
+                .usercp{    height: 190px;
+    width: 125px;
+    float: left;
+    margin: 10px;
+    position: relative;
+    background-size: cover;}
+        .hj1 {     width: 60px;
+    margin-right: 2px;  height: 30px;  font-size: 20px;  color: #6b6464; background: #f3eeee ;  float: left; /*margin-top: 159px;*/ text-align: center;}   
+           .hj1:hover {  color: white; background: red;  border-radius:6px;}
+
+        .hj2 { width: 127px;margin-right: 2px; height: 30px; font-size: 20px; color: #6b6464;background: #f3eeee; float: left;   text-align: center;
+        }
+    .hj2:hover {  color: white; background: red;  border-radius:6px;}
+   
+ 
+   
+   
+                .usercp img{height:153px;width:125px;top:0px;float:left;}
+                 .usernoticestitle{width:100%;height:60px;float:left;background-color:white;border-bottom:1px solid gray; }
+         .noticetit{width:20%;height:50px;float:left;background-color:white;border-radius:5px;margin-left:20px }
+         .noticetit:hover{ background-color:red; }
+           .usernoticeslist{width:100%;height:260px;float:left;background-color:white; }
+        .noticeit { height:auto; width:100%;float:left}
+            .noticeindex{    width: 10%;
+    height: 40px;
+    float: left;
+    font-size: 31px;
+    font-weight: 900;
+    font-style: italic;
+    color: red;
+    /* background-color: red; */
+    word-wrap: break-word;}
+          .noticecon{width:70%;min-height:40px;height:auto;float:left;background-color:#f6f6f6;word-wrap:break-word }
+            .noticetime{width:20%;     height: 29px;
+    padding-top: 11px;float:left;background-color:black;color:white}
+        .userjminnercontent .username {
+            height:200px;height:30px;
+        }
+         .userjminnercontent .username img{
+             width:30px;height:30px;
+        }
+
+
+           .DataBottom{
+               background-color:white;width:150px;height:30px;position:relative;margin: 0 auto;
+            }
+            .DataBottominner{
+               width:130px;height:20px;margin-left:10px;margin-top:3px;text-align:center;padding:2px;background-color:#ffe7dc;position:absolute;
+            
+            }
+            .DataBottominner .presentindex{
+             color:red;float:left;margin-left:70px;
+            }
+              .DataBottominner .pages{
+             float:left;
+            }
+
+
+        .usermenus { position:relative;width:100%;height:90%; float:left;}
+        .usercplist {
+            height:70%;background-color:gray;width:100%;
+        }
+         .userDaTabottom {
+            height:32px;width:100%;position:absolute;
+            /*position:absolute;background-color:;*/bottom:0;
+        }
+        .fafafa {
+             height: 30px;
+    width: 30px;
+    color: white;
+    padding: 10px 14px;
+    text-align: center;
+           
+        }
+.chhh{
+ height:40px;
+ width:50px;
+ display:none;
+ position:absolute;
+  
+ background-color:red;
+}
+        .classblock { 
+          float:left;
+          height:auto; 
+          overflow:auto;
+        }
+        .sxf1tit {
+        max-width:1400px;
+        width:100%;
+        height:30px;
+        float:left;
+        text-align:center;
+        background-color:white;
+        border-bottom:1px solid gray;
+        }
+        .sxf1 {
+            float:left;
+            max-width:160px;
+            margin:10px;
+            border-radius:5px;
+            height:30px;
+            font-size:20px;
+        }
+         .sxf1:hover {
+            float:left;
+            max-width:160px;
+            margin:10px;
+            border-radius:5px;
+            height:30px;
+            font-size:20px;
+            background:red;
+            color:white;
+        }
+            .searchcheckbox2{  width:500px; height:20px; float:left; margin-bottom:-20px;margin-left:10px;}
+            .searchcheckbox2 p{  text-align:center;width:104px; height:20px; float:left;border-bottom:1px solid gray;border-left:1px solid gray;border-right:1px solid gray; }
+            .searchcheckbox2 p:hover{  background-color:#FF6600;  }
+            .searchcheckbox{  width:500px; height:20px; float:left; margin-top:-20px;margin-left:10px;margin-left:50px; }
+            .searchcheckbox p{  text-align:center;width:130px; height:20px; float:left;border-top:1px solid gray;border-left:1px solid gray;border-right:1px solid gray; }
+            .searchcheckbox p:hover{  background-color:#FF6600;  }
+            .searchcheckbox p input{  border:0;height:20px;width:100%; }
+        .searchlist {width:100%;height:100%;}
+.searchlisttitle{float:left;height:20px;width:100%;text-align:center}
+.searchlisttit{}
+.searchlistitem{float:left;height:120px;width:100px;margin:5px;}
+.searchlistitem img {float:left;height:100px;width:100px;}
+ .itemname{float:left;height:20px;width:50px;text-align:center;margin-top:10px;}
+
+        .gbcont1head {
+        /*margin-top: 230px;*/
+            margin-left: 40px;
+            width: 1200px;
+        height:40px;
+        }
+
+        .gbheadpre {
+          width:15%;
+          height:40px;
+          float:left;text-align:left;
+          
+        }
+         .gbheadnext {
+             text-align:right;
+         width:10%;
+          height:40px;
+          float:left;
+          
+        }
+          .gbcont1title {
+          width:70%;
+          height:40px;
+          text-align:center;
+          float:left;
+          
+        }
+        .mmlist {
+        float:left;
+            margin-left: -40px;
+        }
+        .indmain {
+       /*margin-top: -478px;*/
+    margin-left: 100px;
+    overflow: hidden;
+    width: 1200px;
+    position: absolute;
+        }
+
+
+        .xfjm {
+            margin-top: 365px !important;
+        }
+            .xfjm .zcbottom {
+                 margin-left:100px !important;
+            }
+
+            .xfjm .zcbottom {
+    margin-left: 397px !important;
+    margin-top: -10px !important;
+}
+    </style>
+</head>
+
+<body >
+    <script>
+       
+</script>
+    <script>
+        function slideout() {
+            var leftcd = document.getElementById('leftcd');
+            var leftcdct = document.getElementById('zccdcontent');
+            var zccdall = document.getElementById('zccdall');
+            //leftcdct.style.width=260+'px';
+            //leftcd.style.left=260+'px';
+            zccdall.style.left = 0 + 'px';
+        }
+
+        function slidein() {
+            var leftcd = document.getElementById('leftcd');
+            var leftcdct = document.getElementById('zccdcontent');
+            var zccdall = document.getElementById('zccdall');
+            //leftcdct.style.width=0+'px';
+            // leftcd.style.left=0+'px';
+            zccdall.style.left = -266 + 'px';
+        }
+        //function checkdatatype() {
+            
+        //    if (persentdatatype == "" || persentdatatype == "userhistory")
+        //        persentdatatype = "userfollow";
+        //    else if (persentdatatype == "userfollow") {
+        //        $('#gz').css({ 'background-color': '#ffffff' });
+        //    } else if (persentdatatype == "userunkownpeople") {
+        //        $('#msr').css({ 'background-color': '#ffffff' });
+        //    } else if (persentdatatype == "userunacceptfriend") {
+        //        $('#hysq').css({ 'background-color': '#ffffff' });
+        //    }
+           
+        //}
+        $(document).ready(function () {
+            var zccdall = document.getElementById('zccdall');
+            var leftcd = document.getElementById('leftcd');
+            var flag = "fail";
+            /**
+             * 放大按钮鼠标移入事件
+            使用mouseenter来代替mouseover；使用mouseleave来代替mouseout。
+             */
+            zccdall.onmouseenter = function () {
+                if ($('#zccdall').css("left") != "-266px") {
+                    event.stopPropagation();
+                } else {
+                    slideout();
+                    //checkdatatype();
+                   
+                }
+                // $('#zccdcontent').show();
+            };
+
+            /**
+             * 放小按钮鼠标移开事件
+             使用mouseenter来代替mouseover；使用mouseleave来代替mouseout。
+             */
+            zccdall.onmouseleave = function () {
+
+                if ($('#zccdall').css("left") != "0px") {
+                    event.stopPropagation();
+                } else {
+                    slidein();
+                   
+                    //persentdatatype = "";
+
+                }
+
+            };
+
+        })
+</script>
+    <script>
+        var userlogintrue = "false";
+        var cpx = new Array();
+        var ind = 0;
+        $().ready(function () {
+            islogin(); //判断是否登录;
+            mainclasslist(); //获取主分类列表;
+             
+           
+            getclassification("MainMenu");
+            getrmss();
+            getIndexMiddle("mrsc");
+           
+
+
+            setTimeout(function () {
+                if (userlogintrue == "true") {
+                    //getNewNotice();//获取用户未收信息
+                    getUserPersonFollow( 0,0, 1,0);//获取用户关注用户列表
+                    getHistoricalRecord(0,1);//获取用户浏览记录
+                }
+            }, 1000);//等待islogin函数执行完成
+            
+        });
+        function gbheadpre() {
+            ind--;
+          ////  if (ind == 0) {
+          //   //   var h=document.getElementsByClassName("gbheadpre");
+          //      h[0].css({ "display": "none" });
+                   
+          //  }
+          //  if (id == 3) {
+          //      document.getElementsByClassName("gbheadnext").css({ "display": "block" });
+          //  }
+            document.getElementById('mmlist').style.marginLeft = -ind * 1200 + "px";
+           
+        }
+        function gbheadnext() {
+            ind++;
+            //if (ind !=0) {
+            //    document.getElementsByClassName("gbheadpre").css({ "display": "block" });
+            //}
+            //if (id == 4) {
+            //    document.getElementsByClassName("gbheadnext").css({ "display": "none" });
+            //}
+            document.getElementById('mmlist').style.marginLeft = -ind * 1200 + "px";
+ 
+        }
+        function editmenu(menuber,usernumber) {
+            window.location ='../MadeMenu/MadeMenu.html?menunumber=' + menuber + '&usernumber=' + usernumber;
+        }
+        function deletemenu(menuber, menuname) {
+            $.post('../../ashx/UserHandler.ashx?type=UserProductiondel&userfoodnumber=' + menuber + '&menuname=' + menuname, function (msg) {
+                getUserProduction(0, 1, 0);
+            });
+        }
+        //获取中间部分
+        function getIndexMiddle(val) {
+           
+            $.post('../../ashx/Index.ashx?type=IndexMiddle&val=' + val, function (msg) {
+              
+               
+                $('#IndexMiddle').html(msg);
+               // if (val == "mrsc")
+                //else {
+                //    alert(msg);
+                //    $('#iminner').html(msg);
+                //}
+            });
+        }
+        //获取分类list
+        function getclassification(val) {
+            
+            $.post('../../ashx/Index.ashx?type=classification&val=' + val, function (msg) {
+                if (val == "MainMenu") {
+                    cpx = msg.split("|");
+                    createstyle(cpx, "transverse","60");
+ 
+                    
+                } else {
+                    
+                    $(".search-overlay").addClass("open");
+                    $('#classificationCont').html(msg);
+                }
+                
+            });
+        }  
+        //获取热梦搜索list
+        function getrmss() {
+
+            $.post('../../ashx/Index.ashx?type=SearchFever', function (msg) {
+                
+
+                    
+                    $('#rmsslb').html(msg);
+                
+
+            });
+        } 
+        //获取主页分类list
+        function mainclasslist() {
+            $.post('../../ashx/Index.ashx?type=classification&val=HeadNavigation', function (msg) {
+              //  $('#mainclasslist').html(msg);
+            });
+        }
+        //判断是否登录
+        function islogin() {
+            $.post('../../ashx/UserHandler.ashx?type=islogin', function (msg) {
+                if (msg != "unlogin") {
+                    $('#userbriefinfo').html(msg);
+                    userlogintrue = "true";
+                }
+            });
+        }
+        //获取用户关注用户列表
+        function getUserPersonFollow(orderby,pages, persentpageindex,actype) {
+            
+            if (userlogintrue == "true") {
+                $.post('../../ashx/UserHandler.ashx?type=GetUserPersonFollow&pages=' + pages + '&persentpageindex=' + persentpageindex + '&actype=' + actype + '&orderby=' + orderby, function (msg) {
+                    xxxx();
+                    $('#gz').css({ 'background-color': '#ffffff' });
+                    if (msg != "") {
+                        var array = new Array(3);
+                        array = msg.split("|");
+                       
+                        $('#zcbottom').html(array[2]);
+                        $('#zcmiddlemainList').html(array[1]);
+                        $('#zcmiddletitle').html(array[0]);
+                    }
+                    
+
+                });
+                
+            }
+        }
+        //获取历史足迹
+        function getHistoricalRecord(pages, presentpageindex,actype) {
+            
+            if (userlogintrue == "true") {
+                
+                $.post('../../ashx/UserHandler.ashx?type=getHistoricalRecord&pages=' + pages + '&persentpageindex=' + presentpageindex+'&actype='+actype, function (msg) {
+                    if (msg != "") {
+                        var array = new Array(2);
+                        array = msg.split("|");
+                     
+                        $('#xfdatabottom').html(array[1]);
+                        $('#xfcontentlist').html(array[0]);
+                    }
+
+                   
+                });
+            }
+        }
+
+
+        
+        //获取菜谱
+        function getmenulistbytype(valtype,val,bywhat) {
+            window.location = "../Foody/index.html?val='" + val + "'&bywhat='" + bywhat + "'&valtype='" + valtype + "'";
+        }
+        //获取菜谱
+        function getingredientbyname(valtype,val, bywhat) {
+            //window.location = "../Foody/index.html?val='" + val + "'&bywhat='" + valtype + "'";
+            window.location = "../singlemenu/ingredients.html?val=" + val + "&itype=" + bywhat ;
+        }
+        function getmenulistbysx(valtype,val, bywhat) {
+            window.location = "../Foody/index.html?val='" + val + "'&bywhat='" + bywhat + "'&valtype='" + valtype + "'";
+        }
+        //用户的好友
+        function getmyfriend(pages, persentpageindex,actype) {
+            persentdatatype = "userfriend";
+            if (userlogintrue == "true") {
+                $.post('../../ashx/UserHandler.ashx?type=getUserFriends&pages=' + pages + '&persentpageindex=' + persentpageindex + '&actype=' + actype, function (msg) {
+                    xxxx();
+                    $('#userfriend').css({ 'background-color': '#ffffff' });
+
+                    if (msg != "") {
+                        var array = new Array(2);
+                        array = msg.split("|");
+                       
+                        $('#zcbottom').html(array[1]);
+                        $('#zcmiddlemainList').html(array[0]);
+                    }
+                    
+
+                });
+            }
+          
+
+        }
+        //陌生人
+        function getStrangerList(orderby,pages, persentpageindex,actype) {
+
+          //persentdatatype = "userunkownpeople";
+            if (userlogintrue == "true") {
+                $.post('../../ashx/UserHandler.ashx?type=getStrangerList&pages=' + pages + '&persentpageindex=' + persentpageindex + '&actype=' + actype + '&orderby=' + orderby, function (msg) {
+                    xxxx();
+                    $('#msr').css({ 'background-color': '#ffffff' });
+
+                    if (msg != "") {
+                        var array = new Array(3);
+                        array = msg.split("|");
+                       
+                        $('#zcbottom').html(array[2]);
+                        $('#zcmiddlemainList').html(array[1]);
+                        $('#zcmiddletitle').html(array[0]);
+                    }
+
+                });
+            }
+        }
+
+        
+        function medalsmoveout(val) {
+
+            var la = document.getElementById(val);
+
+            la.style.display = 'none';
+            //la.css('margin-top')="";
+            //alert(event.clientX);
+            //la.style.left="100px";
+            //la.style.top="0px";
+            //la.style.left=event.clientX+10+"px";
+            //la.style.top=event.clientY+10+"px";
+        }
+        function medalsmovein(val) {
+
+            var la = document.getElementById(val);
+
+            la.style.display = 'block';
+            //la.css('margin-top')="";
+            //alert(event.clientX);
+            //la.style.left="100px";
+            //la.style.top="0px";
+            la.style.left = event.clientX + 10 + "px";
+            la.style.top = event.clientY + 10 + "px";
+        }
+        
+        ////获取上一页数据
+        //function getPreData(type,pages,presentindex) {
+        //    //getPreData(&quot;" + datatype + "&quot;," + pages + "," + presentindex + ")
+        //    if (type = "")
+        //     type = persentdatatype;
+        //    $.post('../../ashx/DataHandler.ashx?type=' + type + '&persentpageindex' + persentpageindex+'&pages='+pages, function (msg) {
+        //        if (type == "preUserfollow")  
+        //            $('#zcmiddlemainList').html(msg);
+        //        else if (type == "preUserCollect") 
+        //            $('#zcmiddlemainList').html(msg);
+        //        else if (type == "preStranger") 
+        //            $('#zcmiddlemainList').html(msg);
+        //         else if (type == "preHistoryLL") 
+        //             $('#xfcontentlist').html(msg);
+        //     });
+             
+        //}
+        ////获取下一页数据
+        //function getNextData(type, pages, presentindex) {
+        //    if (type = "")
+        //        type = persentdatatype;
+               
+        //    $.post('../../ashx/UserHandler.ashx?type=' + type + '&persentpageindex' + persentpageindex + '&pages=' + pages, function (msg) {
+
+        //        if (type == "nextUserCollect")  
+        //            $('#zcmiddlemainList').html(msg);
+        //        else if (type == "nextStranger") 
+        //            $('#zcmiddlemainList').html(msg);
+        //        else if (type == "nextUserfollow") 
+        //            $('#zcmiddlemainList').html(msg);
+        //        else if (type == "nextHistoryLL") 
+        //            $('#xfcontentlist').html(msg);
+        //        });
+           
+        //}
+       
+      
+       
+        //退出登录
+        function logout() {
+            $.post('../../ashx/Index.ashx?type=logout', function () {
+                window.location.reload();
+            });
+        }
+        
+        function popsearchBox() {
+             
+                $('.login-form-mask').fadeIn(100);
+                $('.login-form').slideDown(200);
+            
+        };
+        /*点击弹出用户界面*/
+        function popUserInfoBox() {
+            if (userlogintrue == "true") {
+                var popBox = document.getElementById("popBox");
+                var popLayer = document.getElementById("popLayer");
+                popBox.style.display = "block";
+                popLayer.style.display = "block";
+                $('#userxinxis').css({ 'display': 'block' });
+                getUserAllxinxi();
+               
+
+            } else {
+                $('.login-form-mask').fadeIn(100);
+                $('.login-form').slideDown(200);
+            }
+        };
+
+        /*点击关闭用户界面*/
+        function closeUserInfoBox() {
+            var popBox = document.getElementById("popBox");
+            var popLayer = document.getElementById("popLayer");
+            popBox.style.display = "none";
+            popLayer.style.display = "none";
+        }
+        function xxxx() {
+          
+            $('#gz').css({ 'background-color': '#f7cbcb' });
+            $('#msr').css({ 'background-color': '#f7cbcb' });
+            $('#wt').css({ 'background-color': '#f7cbcb' });
+            $('#hysq').css({ 'background-color': '#f7cbcb' });
+        }
+      
+        
+     
+        //function getdatabottom(val, type, presentindex) {
+        //    if (type = "")
+        //        type = persentdatatype;           
+        //    $.post('../../ashx/DataHandler.ashx?type=getDataBottom&datatype=' + datatype + '&presentindex=' + presentindex, function (msg) {
+        //        if (msg == "unchange") return;
+        //        if (val == "zcb") {
+        //            $('#zcbottom').html(msg);
+        //        } else if (val == "xfb") {
+        //            $('#xfdatabottom').html(msg);
+        //        }
+                
+              
+                
+        //    }); 
+
+        //}
+        //用户的好友申请列表
+        function gethysq(pages, persentpageindex,actype) {
+            //persentdatatype = "userunacceptfriend";
+            if (userlogintrue == "true") {
+                $.post('../../ashx/UserHandler.ashx?type=getUserhysq&pages=' + pages + '&persentpageindex=' + persentpageindex + '&actype=' + actype, function (msg) {
+                    xxxx();
+                    $('#hysq').css({ 'background-color': '#ffffff' });
+                    if (msg != "") {
+                        var array = new Array(2);
+                        array = msg.split("|");
+                        
+                        $('#zcbottom').html(array[1]);
+                        $('#zcmiddlemainList').html(array[0]);
+                    }
+
+                });
+            }
+       }
+        function nextSibling(node) {
+            var tempLast = node.parentNode.lastChild;
+            if (node == tempLast) return null;
+            var tempObj = node.nextSibling;
+            while (tempObj.nodeType != 1 && tempObj.nextSibling != null) {
+                tempObj = tempObj.nextSibling;
+            }
+            return (tempObj.nodeType == 1) ? tempObj : null;
+        }
+        //前一个兄弟节点
+        function prevSibling(node) {
+
+            var tempFirst = node.parentNode.firstChild;
+            if (node == tempFirst) return null;
+            var tempObj = node.previousSibling;
+             
+
+            //while (tempObj.nodeType != 1 && tempObj.previousSibling != null) {
+            while (tempObj.nodeType != 1 && tempObj != tempFirst) {
+               
+                tempObj = tempObj.previousSibling;
+
+            }
+            return (tempObj.nodeType == 1) ? tempObj : null;
+        }
+        function followuser(obcollection,obname, obAccount, obj) {
+            $(obj).toggleClass("xzdislike");
+            obcollection++;
+            var s = obj.parentNode;
+               s=prevSibling(s);
+         
+            //obj.previousSibling.innerHtml = obcollection;
+         
+           
+            $.post('../ashx/UserHandler.ashx?type=FollowUser&ObAccount=' + obAccount + '&ObCollection=' + obcollection + '&ObName=' + obname, function (msg) {
+
+                //obel
+                //dislike
+                //retstr += " <div class='zmml5'><a href='#' onclick='followuser('" + list.ObjectFNum + "','" + list.ObjectNumber + "')'><div class='wishlist'></div> </a></div>";
+
+                //$('#sc').html("<div class='dislike'><a href='#' onclick='shoucangdel(" + obcollection + ")'><span>wishlist</span></a></div> ");
+
+                //if (msg = "ok") {
+                //    $('#scl').html("<span class='amount'><span class='currencySymbol'>已有</span>" + obcollection + " 收藏</span>");
+
+                //} 
+                s.innerHTML = obcollection;
+                obj.setAttribute("onclick", "unfollowuser(" + obcollection + ",'" + obname + "','" + obAccount + "',this)");
+
+            });
+        }
+        
+        //删除好友
+        function deletefriend(obcollection, obname, obAccount, obj) {
+           
+            obcollection--;
+            var s = obj.parentNode;
+            //s = prevSibling(s);
+            s.removechild(obj);
+
+            // obj.setAttribute("onclick");
+            // obcollection--; 
+            $.post('../ashx/UserHandler.ashx?type=DeleteFriend&ObAccount=' + obAccount + '&ObCollection=' + obcollection + '&ObName=' + obname, function (msg) {
+
+                //$('#sc').html("  <div class='wishlist'><a href='#' onclick='shoucang('+ menu.Collection + ')'><span>wishlist</span></a></div>");
+                //$('#scl').html("<span class='amount'><span class='currencySymbol'>已有</span>" + collection + " 收藏</span>");
+               // s.innerHTML = obcollection;
+               // obj.setAttribute("onclick", "followuser(" + obcollection + ",'" + obname + "','" + obAccount + "',this)");
+            });
+        }
+        //取消关注用户
+        function unfollowuser(obcollection,obname ,obAccount, obj) {
+            $(obj).toggleClass("xzlike");
+            obcollection--;
+            var s = obj.parentNode;
+            s = prevSibling(s);
+           
+           
+           // obj.setAttribute("onclick");
+           // obcollection--; 
+            $.post('../ashx/UserHandler.ashx?type=UnFollowUser&ObAccount=' + obAccount + '&ObCollection=' + obcollection + '&ObName=' + obname, function (msg) {
+               
+                //$('#sc').html("  <div class='wishlist'><a href='#' onclick='shoucang('+ menu.Collection + ')'><span>wishlist</span></a></div>");
+                //$('#scl').html("<span class='amount'><span class='currencySymbol'>已有</span>" + collection + " 收藏</span>");
+                s.innerHTML = obcollection;
+                obj.setAttribute("onclick", "followuser(" + obcollection + ",'" + obname + "','" + obAccount + "',this)");
+            });
+        }
+       
+
+
+        //收藏菜谱
+        function shoucang(collection) {
+            collection++;
+            $.post('../ashx/UserHandler.ashx?type=Collect', function (msg) {
+               
+                //$('#sc').html("<div class='dislike'><a href='#' onclick='shoucangdel(" + collection + ")'><span>wishlist</span></a></div> ");
+
+                //if (msg = "ok") {
+                //    $('#scl').html("<span class='amount'><span class='currencySymbol'>已有</span>" + collection + " 收藏</span>");
+                
+                //}
+
+            });
+        }
+        //取消收藏菜谱
+        function shoucangdel(collection) {
+            collection++;
+            $.post('../ashx/UserHandler.ashx?type=Collectdel', function (msg) {
+                
+                //$('#sc').html("  <div class='wishlist'><a href='#' onclick='shoucang(" + menu.Collection + ")'><span>wishlist</span></a></div>");
+                //$('#scl').html("<span class='amount'><span class='currencySymbol'>已有</span>" + collection + " 收藏</span>");
+
+            });
+        }
+       
+        //删除用户菜谱
+        function MunuDelete(collection) {
+
+            $.post('../ashx/UserHandler.ashx?type=Collect', function (msg) {
+                //collection++;
+                //$('#sc').html("<div class='dislike'><a href='#' onclick='shoucangdel(" + collection + ")'><span>wishlist</span></a></div> ");
+
+                //if (msg = "ok") {
+                //    $('#scl').html("<span class='amount'><span class='currencySymbol'>已有</span>" + collection + " 收藏</span>");
+
+                //}
+
+            });
+        }
+        //创建菜谱
+        function MenuCreate(collection) {
+
+            $.post('../ashx/UserHandler.ashx?type=Collectdel', function (msg) {
+                //collection--;
+                //$('#sc').html("  <div class='wishlist'><a href='#' onclick='shoucang(" + menu.Collection + ")'><span>wishlist</span></a></div>");
+                //$('#scl').html("<span class='amount'><span class='currencySymbol'>已有</span>" + collection + " 收藏</span>");
+
+            });
+        }
+        //function up() {
+        //    var href = "www.baidu.com";
+        //    $("#gwc").load(href + " #gwc");
+        //}
+        //获取陌生人列表
+        //function loadURLWithTip() {
+
+        //    $.ajax({
+        //        url: "http://localhost:1516/ashx/UserHandler.ashx?type=getStrangerList",
+
+        //        success: function (data) {
+        //          
+
+        //            $('#zcmiddlemainList').html(data);
+
+
+        //        },
+
+        //    });
+        //}
+       
+       
+      
+</script>
+
+<!-- header begin -->
+<div class="gbhead1">
+  <div class="gbhedcontain">
+   <div class="userheadpro" id="userbriefinfo"> <img  src="images/unlogin.png" /> <p id="wdxxjls">  <a href="../../login-reister/index.html">未登录</a></p></div>
+
+      
+
+     <div id="circlemenu" style="position:fixed;width:20px;height:20px;margin-top: 0px;margin-left:1200px;">
+		  <div class="burger_menu">
+		    <div class="top_line"></div>
+		    <div class="middle_line"></div>
+		    <div class="bottom_line"></div>
+		  </div>
+		  <div id="circlemenulist">
+		  
+		 </div>
+     </div>
+   <!-- <ul class="gbhdconul1">
+      <li class="gbfl gbhdzs"><a href="#" title="" target="_blank">招商网页</a></li>
+      <li class="gbfl">　｜　</li>
+      <li class="gbfl"><a href="#" onClick="AddFavorite('餐饮加盟网','')">收藏网站</a></li>
+      <li class="gbfl">　｜　</li>
+      <li class="gbfl"><a href="#" title="" target="_blank">手机查商网</a></li>
+      <li class="gbfl">　｜　</li>
+      <li class="gbfl wxewmli"><a href="#" title="" target="_blank">微信</a>
+        <div class="wxewm"><img src="picture/xdd.jpg" alt=""></div>
+      </li>
+      <li class="gbfl">　｜　</li>
+      <li class="gbfl lista"><a href="#" title="" target="_self" id="username">xixi</a></li>
+    </ul>-->
+  </div>
+</div>
+
+
+
+
+     <script>
+         //设置登录页面弹出效果
+         function editusername() {
+
+             $('#userjmname').attr("disabled", false);
+            // $('#userjmname').disabled = "true";
+             $('#userjmname').focus();
+         }
+          
+         $("#userxinxis").on("blur",".userjmname",function(){
+             alert('已绑定');
+         });//使用全局绑定事件
+         $("#userjmname").blur(function () {
+             //$('#userjmname').disabled = "true";
+             $('#userjmname').attr("disabled", true);
+            var unam=  $('#userjmname').val();
+            $.post('../../ashx/UserHandler.ashx?type=altername&username=' + unam , function (msg) {
+ 
+
+             });
+
+
+         });
+         function alertcancle() {
+             $('.login-form-mask').fadeOut(100);
+             $('.login-form').slideUp(200);
+         }
+
+         function alertconfirm() {
+             alertcancle();
+             window.location = "../../login-reister/index.html";
+         }
+
+         function switchUserjm(jm) {
+             $('#usernotices').css({'display':'none'});
+             $('#usermenus').css({ 'display': 'none' });
+             $('#usercmenus').css({ 'display': 'none' });
+             $('#userxinxis').css({ 'display': 'none' });
+             $('#usermedals').css({ 'display': 'none' });
+             if (jm == "usernotices") {
+                 $('#usernotices').css({ 'display': 'block' });
+                  
+             } else if (jm == "usermenus") {
+                 $('#usermenus').css({ 'display': '' });
+                 
+             } else if (jm == "usercmenus") {
+                 $('#usercmenus').css({ 'display': 'block' });
+                 
+                 usermedals
+             } else if (jm == "userxinxis") {
+                 $('#userxinxis').css({ 'display': 'block' });
+                 
+                 
+             } else if (jm == "usermedals") {
+                 $('#usermedals').css({ 'display': 'block' });
+                 
+             }
+         }
+         //获取未读信息
+         function getUserNotice(noticetype, pages, persentpageindex, actype) {
+             switchUserjm("usernotices");
+             //persentdatatype = "userunread";
+             $.post('../../ashx/UserHandler.ashx?type=getNewNotice&noticetype=' + noticetype + '&pages=' + pages + '&persentpageindex=' + persentpageindex + '&actype=' + actype, function (msg) {
+                 
+                 if (msg != "") {
+                     var array = new Array(2);
+                     array = msg.split("|");
+                     var h = " <p>未读信息 " + array[1] + " 条</p>";
+                     $('#usernoticeslist').html(array[0]);
+                     $('#wdxxjls').html(h);
+                 }
+                
+                
+             });
+         }
+
+         function shoucangdel(ObName, ObMenuNumber, ObCollection) {
+
+             
+                     ObCollection--;
+                     $.post('../ashx/UserHandler.ashx?type=DisLikeMenu&ObName=' + ObName + '&ObMenuNumber=' + ObMenuNumber + '&ObCollection=' + ObCollection, function (msg) {
+
+                         getUsermenuCollection(0, 1, 0);
+                     });
+                 
+             
+
+         }
+         //获取用户菜谱作品 
+                  
+         function getUserProduction(pages, persentpageindex, actype) {
+             switchUserjm("usermenus");
+            
+             //persentdatatype = "userproduct";
+             if (userlogintrue == "true") {
+                  
+                 $.post('../../ashx/UserHandler.ashx?type=GetUserProduction&pages=' + pages + '&persentpageindex=' + persentpageindex + '&actype=' + actype, function (msg) {
+                     if (msg != "") { 
+                         $('#usermenus').html(msg);
+                     }
+                    
+
+                 });
+             }
+         }
+         //获取用户收藏菜谱
+                   
+         function getUsermenuCollection(pages,persentpageindex,actype) {
+             switchUserjm("usercmenus");
+           
+            // persentdatatype = "usercollectmenu";
+             if (userlogintrue == "true") {
+                 $.post('../../ashx/UserHandler.ashx?type=GetUserMenuCollection&pages=' + pages + '&persentpageindex=' + persentpageindex + '&actype=' + actype, function (msg) {
+                     //alert(msg);
+                     if (msg != "") {
+                         $('#usercmenus').html(msg);
+                     }
+
+                 });
+             }
+         }
+         //获取用户获得称号
+         function getUserMedals(pages, persentpageindex, actype) {
+             switchUserjm("usermedals");
+             // persentdatatype = "usercollectmenu";
+             if (userlogintrue == "true") {
+                 $.post('../../ashx/UserHandler.ashx?type=getMedals&pages=' + pages + '&persentpageindex=' + persentpageindex + '&actype=' + actype, function (msg) {
+                     $('#usermedals').html(msg);
+
+                 });
+             }
+         }
+         
+         //在事件响应函数调用的函数里，不能通过this来获得事件对象
+         function usersearchtypeclick(val) {
+
+             $('#Hidden1').val(val);
+             $('#zh').css({ 'background-color': '' });
+             $('#yhm').css({ 'background-color': '' });
+              
+             if (val == "zh") { $('#zh').css({ 'background-color': '#FF6600' }); }
+             if (val == "yhm") $('#yhm').css({ 'background-color': '#FF6600' });
+            
+
+         }
+         //在事件响应函数调用的函数里，不能通过this来获得事件对象
+         function searchtypeclick(val) {
+            
+             $('#sid').val(val);
+             $('#zz').css({ 'background-color': '' });
+             $('#sc').css({ 'background-color': '' });
+             $('#cm').css({ 'background-color': '' });
+             if (val == "zz") { $('#zz').css({ 'background-color': '#FF6600' }); }
+             if (val == "sc") $('#sc').css({ 'background-color': '#FF6600' });
+             if (val == "cm") $('#cm').css({ 'background-color': '#FF6600' });
+             //$(this).siblings().css({ 'background-color': 'red' });
+               //  $('#id').siblings() 当前元素所有的兄弟节点
+            // dm.siblings().css({ 'background-color': '' }); //当前元素所有的兄弟节点
+             // $(this).css({ 'background-color': 'gray' });
+             // function siblings(elm) {
+               //  
+               //  var a = document.getElementsByClassName('checklist');
+                 
+                
+                 
+               //  for (var i = 0, pl = a.length; i < pl; i++) {
+                //     if (a[i].style.backgroundcolor!="gray")
+                 //    $( a[i]).css({ 'background-color': '' });
+                // }
+                 
+            
+                
+         }  
+         function getmenudp(MCNumber) {
+             // alert(MCNumber);
+             
+             window.location = "../singlemenu/index.html?MenuNumber=" + MCNumber + "&tt=notuserproduction";
+           //  window.location = "../singlemenu/index.html?MenuNumber='" + MenuNumber + "'";
+         }
+         function getmenudetails(tt,MenuNumber) {
+             window.location = "../singlemenu/index.html?MenuNumber='" + MenuNumber + "'&tt="+tt; 
+         }
+
+         function getingredientdetails(tt,val) {
+             window.location = "../singlemenu/ingredients.html?val=" + val + "&&itype=" + tt;
+         }
+        
+         //热门搜索
+         function rmsubmitsearch(sid, sval) {
+             
+             if (sid == "sc") {
+                 getingredientdetails("IngredientName",sval);
+                  
+             } else {
+
+                 $.post(' ../../ashx/Index.ashx?type=search&sid=' + sid + '&keyword=' + sval + '&pages=0&persentpageindex=1&actype=0', function (msg) {
+
+                     if (msg != "") {
+                         // var array = new Array(3);
+                         // array = msg.split("|");
+
+                         // $('#zcbottom').html(array[2]);
+                         $('#searchresult').html(msg);
+                         // $('#zcmiddletitle').html(array[0]);
+                     }
+                     // $('#searchresult').html(msg);
+
+                     //popUserInfoBox();
+                     popsearchBox();
+
+                 });
+             }
+                
+
+            
+            
+
+
+         }
+         function submitsearch(orderby,pages,persentpageindex,actype,sid,sval){
+             if (sid == 0) {
+                   sid = $('#sid').val();
+                   sval = $('#input_text').val();
+             }
+             
+           
+
+             var re2 = /^[-\s\w\u4e00-\u9fa5]{1,15}$/;//只能输入汉字和英文字母空格3-15位
+             var account = $("#usernamelogin").val();
+
+             var uname = sval.replace(/(^\s*)|(\s*$)/g, "");//去除首尾空格
+             if (!re2.test(uname)) {
+                 if (uname.length == 0) { alert("您还没有输入内容"); }
+                 else if (uname.length > 15) { alert("输入过长"); }
+                 else { alert("包含特殊字符"); }
+                 //document.getElementById("loginsubmit").disabled = "true";//disabled 
+             }
+             else {
+                 if (sid == "sc") {
+                     $.post(' ../../ashx/Index.ashx?type=search&sid=' + sid + '&keyword=' + sval + '&pages=' + pages + '&persentpageindex=' + persentpageindex + '&actype=' + actype + '&orderby=' + orderby, function (msg) {
+                         if (msg != "") { 
+                             $('#searchresult').html(msg); 
+                         } 
+                         popsearchBox();
+                     })
+                    
+                 } else {
+                     $.post(' ../../ashx/Index.ashx?type=search&sid=' + sid + '&keyword=' + sval + '&pages=' + pages + '&persentpageindex=' + persentpageindex + '&actype=' + actype + '&orderby=' + orderby, function (msg) {
+
+                         if (msg != "") {
+                             // var array = new Array(3);
+                             // array = msg.split("|");
+
+                             // $('#zcbottom').html(array[2]);
+                             $('#searchresult').html(msg);
+                             //$('#zcmiddletitle').html(array[0]);
+                         }
+                         // $('#searchresult').html(msg);
+
+                         // popUserInfoBox();
+                         popsearchBox();
+
+                     });
+                 }
+             }
+            
+             
+         }
+         
+         //用户查询
+         function usersearch(pages, persentpageindex, actype) {
+             var sval = $('#usersearch').val();
+             var s2 = $('#Hidden1').val();
+
+             var re2 = /^[-\s\w\u4e00-\u9fa5]{1,15}$/;//只能输入汉字和英文字母空格3-15位
+            // var account = $("#usernamelogin").val();
+
+             var uname = sval.replace(/(^\s*)|(\s*$)/g, "");//去除首尾空格
+             if (!re2.test(uname)) {
+                 if (uname.length == 0) { alert("您还没有输入内容"); }
+                 else if (uname.length > 15) { alert("输入过长"); }
+                 else { alert("包含特殊字符"); }
+                 //document.getElementById("loginsubmit").disabled = "true";//disabled 
+             }
+             else {
+                 $.post(' ../../ashx/Index.ashx?type=usersearch&sid=' + s2 + '&keyword=' + sval + '&pages=' + pages + '&persentpageindex=' + persentpageindex + '&actype=' + actype, function (msg) {
+                     $('#zcmiddlemainList').html(msg);
+
+                     
+
+
+                 });
+             }
+         }
+         //获取用户信息
+         function getUserAllxinxi() {
+             switchUserjm("userxinxis");
+             // persentdatatype = "usercollectmenu";
+             if (userlogintrue == "true") {
+                 $.post('../../ashx/UserHandler.ashx?type=getUserAllxinxi', function (msg) {
+                     $('#userxinxis').html(msg);
+                     document.getElementById('userjmname').onblur = function () {
+                         $('#userjmname').attr("disabled", true);
+                         var unam = $('#userjmname').val();
+                         $.post('../../ashx/UserHandler.ashx?type=altername&username=' + unam, function (msg) {
+
+
+                         });
+
+                     }
+                 });
+                 
+             }
+             
+             
+         }
+</script>	
+<div class="login-form" id="searchresult">
+<div class="alertheader">
+<h3 class="alertlabel">点击确定前往登录</h3>
+</div>
+  
+<div class="alertcancle" onclick="alertcancle()"> 取消</div> 
+<div class="alertconfirm" onclick="alertconfirm()"> 确定</div>
+</div>
+<div class="login-form-mask"></div>
+<!-- 会员登录 -->
+		<!--<div class="member" id="themember">
+			<p>会员中心</p>
+			<ul>
+				<li>
+					<img src="img/huiyuan1.png" alt="">
+					<a href="../login-reister/index.html">登录</a>
+				</li>
+				<li>
+					<img src="img/huiyuan1.png" alt="">
+					<a href="../login-reister/index.html">新会员注册</a>
+				</li>
+			</ul>
+		</div>-->
+    <div id="popLayer"></div>
+<div id="popBox">
+      <div class="userjmtitle">主厨</div>
+    <div class="close">
+        <a href="javascript:void(0)" onclick="closeUserInfoBox()">关闭</a>
+    </div>
+	<div class="usernavbar">
+	  
+	   <div class="userjmnav" onclick="getUserAllxinxi()">我的信息</div>
+	   <div class="userjmnav" onclick="getUserProduction(0,1,0)">我的菜谱</div>
+	   <div class="userjmnav" onclick="getUsermenuCollection(0,1,0)">菜谱收藏</div>
+	  <!-- <div class="userjmnav" onclick="getUserMedals(0,1,0)">我的称号</div>-->
+	   <div class="userjmnav" onclick="getUserNotice('usernoticeunread',0,1,0)">我的消息</div>
+	   
+	</div>
+    <div class="userjmcontent">
+        <!-- 用户信息界面  -->
+	   <div class="userjminnercontent">
+	     <div id="usernotices" style="display:none">
+          <div class="usernoticestitle">
+              <p class="noticetit" onclick="getUserNotice('usernoticeunread',0,1,0)">通知</p>
+              <p class="noticetit" onclick="getUserNotice('userPnoticeunread',0,1,0)">私信</p>
+          </div>
+           <div class="usernoticeslist" id="usernoticeslist">
+              <p class="noticecon"> 
+                  无
+              </p>
+              <p class="noticecon">私信</p>
+          </div>
+          </div>  
+          <!--  <div  id="usermenus" style="display:none" >
+              <div class="usercptit"> <p class="bt">我的菜谱 </p> <p class="jyt"></p> </div>
+            
+           
+           
+          </div>  -->
+              <div  id="usercmenus" style="display:none" >
+              <div class="usercptit"> <p class="bt">用户收藏 </p> <p class="jyt"></p> </div>
+            
+           
+           
+          </div>  
+            <div  id="usermedals" style="display:none">
+              <div class="usercptit"> <p class="bt">用户称号</p> <p class="jyt"></p> </div>
+          
+            <div class="usercp">
+                <img src="images/close-icon-black.png" />
+            </div>
+           
+          </div>  
+          <div  id="usermenus" style="display:none" class="usermenus">
+              <div class="usercptit"> <p class="bt">用户制作 </p> <p class="jyt"></p> </div>
+          
+            
+           
+          </div>  
+
+            <div  id="userxinxis" >
+                 <div class="userjmleft">
+               <div class="username"> 
+                   <input  id="userjmname" value="username"  disabled/>
+                 
+                    <img src="images/edit.jpg"  onclick="editusername()"/>
+               </div>
+
+          </div>
+           <div class="userjmright">
+               
+               <div class="userjmrighthead">
+               <div class="userjmrighttit">基本信息 </div>
+                <div class="userjmrightc2">时间加入 </div>
+                <div class="userjmrightc2"> 等级 hover可查看所有等级</div>
+
+                <div class="userjmrightc2">经验 </div>
+               <div class="userjmrightc2">积分 </div>
+
+               <div class="userjmrightc3">关注 </div>
+               <div class="userjmrightc3">粉丝 </div>
+              <div class="userjmrightc3">好友 </div>
+
+               <div class="userjmrightc3">发布菜谱 </div>
+               <div class="userjmrightc3"> 收藏菜谱 </div>
+               <div class="userjmrightc3"> 做过 </div>
+               </div>      
+               <div class="userjmrightbottom">  
+                    <div class="userjmrighttit"> 口味 </div>
+                    <div class="userjmrightbottomcot"> 
+                         <div class="userjmrightc2"><p>酸</p><p class="jyt"></p><p>甜</p><p class="jyt"></p> </div>
+                        
+                        
+                    </div>
+                    <div class="userjmrighttit"> 食材 </div>
+                    <div class="userjmrightbottomcot"> 做过 </div>
+                    </div>
+         </div>
+           
+          </div>  
+
+       </div>
+        <!-- 用户信息界面end  -->
+	</div>
+</div>
+
+
+<div class="gbhead2">
+ 
+        <div class="userbriefintro" id="userbriefinfo22">
+
+            <div> </div>
+         <!--  <div class="userheadpro" onclick="popUserInfoBox()"> <img  src="images/unlogin.png" /></div> 
+               <div class="usermiddlejs">
+              <div class="wdusername"> </div> 
+                <div class="wdlabel">无</div> 
+              <div class="wdjyan">经验</div> 
+               </div>
+
+                    <div class="userrightjs"> 
+                     <ul class="userrightul"> 
+                    <li >wwwww </li> 
+                    <li >www </li> 
+                    <li >wwww </li> 
+                    </ul> 
+                   </div>  -->
+           
+        
+       
+      </div> 
+
+    <div style="width:550px;height:200px;float:left;">
+     <div class="gbsecdivaa">
+         <div class="searchcheckbox">
+            <p  class="checklist" id="cm" onclick="searchtypeclick('cm')">菜名</p>
+            <p  class="checklist" id="sc" onclick="searchtypeclick('sc')">食材</p>
+          <!--  <p  class="checklist" id="zz" onclick="searchtypeclick('zz')">作者</p> -->
+            </div>
+      <div class="gbsearch">
+        
+            <input type="hidden" name="sid" id="sid" value="">
+            
+           
+          
+          <input type="text" placeholder="请选择菜名/食材/作者" class="inp_text" name="keyword" id="input_text">
+          
+            <input type="submit" value="搜索" class="inp_sub log100_listen" onclick="submitsearch(0,0,1,0,0,0)" />
+         <!-- <input type="submit" value="搜索" class="inp_sub log100_listen"   id="sub" onclick="submitsearch(0, 1, 0)">-->
+         
+      </div>
+      <div class="gbssp"> 热门搜索：
+       
+        <span id="rmsslb">
+             <a title="菜立方芽苗菜" href="#" data_1="#" target="_blank">芽 苗 菜</a>
+        <a title="五谷联盟煎饼果子" href="#" data_1="#" target="_blank">五谷煎饼</a>
+        <a title="疯迷便当" href="#" data_1="#" target="_blank">精品便当</a>
+        <a title="摊小二煎饼果子" href="#" data_1="#" target="_blank">煎饼煎饼</a>
+        <a title="辛麻到瓦香鸡" href="#" data_1="#" target="_blank">瓦 香 鸡</a>   
+
+        </span>
+          
+      
+      </div>
+    </div>
+
+        
+       <ul class="nav_ul" id="mainclasslist">
+      <!-- 选中给li添加check类名-->
+     <!-- <li><a href="#" title="中西美食" target="_blank">中西美食</a></li>
+      -->
+    </ul>  
+        </div>
+<!--    <div class="gbhykh gbfr">
+      <div class="out outl5">
+        <ul class="img imgl5">
+          <li style="display: list-item;"><a href="#" title="" target="_blank"><img src="picture/201902131628142713058.jpg" alt=""></a></li>
+          <li style="display: none;"><a href="#" title="" target="_blank"><img src="picture/201902131628542718111.jpg" alt=""></a></li>
+          <li style="display: none;"><a href="#" title="" target="_blank"><img src="picture/201902281659422718293.jpg" alt=""></a></li>
+        </ul>
+        <ul class="num numl5">
+        </ul>
+        <div class="left btn"></div>
+        <div class="right btn"></div>
+      </div>
+    </div>-->
+  </div>
+ 
+
+ 
+
+
+
+    
+<!-- header end -->
+<div class="zccdall" id="zccdall" style="display:none">
+<div class="cbcd" id="leftcd">
+<div class="cbitem"  onclick="getUserPersonFollow(0,0, 1,0)" id="gz">
+<div class="chuizjz ">
+
+ <p style="text-align:center;">我的关注</p>
+</div>
+</div>
+<div class="cbitem" onclick="getStrangerList(0,0, 1,0)" id="msr">
+<div class="chuizjz">
+<p style="text-align:center;" >用户推荐</p>
+</div>
+</div>
+<!--<div class="cbitem" onclick="getmyfriend(0,1)" id="userfriend">
+<div class="chuizjz">
+<p style="text-align:center;" >我的好友</p>
+</div>
+</div>
+<div class="cbitem" onclick="gethysq(0,1)" id="hysq">
+<div class="chuizjz  tp0">
+<p style="text-align:center;" >好友申请</p>
+</div>
+</div>-->
+</div>
+ <div class="zccdcontent" id="zccdcontent">
+<div class="zchead">
+  <div class="zclbsearch">
+  <div class="search bar1">
+         
+            <input type="text" placeholder="请输入您要搜索的内容..." id="usersearch">
+            <div class="searchcheckbox2">
+            <p  class="checklist2" id="zh" onclick="usersearchtypeclick('zh')">账号</p>
+            <p  class="checklist2" id="yhm" onclick="usersearchtypeclick('yhm')">用户名</p>
+             <input type="hidden" name="sid" id="Hidden1" value="">
+            </div>
+            <button type="submit" onclick="usersearch(0,1,0)">搜索</button>
+        
+    </div>
+  </div>
+  <!--<div class="acrefresh"></div>-->
+</div>
+<div class="zcmiddle">
+  <div class="zcmiddletitle" id="zcmiddletitle">
+
+  
+	    <!--<div class="zcmiddlet1"> <a onclick="#"> 等级</a>   </div> 
+		<div class="zcmiddlet1 lm2"> <a onclick="#">关注度</a>  </div>
+	 <div class="zcmiddlet1 lm3">  <a onclick="#">认证</a>  </div>-->
+	  </div> 
+    <div class="zcmiddlemian" id="zcmiddlemainList">
+    <div style="background:url('images/unlogin2.png');background-size:cover;height:100%;width:100%"></div>
+<!--	   <div class="zmmrow">
+	 <div class="zmml1">号</div>
+	 <div class="zmml2">像</div>
+	 <div class="zmml3">用户名</div>
+	 <div class="zmml4">级</div>
+	 <div class="zmml5">注</div>
+	 </div>-->
+	 
+	 
+	 
+	 
+	 
+	</div>
+</div>
+<div class="zcbottom" id="zcbottom">
+  <!-- <div style="background-color:white;width:150px;height:30px;position:relative">
+      <div style="width:130px;height:20px;margin-left:10px;margin-top:3px;text-align:center;padding:2px;background-color:gray;position:absolute">1/5</div>
+	  <div class="zcbq" ></div>
+	   <div class="zcbh" ></div>
+   </div>-->
+   
+</div>
+</div>
+    </div>
+    
+<div class="indmain" id="IndexMiddle">
+   <!-- <div class="gbcont1head"> <p class="gbheadpre"><<<<</p><p class="gbcont1title">人气早餐</p> <p class="gbheadnext">>>>></p></div>-->
+  <ul class="gbco11"  id="iminner" >
+    <li> <a href="#"  title="８元汉堡 全天爆单" target="_blank" class="gbco1ig"><img src="picture/201901281531223754335.jpg" alt=""></a>
+      <div class="gbco1dv gbco1dv1">
+        <label class="gbco1lb">早餐</label>
+        <a href="#"  title="" target="_blank">麦塔基汉堡</a>
+        <p>额度：3-5万</p>
+        <p>８元汉堡 全天爆单</p>
+        <a href="#"  title="８元汉堡 全天爆单" target="_blank" class="gbco1ck">立即查看</a> </div>
+    </li>
+    <li> <a href="#"  title="海鲜零食 万元开店" target="_blank" class="gbco1ig"><img src="picture/201901311435002714771.jpg" alt=""></a>
+      <div class="gbco1dv gbco1dv2">
+        <label class="gbco1lb">中餐</label>
+        <a href="#"  title="" target="_blank">漫鲸捞汁小海鲜</a>
+        <p>额度：3-5万</p>
+        <p>海鲜零食 万元开店</p>
+        <a href="#"  title="海鲜零食 万元开店" target="_blank" class="gbco1ck">立即查看</a> </div>
+    </li>
+    <li> <a href="#"  title="粗粮煎饼 酥脆好吃" target="_blank" class="gbco1ig"><img src="picture/201901111451162717397.png" alt=""></a>
+      <div class="gbco1dv gbco1dv3">
+        <label class="gbco1lb">晚餐</label>
+        <a href="#"  title="" target="_blank">石小沫煎饼果儿</a>
+        <p>额度：5-10万</p>
+        <p>粗粮煎饼 酥脆好吃</p>
+        <a href="#"  title="粗粮煎饼 酥脆好吃" target="_blank" class="gbco1ck">立即查看</a> </div>
+    </li>
+    <li> <a href="#"  title="麻辣海鲜 人手一杯" target="_blank" class="gbco1ig"><img src="picture/201902101827112717806.jpg" alt=""></a>
+      <div class="gbco1dv gbco1dv4">
+        <label class="gbco1lb">夜宵</label>
+        <a href="#"  title="" target="_blank">赶海鲜生即食小海鲜</a>
+        <p>额度：3-5万</p>
+        <p>麻辣海鲜 人手一杯</p>
+        <a href="#"  title="麻辣海鲜 人手一杯" target="_blank" class="gbco1ck">立即查看</a> </div>
+    </li>
+        <li> <a href="#"  title="麻辣海鲜 人手一杯" target="_blank" class="gbco1ig"><img src="picture/201902101827112717806.jpg" alt=""></a>
+      <div class="gbco1dv gbco1dv4">
+        <label class="gbco1lb">夜宵</label>
+        <a href="#"  title="" target="_blank">赶海鲜生即食小海鲜</a>
+        <p>额度：3-5万</p>
+        <p>麻辣海鲜 人手一杯</p>
+        <a href="#"  title="麻辣海鲜 人手一杯" target="_blank" class="gbco1ck">立即查看</a> </div>
+    </li>
+  </ul>
+ 
+</div>
+
+ 
+
+    <div  class="xfjm">
+	  <div class="xftitle">
+	    <!--<div class="cdc"> 
+		<div class="bbb" onclick="getNewNotice()"><a >未读信息</a></div>
+		</div>-->
+		<div class="cdc"><div class="bbb" onclick="getHistoricalRecord(0,1,0)"><a>浏览记录</a></div>
+		</div> 
+		
+	  </div>
+	 
+	   <div class="boxshadowex"  >
+	  <div class="xfcontent" id="xfcontentlist">
+	 <!--  <div class="xfitem"> 
+             
+               
+               <div class="xfitemrowimg" onclick="#"><img src="picture/xdd.jpg" /><p>name</p></div>
+            
+               <div class="xfitemrowc">  
+                <div class="xfitemrowtit">标题</div>
+                <div class="xfitemrowcont">内容</div> 
+                 <div class="xfitemrowti">时间</div>
+               
+               </div>
+               
+          </div>-->
+	    
+	    
+	  </div>
+            <div class="zcbottom" id="xfdatabottom">
+       <!--<div style="background-color:white;width:150px;height:30px;position:relative">
+         <div style="width:130px;height:20px;margin-left:10px;margin-top:3px;text-align:center;padding:2px;background-color:gray;position:absolute">1/5</div>
+	     <div class="zcbq"  ></div>
+	     <div class="zcbh"  ></div>
+       </div>-->
+   
+       </div>
+	  </div>
+	  <div style="height:50px;width:100%"></div>
+	</div>
+
+ 
+      <div class="main-search pull-right">
+                <div class="search-overlay">
+                  <!-- Close Icon -->
+                  <a href="javascript:void(0)" class="search-overlay-close"></a>
+               
+                  <div class="container" id="classificationCont">
+                    <!-- Search Form -->
+                    <form role="search" id="searchform" action="search" method="get">
+                      <label class="h5 normal search-input-label">Enter keywords To Search Entire Store</label>
+                      <input value="" name="q" placeholder="Search here..." type="search">
+                      <button type="submit"></button>
+                    </form>
+                    <!-- End Search Form -->
+                  </div>
+                </div>
+               
+              </div>
+	
+	   
+	   
+	  
+</body>
+</html>

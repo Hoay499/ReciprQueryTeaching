@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style>
+        html,body {
+            margin:0;
+            padding:0;
+            height:100%;
+        }
+        .wrap {
+            height:100%;
+            width:100%;
+        }
+        .head {
+            height:6%;
+            width:100%;
+            background:red;
+           
+            text-align:center;
+            color:white;
+            float:left;
+        }
+            .head a {
+                text-decoration:none;
+                color:white;
+                float:left;
+                font-size:24px;
+                
+            }
+        .userimg {
+            height:30%;
+            width:100%;
+            float:left;
+            background:pink;
+            margin-top:4%;
+        }
+        .put {
+             height:40%;
+            width:100%;
+            float:left;
+           
+        }
+            .put .username {
+                height:20%;
+                margin-top:5%;
+                width:70%;
+                float:left;
+                margin-left:15%;
+            }
+            .put .password {
+                 height:20%;
+                margin-top:5%;
+                  width:70%;
+                float:left;
+                margin-left:15%;
+            }
+            .put .submit_button {
+                 height:20%;
+                margin-top:5%;
+                  width:70%;
+                float:left;
+                margin-left:15%;
+                text-align:center;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="wrap">
+        <header class="head">
+            <a href="login.html"><</a>
+            注册</header>
+        <div class="userimg"></div>
+        <div class="put">
+               <input type="text" id="acount" class="username" placeholder="请输入您的用户名！"/>
+        <input type="password" id="password" class="password" placeholder="请输入您的密码！"/>
+             <button type="submit" class="submit_button" onclick="login()">注册</button>
+
+        </div>
+     
+    </div>
+
+</body>
+    <script src="../html/js/jquery-1.8.3.min.js"></script>
+<script>
+    function login() {
+        var username = $('#acount').val();
+        var password = $('#password').val();
+        $.post('../ashx/UserHandler.ashx?type=register&username=' + username + '&password=' + password, function (msg) {
+            if (msg == "success")
+                alert("注册成功！");
+            else
+                alert("用户已存在！");
+             
+        });
+    }
+
+</script>
+</html>

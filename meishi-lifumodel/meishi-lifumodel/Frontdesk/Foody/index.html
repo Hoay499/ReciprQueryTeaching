@@ -1,0 +1,365 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content=" Free Responsive Html5 Templates" />
+    
+	<title>Foody</title>
+	
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	
+    <!-- Custom Fonts -->
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+         <script src="js/jquery-2.1.1.min.js"></script>
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/style-responsive.css">
+    
+	
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="template/js/html5shiv.js"></script>
+        <script src="template/js/respond.min.js"></script>
+    <![endif]-->
+	<style>
+	.cccc{
+	    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+	}
+	
+article{}
+article:after, article:before{clear: both; content: '\0020'; display: block;  width: 0; height: 0;}
+article img{width:100%;height:240px}
+
+article.box-shadow{background: #fff; overflow: hidden;position: relative;    float: left;
+    width: 50%;}
+article.box-shadow:after{box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1) inset;content: "";display: block;height: 100%;left: 0;pointer-events: none;position: absolute;top: 0;transition: all 0.4s ease 0s;width: 100%;}
+article.box-shadow:hover:after{box-shadow: 0 0 0 1.62rem rgba(0, 0, 0, 0.2) inset;}
+
+article .art-content{font-size: 10px;padding: 20px 20px;}
+article .art-content .heading{font-family: "Alegreya","Helvetica Neue",Helvetica,Arial,sans-serif;color: #252525;margin-bottom: 15px;}
+article .art-content .heading h2{font-size: 13px;font-weight: bold;line-height: 1.2;}
+.btn-theme {
+    color: #E53739;
+    background-color: transparent;
+    border: 2px solid #E53739;
+    border-radius: 0;
+    margin: 20px 0;
+    padding: 2px 8px;
+    font-weight: bold;
+}
+hr {
+    /* margin-top: 20px; */
+    /* margin-bottom: 20px; */
+    border: 0;
+    border-top: 1px solid #eee;
+}
+.page-title {
+      min-height: 100px; 
+    padding: 0px 50px 0;
+    font-size: 15px;
+}
+.text-center {
+    text-align: center;
+}
+.page-title h1 {
+    color: #222;
+    font-size: 46px;
+    font-weight: bold;
+        margin-bottom: 10px;
+    margin-top: 10px;
+}
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/  
+::-webkit-scrollbar  
+{  
+    width: 4px;  
+    height: 4px;  
+    background-color: #F5F5F5;  
+}  
+ /*定义滚动条轨道 内阴影+圆角*/  
+::-webkit-scrollbar-track  
+{  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);  
+    border-radius: 10px;  
+    background-color: #FFF;  
+}
+/*定义滑块 内阴影+圆角*/  
+::-webkit-scrollbar-thumb  
+{  
+    border-radius: 10px;  
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+    background-color: #5eeaee;  
+}
+	    .glyphicon  {
+	      background-color:black;
+        }
+
+	    #pclass {
+	        color: #e4a2a2;
+        }
+	    #pclasslist {
+	    overflow-y:scroll;
+        max-height:700px;
+        }
+
+	    .wdjs1 {
+
+            overflow: hidden;
+text-overflow: ellipsis;
+display: -webkit-box;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
+	    }
+	    .loadmore {
+	       color: white;
+    text-align: center;
+    position: fixed;
+    bottom: -10px;
+    /* width: 1242px; */
+    left: 630px;
+    text-align: center;
+        }
+	    .wdc {
+	    text-align:center;
+        }
+	    .k1 {
+	    display:none !important;
+        }
+	    .k2 {
+	    display:block;
+        }
+	</style>
+</head>
+
+<body>
+   <!--header start-->
+	<header class="header">
+		<div class="sidebar-toggle-box">
+			<div class="fa fa-bars tooltips" data-placement="right"></div>
+		</div>
+		<!--logo start-->
+		<a href="#" class="logo"><b id="pclass2">FOODY</b></a>
+		<!--logo end-->
+		
+		<div class="top-menu">
+			<ul class="nav pull-right top-menu" id="menuallmk">
+				<li><a class="social wdc" href="#" id="count">共0记录</a></li>
+                <li><a class="social wdc" href="#" >1-20</a></li>
+                <li><a class="social wdc" href="#" >21-21</a></li>
+			</ul>
+		</div>
+	</header>
+	<!--header end-->
+	<!--sidebar start-->
+	<aside>
+		<div id="sidebar"  class="nav-collapse ">
+			<!-- sidebar menu start-->
+			<ul class="sidebar-menu" id="pclasslist">
+				<li>
+					<a href="index.html">
+						<i class="fa fa-tags"></i>
+						<span>Home</span>
+					</a>
+				</li>
+				<li>
+					<a href="single.html">
+						<i class="fa fa-tags"></i>
+						<span>About</span>
+					</a>
+				</li>
+				<li>
+					<a href="archive.html">
+						<i class="fa fa-tags"></i>
+						<span>Blogs</span>
+					</a>
+				</li>
+				<li>
+					<a href="contact.html">
+						<i class="fa fa-tags"></i>
+						<span>Contact</span>
+					</a>
+				</li>
+			</ul>
+		  <!-- sidebar menu end-->
+		</div>
+	</aside>
+    <!--sidebar end-->
+	
+	
+	
+	<!--main content start-->
+	<section id="main-content">
+		<section class="wrapper">
+		<div class="page-title text-center" id="pagetitle">
+				<!-- <p onclick="loadmore()" class="loadmore">加载更多...</p>-->
+            <h1>当前分类: <span id="pclass"> </span></h1>
+				<div class="description">
+					These are standard post format posts. If you split the post into multiple parts, and use the h2 headings at the beginning of the post parts, the theme will automatically generate the post parts table of contents.
+				</div>
+			</div>
+			
+		
+			<div class="no-gutter">
+				
+<!-- Carousel -->
+			<div id="carousel-example-generic" class="carousel slide" data-ride="">
+				
+				<!-- Wrapper for slides -->
+				<div class="carousel-inner" id="menulist" >
+					
+				</div>
+				<!-- Controls -->
+				 <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left" onclick="prev()"></span>
+				</a>
+				<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right" onclick="next()"></span>
+				</a> 
+				<script>
+				  var index=0;
+				   
+				   function prev(){
+				    // var item=document.getElementsByName("item");
+					  
+					  //if(index=0){
+					   //  index=2;
+					   //  item[0].toggle('');
+						// item[index].toggle('active');
+					  //}
+					  //else{
+					  //   item[index].toggle('');
+					//	 index--;
+					//	 item[index].toggle('active');
+					 // } -->
+					 
+   
+				  }
+				   function next(){
+				    //  var item=document.getElementsByClassName("item");
+					   
+					  //if(index=2){
+					   //  index=0;
+						 
+					   //  item[2].toggle('');
+						// item[index].toggle('active');
+					 // }
+					  //else{
+					  //   item[index].toggle('');
+						// index++;
+						// item[index].toggle('active');
+					 // }
+					 
+   
+				   }
+				  
+				   function displayli() {
+				       var a = document.getElementById('menuallmk');
+                       
+				       var le = a.children;
+				      // console.log(le);
+				       // alert(le.length);
+				       
+				       var h;
+				       for (var i = 0; i < le.length; i++) {
+				           h = document.getElementById('menuallmk').children[i];
+				          // setTimeout(function () {
+				              // h = document.getElementById('menuallmk').children[i];
+				              console.log(h.className);
+				              if (h.className == "k1") {
+                                  h.setAttribute("class","k2")
+				                  //h.style = "display:block";
+				              }
+				              
+				           //},500)
+				       }
+				   }
+				   
+				   $().ready(function () { 
+				       var val = decodeURI(GetQueryString("val"));
+				       var bywhat = decodeURI(GetQueryString("bywhat"));
+				       var valtype = decodeURI(GetQueryString("valtype"));
+				     //  var val = "重庆小吃";
+				       //var valtype = "各地小吃";
+				       var val2 = val.replace("'", "");
+				       val2 = val2.replace("'", "");
+				       var valtype2 = valtype.replace("'", "");
+				       valtype2 = valtype2.replace("'", "");
+				       
+				        //val2 = val2.replace("‘", "");
+				       //var val2 = val.replace("'", "");
+				       document.getElementById('pclass').innerText = val2;
+				       document.getElementById('pclass2').innerText = valtype2;
+				       
+				       getmenulist(valtype,val, bywhat, 1);
+				   });
+				   function GetQueryString(name) {
+				       var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+				       var r = window.location.search.substr(1).match(reg);
+				       if (r != null) return (r[2]); return null;
+				   }
+				   //获取菜谱
+				   function getmenulist(valtype, val, bywhat, persentpageindex) {
+				       var val2 = val.replace("'", "");
+				       val2 = val2.replace("'", "");
+				       var valtype2 = valtype.replace("'", "");
+				       valtype2 = valtype2.replace("'", "");
+				       document.getElementById('pclass').innerText = val2;
+				       document.getElementById('pclass2').innerText = valtype2;
+				       $.post('../../ashx/Index.ashx?type=getMenuLists&valtype=' + valtype + '&val=' + val + '&bywhat=' + bywhat + '&persentpageindex=' + persentpageindex , function (msg) {
+				           
+				           var n = msg.split('$');
+				           $('#menulist').html(n[0]);
+				          // alert(n[0]);
+				           $('#pclasslist').html(n[1]);
+				           $('#menuallmk').html(n[2]);
+				          // document.getElementById('menuallmk').innerText = n[2];
+				           //alert(n[1]);
+				       });
+				   }
+				   function getmenudetails(tt, MenuNumber) {
+				       
+				       window.location = "../singlemenu/index.html?MenuNumber='" + MenuNumber + "'&tt='"+tt+"'";
+				   
+				   }
+				</script>
+				<!-- 
+				<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+					<span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+					<span class="glyphicon glyphicon-chevron-right"></span>
+				</a> -->
+			</div><!-- /carousel -->
+					
+					
+				
+				
+			</div>
+		</section><!-- /wrapper -->
+	</section><!-- /MAIN CONTENT -->
+	
+	<!--main content end-->
+	<!--footer start-->
+	<!--<footer class="site-footer">
+	  <p onclick="loadmore()" class="loadmore">加载更多...</p>
+	</footer>-->
+	<!--footer end-->
+	
+	
+	<!-- js placed at the end of the document so the pages load faster -->
+   
+	<script src="js/bootstrap.min.js"></script>
+	<!-- <script src="js/jquery.nicescroll.js"></script> -->
+	
+    <!--common script for all pages-->
+   <!--  <script src="js/common-scripts.js"></script> -->
+
+</body>
+</html>

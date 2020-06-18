@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <head>
+
+        <meta charset="utf-8"/>
+        <title>登录(Login)</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="description" content=""/>
+        <meta name="author" content=""/>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="assets/css/reset.css"/>
+        <link rel="stylesheet" href="assets/css/supersized.css"/>
+        <link rel="stylesheet" href="assets/css/style.css"/>
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="assets/js/html5.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body>
+
+        <div class="page-container">
+            <h1>登录(Login)</h1>
+            <div>
+                <input type="text" id="username" class="username" placeholder="请输入您的用户名！"/>
+                <input type="password" id="password" class="password" placeholder="请输入您的用户密码！"/>
+                <input type="Captcha" class="Captcha" name="Captcha" placeholder="请输入验证码！"/>
+                <button type="submit" class="submit_button" onclick="login()">登录</button>
+                 <button type="submit" class="submit_button" onclick="register()">注册</button>
+                <div class="error"><span>+</span></div>
+            </div>
+            <div class="connect">
+                <p>快捷</p>
+                <p>
+                    <a class="facebook" href=""></a>
+                    <a class="twitter" href=""></a>
+                </p>
+            </div>
+        </div>
+		
+        <!-- Javascript -->
+        <script src="assets/js/jquery.js" ></script>
+        <script src="assets/js/supersized.3.2.7.min.js" ></script>
+        <script src="assets/js/supersized-init.js" ></script>
+        <script src="assets/js/scripts.js" ></script>
+        <script>
+            function register() {
+                window.location = "Register.html";
+            }
+            function login() {
+                var username = $('#username').val();
+                var password = $('#password').val();
+               
+                $.post('login.ashx?type=login&username=' + encodeURI(username) + '&password=' + encodeURI(password), function (msg) {
+                    if (msg == "error")
+                        alert("用户名密码错误！");
+                    else { alert("登录！"); window.location = "../index/index.html?username="+username;}
+                        
+
+                });
+                //window.location = "../html/index.html?username="+username;
+            }
+        </script>
+    </body>
+</html>
